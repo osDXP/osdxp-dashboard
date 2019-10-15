@@ -1,0 +1,15 @@
+{
+  "name": "crowdfavorite/osdxp-dashboard",
+  "type": "wordpress-plugin",
+  "authors": [
+    {
+      "name": "Crowd Favorite",
+      "email": "support@crowdfavorite.com",
+      "homepage": "http://crowdfavorite.com/"
+    }
+  ],
+  "require":
+    {
+    "yahnis-elsts/plugin-update-checker": "^4.7"
+  }
+}

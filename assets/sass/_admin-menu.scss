@@ -1,0 +1,11 @@
+#adminmenu {
+	li.wp-menu-separator {
+		height: auto;
+		margin: 10px 0;
+	}
+
+	div.separator {
+		background: rgba($color-white, .15);
+		height: 1px;
+	}
+}

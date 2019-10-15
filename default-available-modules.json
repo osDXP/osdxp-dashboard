@@ -1,0 +1,56 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "logo": "https://via.placeholder.com/125",
+            "description": "plugin 1 description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "name": "plugin name 1",
+            "url": "http://www.crowdfavorite.com",
+            "author": "Leo Tolstoy",
+            "price": "199.99",
+            "before-price-text": "From",
+            "after-price-text": "per Year"
+        },
+        {
+            "logo": "https://via.placeholder.com/125",
+            "description": "plugin 2 description plugin 1 description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            "name": "plugin name 2",
+            "url": "http://www.plugin-url-2.com",
+            "author": "Stephen King",
+            "price": "$20.98",
+            "before-price-text": "From",
+            "after-price-text": "per Year"
+        },
+        {
+            "logo": "https://via.placeholder.com/125",
+            "description": "plugin 3 description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "name": "plugin name 3",
+            "url": "http://plugin-url-3.com",
+            "author": "H.G. Wells",
+            "price": "$2.99",
+            "before-price-text": "From",
+            "after-price-text": "per Year"
+        },
+    {
+            "logo": "https://via.placeholder.com/125",
+            "description": "plugin 4 description plugin 1 description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            "name": "plugin name 2",
+            "url": "http://www.plugin-url-2.com",
+            "author": "Jane Austin",
+            "price": "$12.50",
+            "before-price-text": "From",
+            "after-price-text": "per Year"
+        },
+        {
+            "logo": "https://via.placeholder.com/125",
+            "description": "plugin 5 description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "name": "plugin name 3",
+            "url": "http://plugin-url-3.com",
+            "author": "J.K. Rowling",
+            "price": "$29.99",
+            "before-price-text": "From",
+            "after-price-text": "per Year"
+        }
+    ]
+}
+

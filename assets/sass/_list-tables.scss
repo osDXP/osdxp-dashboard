@@ -1,0 +1,30 @@
+.tablenav {
+	margin: 10px 0 15px;
+}
+
+.module-actions {
+	a {
+		width: 134px;
+
+		+ a {
+			margin-top: 10px !important;
+		}
+	}
+}
+
+.wp-list-table {
+	height: 100%;
+
+	.column-description {
+		height: 100%;
+	}
+}
+
+
+.osdxp-module-description-column {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: space-between;
+	overflow: auto;
+}

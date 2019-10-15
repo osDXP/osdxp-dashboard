@@ -1,0 +1,82 @@
+// assign default value to all undefined variables
+
+
+// core variables
+
+$color-black: #000 !default;
+$color-blackcurrant: #281F2E !default;
+$color-blackcurrant2: #110034 !default;
+$color-dark-gray: #B0B0B0 !default;
+$color-deep-sky-blue: #00D7FF !default;
+$color-fog: #D6BCF8 !default;
+$color-fruit-salad: #46b450 !default;
+$color-ghost-white: #FAF9FF !default;
+$color-matterhorn: #4D4D4D !default;
+$color-persian-red: #DC3232 !default;
+$color-scarlet: #E81818 !default;
+$color-ultramarine: #25048B !default;
+$color-very-light-gray: #CCCCCC !default;
+$color-white: #fff !default;
+$color-white-smoke: #F4F4F4 !default;
+
+$text-color: $color-white !default;
+$base-color: #4B1BE2 !default;
+$icon-color: $color-white !default;
+$highlight-color: $color-white !default;
+$notification-color: #d54e21 !default;
+$base-color-secondary: #E81818 !default;
+
+// global
+
+$body-background: #f1f1f1 !default;
+
+$link: $base-color !default;
+$link-focus: $color-ultramarine !default;
+
+$button-color: $base-color !default;
+$form-checked: $base-color !default;
+
+
+// admin menu & admin-bar
+
+$menu-text: $text-color !default;
+$menu-icon: $icon-color !default;
+$menu-background: #3C15B4 !default;
+
+$menu-highlight-text: $base-color !default;
+$menu-highlight-icon: $base-color !default;
+$menu-highlight-background: $text-color !default;
+
+$menu-current-text: $menu-highlight-text !default;
+$menu-current-icon: $menu-highlight-icon !default;
+$menu-current-background: $menu-highlight-background !default;
+
+$menu-submenu-text: rgba($text-color, .8) !default;
+$menu-submenu-background: $link-focus !default;
+$menu-submenu-background-alt: desaturate( lighten( $menu-background, 7% ), 7% ) !default;
+
+$menu-submenu-focus-text: $highlight-color !default;
+$menu-submenu-current-text: $text-color !default;
+
+$menu-bubble-text: $menu-background !default;
+$menu-bubble-background: #49D9FF !default;
+$menu-bubble-current-text: $menu-bubble-text !default;
+$menu-bubble-current-background: $menu-bubble-background !default;
+
+$menu-collapse-text: $menu-icon !default;
+$menu-collapse-icon: $menu-icon !default;
+$menu-collapse-focus-text: $text-color !default;
+$menu-collapse-focus-icon: $menu-highlight-icon !default;
+
+$adminbar-background: $color-white !default;
+$adminbar-text: $color-blackcurrant !default;
+$adminbar-height: 44px !default;
+
+$adminbar-avatar-frame: lighten( $menu-background, 7% ) !default;
+$adminbar-input-background: lighten( $menu-background, 7% ) !default;
+
+$adminbar-recovery-exit-text: $menu-bubble-text !default;
+$adminbar-recovery-exit-background: $menu-bubble-background !default;
+$adminbar-recovery-exit-background-alt: mix(black, $adminbar-recovery-exit-background, 10%) !default;
+
+$menu-customizer-text: mix( $base-color, $text-color, 40% ) !default;

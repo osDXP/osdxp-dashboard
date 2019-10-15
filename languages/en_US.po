@@ -1,0 +1,1146 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-08-05 17:35-0500\n"
+"PO-Revision-Date: 2019-08-05 17:35-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;esc_html_e;_n;_x;esc_html__;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: assets\n"
+"X-Poedit-SearchPathExcluded-1: build\n"
+"X-Poedit-SearchPathExcluded-2: node_modules\n"
+
+#: includes/config.php:25 includes/config.php:26 includes/menus.php:183
+msgid "Modules"
+msgstr ""
+
+#: includes/config.php:38 includes/config.php:39
+#: templates/modules-list-installed.php:469
+msgid "Installed Modules"
+msgstr ""
+
+#: includes/config.php:48 includes/config.php:49
+#: templates/modules-list-available.php:106
+msgid "Available Modules"
+msgstr ""
+
+#: includes/config.php:58 includes/config.php:59
+msgid "Upgrade Modules"
+msgstr ""
+
+#: includes/config.php:68 includes/config.php:69
+msgid "Modules Information"
+msgstr ""
+
+#: includes/config.php:78 includes/config.php:79
+msgid "Module Settings"
+msgstr ""
+
+#: includes/core.php:133
+#, php-format
+msgid ""
+"<a href=\"%1s\">Open Source DXP</a>. Powered by <a href=\"%2s\">WordPress</a>"
+msgstr ""
+
+#: includes/core.php:165
+#, php-format
+msgid ""
+"Open Source DXP %1$s installed. <a href=\"%2$s\">Get current version, %3$s</"
+"a>."
+msgstr ""
+
+#: includes/core.php:178
+#, php-format
+msgid "Open Source DXP %1$s installed."
+msgstr ""
+
+#: includes/core.php:207
+#, php-format
+msgid ""
+"You are using a development version (%1$s). Cool! Please <a href=\"%2$s"
+"\">stay updated</a>."
+msgstr ""
+
+#: includes/core.php:228
+#, php-format
+msgid "WordPress %s installed."
+msgstr ""
+
+#: includes/dashboard.php:25
+msgid "DXP News"
+msgstr ""
+
+#: includes/dashboard.php:46
+#, php-format
+msgid "Posted %s"
+msgstr ""
+
+#: includes/dashboard.php:61
+msgid "There are no DXP news at the moment."
+msgstr ""
+
+#: includes/dependencies/plugin-update-checker/class-osdxp-module-update-checker-ui.php:66
+#: vendor/yahnis-elsts/plugin-update-checker/Puc/v4p7/Plugin/Ui.php:54
+msgid "View details"
+msgstr ""
+
+#: includes/dependencies/plugin-update-checker/class-osdxp-module-update-checker-ui.php:90
+#: vendor/yahnis-elsts/plugin-update-checker/Puc/v4p7/Plugin/Ui.php:77
+#, php-format
+msgid "More information about %s"
+msgstr ""
+
+#: includes/dependencies/plugin-update-checker/class-osdxp-module-update-checker-ui.php:142
+#: includes/dependencies/plugin-update-checker/class-osdxp-module-update-checker-ui.php:168
+#: vendor/yahnis-elsts/plugin-update-checker/Puc/v4p7/Plugin/Ui.php:128
+msgid "Check for updates"
+msgstr ""
+
+#: includes/dependencies/plugin-update-checker/class-osdxp-module-update-checker-ui.php:256
+#, php-format
+msgid "The %s module is up to date."
+msgstr ""
+
+#: includes/dependencies/plugin-update-checker/class-osdxp-module-update-checker-ui.php:258
+#, php-format
+msgid "A new version of the %s module is available."
+msgstr ""
+
+#: includes/dependencies/plugin-update-checker/class-osdxp-module-update-checker-ui.php:260
+#: vendor/yahnis-elsts/plugin-update-checker/Puc/v4p7/Plugin/Ui.php:217
+#, php-format
+msgid "Could not determine if updates are available for %s."
+msgstr ""
+
+#: includes/dependencies/plugin-update-checker/class-osdxp-module-update-checker-ui.php:266
+#: vendor/yahnis-elsts/plugin-update-checker/Puc/v4p7/Plugin/Ui.php:223
+#, php-format
+msgid "Unknown update checker status \"%s\""
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-bulk-module-upgrader-skin.php:27
+msgid ""
+"The update process is starting. This process may take a while on some hosts, "
+"so please be patient."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-bulk-module-upgrader-skin.php:29
+#, php-format
+msgid "An error occurred while updating %1$s: %2$s"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-bulk-module-upgrader-skin.php:31
+#, php-format
+msgid "The update of %s failed."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-bulk-module-upgrader-skin.php:33
+#, php-format
+msgid "%s updated successfully."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-bulk-module-upgrader-skin.php:34
+msgid "All updates have been completed."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-bulk-module-upgrader-skin.php:36
+#, php-format
+msgid "Updating Module %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-bulk-module-upgrader-skin.php:45
+#: includes/dependencies/wordpress/class-osdxp-module-installer-skin.php:64
+msgid "Return to Installed Modules page"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-bulk-module-upgrader-skin.php:46
+msgid "Return to Available Modules page"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:171
+msgid "List View"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:172
+msgid "Excerpt View"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:348
+msgid "No items found."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:482
+msgid "Select bulk action"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:484
+msgid "Bulk Actions"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:494
+msgid "Apply"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:548
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:1397
+msgid "Show more details"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:617
+msgid "Filter by date"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:619
+msgid "All dates"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:634
+#, php-format
+msgid "%1$s %2$d"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:687
+#, php-format
+msgid "%s comment"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:688
+#, php-format
+msgid "%s approved comment"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:689
+#, php-format
+msgid "%s pending comment"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:695
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:717
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:740
+msgid "No comments"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:717
+msgid "No approved comments"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:740
+msgid "No pending comments"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:819
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:1422
+#, php-format
+msgid "%s item"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:856
+msgid "First page"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:867
+msgid "Previous page"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:874
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:878
+msgid "Current Page"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:884
+#, php-format
+msgid "%1$s of %2$s"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:892
+msgid "Next page"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:903
+msgid "Last page"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-list-table.php:1133
+msgid "Select All"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-module-installer-skin.php:46
+#, php-format
+msgid "Successfully installed the module <strong>%1$s %2$s</strong>."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-module-installer-skin.php:57
+#: includes/dependencies/wordpress/class-osdxp-module-upgrader-skin.php:64
+msgid "Activate Module"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-module-installer-skin.php:60
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:492
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:659
+msgid "Network Activate"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-module-upgrader-skin.php:31
+#: includes/dependencies/wordpress/class-osdxp-module-upgrader-skin.php:50
+#: templates/modules-update.php:60
+msgid "Update Module"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-module-upgrader-skin.php:65
+msgid "Return to Modules page"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-module-upgrader.php:37
+msgid "The module is at the latest version."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-module-upgrader.php:38
+msgid "Update package not available."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-module-upgrader.php:40
+#, php-format
+msgid "Downloading update from %s&#8230;"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-module-upgrader.php:41
+msgid "Unpacking the update&#8230;"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-module-upgrader.php:42
+msgid "Removing the old version of the module&#8230;"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-module-upgrader.php:43
+msgid "Could not remove the old module."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-module-upgrader.php:44
+msgid "Module update failed."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-module-upgrader.php:45
+msgid "Module updated successfully."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-module-upgrader.php:46
+msgid "Modules updated successfully."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-module-upgrader.php:56
+msgid "Installation package not available."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-module-upgrader.php:58
+#, php-format
+msgid "Downloading installation package from %s&#8230;"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-module-upgrader.php:59
+msgid "Unpacking the package&#8230;"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-module-upgrader.php:60
+msgid "Installing the module&#8230;"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-module-upgrader.php:61
+msgid "The module contains no files."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-module-upgrader.php:62
+msgid "Module installation failed."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-module-upgrader.php:63
+msgid "Module installed successfully."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-module-upgrader.php:107
+msgid "No valid modules were found."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:345
+#, php-format
+msgid "No modules found for &#8220;%s&#8221;."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:349
+msgid "Browse for more modules on the OSDXP Website!"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:352
+msgid "No modules found."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:354
+msgid "You do not appear to have any modules available at this time."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:404
+msgid "Module"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:405
+#: includes/dependencies/wordpress/modules-update-information.php:57
+msgid "Description"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:406
+msgid "Status"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:440
+#, php-format
+msgid "Active <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:444
+#, php-format
+msgid "Recently Active <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:448
+#, php-format
+msgid "Inactive <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:452
+#, php-format
+msgid "Must-Use <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:456
+#, php-format
+msgid "Drop-in <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:460
+#, php-format
+msgid "Paused <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:464
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:492
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:687
+msgid "Activate"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:496
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:654
+msgid "Network Deactivate"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:496
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:678
+msgid "Deactivate"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:501
+msgid "Update"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:504
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:663
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:692
+msgid "Delete"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:541
+msgid "Clear List"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:545
+#, php-format
+msgid "Files in the %s directory are executed automatically."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:551
+#, php-format
+msgid ""
+"Drop-ins are advanced modules in the %s directory that replace OSDXP "
+"functionality when present."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:630
+msgid "Inactive:"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:633
+#, php-format
+msgid "Requires %1$s in %2$s file."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:654
+#, php-format
+msgid "Network Deactivate %s"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:659
+#, php-format
+msgid "Network Activate %s"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:663
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:692
+#, php-format
+msgid "Delete %s"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:669
+msgid "Network Active"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:673
+msgid "Network Only"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:678
+#, php-format
+msgid "Deactivate %s"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:682
+#, php-format
+msgid "Resume %s"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:682
+msgid "Resume"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:687
+#, php-format
+msgid "Activate %s"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:768
+#, php-format
+msgid "Select %s"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:853
+msgid "Valid through"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:857
+msgid "License:"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:860
+msgid "Manage License"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:932
+msgid "This module failed to load properly and is paused during recovery mode."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-upgrader.php:130
+msgid "Invalid data provided."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-upgrader.php:131
+msgid "Could not access filesystem."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-upgrader.php:132
+msgid "Filesystem error."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-upgrader.php:133
+msgid "Unable to locate DXP root directory."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-upgrader.php:134
+msgid "Unable to locate DXP content directory (wp-content)."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-upgrader.php:135
+msgid "Unable to locate DXP module directory."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-upgrader.php:137
+#, php-format
+msgid "Unable to locate needed folder (%s)."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-upgrader.php:139
+msgid "Download failed."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-upgrader.php:140
+msgid "Installing the latest version&#8230;"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-upgrader.php:141
+msgid "The package contains no files."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-upgrader.php:142
+msgid "Destination folder already exists."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-upgrader.php:143
+msgid "Could not create directory."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-upgrader.php:144
+msgid "The package could not be installed."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-upgrader.php:145
+msgid ""
+"The update cannot be installed because we will be unable to copy some files. "
+"This is usually due to inconsistent file permissions."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-upgrader.php:147
+msgid "Enabling Maintenance mode&#8230;"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-upgrader.php:148
+msgid "Disabling Maintenance mode&#8230;"
+msgstr ""
+
+#: includes/dependencies/wordpress/module-install.php:85
+#: includes/dependencies/wordpress/module-install.php:98
+#: includes/dependencies/wordpress/module-install.php:113
+#, php-format
+msgid ""
+"An unexpected error occurred. Something may be wrong with WordPress.org or "
+"this server&#8217;s configuration. If you continue to have problems, please "
+"try the <a href=\"%s\">support forums</a>."
+msgstr ""
+
+#: includes/dependencies/wordpress/module-install.php:86
+#: includes/dependencies/wordpress/module-install.php:99
+#: includes/dependencies/wordpress/module-install.php:114
+msgid "https://wordpress.org/support/"
+msgstr ""
+
+#: includes/dependencies/wordpress/module-install.php:87
+msgid ""
+"(WordPress could not establish a secure connection to WordPress.org. Please "
+"contact your server administrator.)"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-print-updates.php:82
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a href=\"%2$s\" %3$s>View version "
+"%4$s details</a>."
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-print-updates.php:88
+#: includes/dependencies/wordpress/modules-print-updates.php:101
+#: includes/dependencies/wordpress/modules-print-updates.php:115
+#: includes/dependencies/wordpress/modules-print-updates.php:134
+#, php-format
+msgid "View %1$s version %2$s details"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-print-updates.php:95
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a href=\"%2$s\" %3$s>View version "
+"%4$s details</a>. <em>Automatic update is unavailable for this module.</em>"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-print-updates.php:109
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a href=\"%2$s\" %3$s>View version "
+"%4$s details</a> or <a href=\"%5$s\" %6$s>update now</a>."
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-print-updates.php:122
+#, php-format
+msgid "Update %s now"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-print-updates.php:128
+#, php-format
+msgid ""
+"There is a new version of %1$s available, but it doesn&#8217;t work with "
+"your version of PHP. <a href=\"%2$s\" %3$s>View version %4$s details</a> or "
+"<a href=\"%5$s\">learn more about updating PHP</a>."
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:58
+msgid "Installation"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:59
+msgid "FAQ"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:60
+msgid "Screenshots"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:61
+msgid "Changelog"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:62
+#: includes/dependencies/wordpress/modules-update-information.php:210
+msgid "Reviews"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:63
+msgid "Other Notes"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:85
+msgid "Module Installation"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:141
+msgid "Version:"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:143
+msgid "Author:"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:145
+msgid "Last Updated:"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:148
+#, php-format
+msgid "%s ago"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:153
+msgid "Requires WordPress Version:"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:156
+#: includes/dependencies/wordpress/modules-update-information.php:166
+#, php-format
+msgid "%s or higher"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:160
+msgid "Compatible up to:"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:163
+msgid "Requires PHP Version:"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:170
+msgid "Active Installations:"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:186
+msgid "https://wordpress.org/plugins/"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:186
+msgid "WordPress.org Module Page &#187;"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:188
+msgid "Module Homepage &#187;"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:190
+#: includes/dependencies/wordpress/modules-update-information.php:258
+msgid "Donate to this module &#187;"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:194
+msgid "Average Rating"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:204
+#, php-format
+msgid "(based on %s rating)"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:211
+msgid "Read all reviews on WordPress.org or write your own!"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:219
+#, php-format
+msgid "Reviews with %1$d star: %2$s. Opens in a new tab."
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:228
+#, php-format
+msgid "%d star"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:240
+msgid "Contributors"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:273
+msgid ""
+"<strong>Error:</strong> This module <strong>requires a newer version of PHP</"
+"strong>."
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:277
+#, php-format
+msgid ""
+"<a href=\"%s\" target=\"_blank\">Click here to learn more about updating "
+"PHP</a>."
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:290
+msgid ""
+"<strong>Warning:</strong> This module <strong>has not been tested</strong> "
+"with your current version of WordPress."
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:294
+msgid ""
+"<strong>Error:</strong> This module <strong>requires a newer version of "
+"WordPress</strong>."
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:298
+#, php-format
+msgid "<a href=\"%s\" target=\"_parent\">Click here to update WordPress</a>."
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:327
+#: templates/modules-list-installed.php:25
+msgid "Install Now"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:331
+msgid "Cannot Install"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:339
+msgid "Install Update Now"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:343
+msgid "Cannot Update"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:350
+#, php-format
+msgid "Newer Version (%s) Installed"
+msgstr ""
+
+#: includes/dependencies/wordpress/modules-update-information.php:353
+msgid "Latest Version Installed"
+msgstr ""
+
+#: includes/menus.php:85
+msgid "<div>Return to<br>Legacy WordPress</div>"
+msgstr ""
+
+#: includes/menus.php:95
+msgid "Switch to DXP"
+msgstr ""
+
+#: includes/menus.php:183
+msgid "Modules "
+msgstr ""
+
+#: includes/utils.php:264
+msgid "Network Admin"
+msgstr ""
+
+#: includes/utils.php:273 includes/utils.php:370
+msgid "Dashboard"
+msgstr ""
+
+#: includes/utils.php:283
+msgid "Sites"
+msgstr ""
+
+#: includes/utils.php:294
+msgid "Users"
+msgstr ""
+
+#: includes/utils.php:305
+msgid "Themes"
+msgstr ""
+
+#: includes/utils.php:316
+msgid "Plugins"
+msgstr ""
+
+#: includes/utils.php:327
+msgid "Settings"
+msgstr ""
+
+#: includes/utils.php:401
+msgid "Manage Comments"
+msgstr ""
+
+#: includes/utils.php:411
+msgid "Visit Site"
+msgstr ""
+
+#: templates/modules-information.php:22 templates/modules-update.php:102
+msgid "Sorry, you are not allowed to install modules on this site."
+msgstr ""
+
+#: templates/modules-list-available.php:108
+msgid "Plugins extend and expand the functionality of Open Source DXP"
+msgstr ""
+
+#: templates/modules-list-available.php:127
+msgid "From"
+msgstr ""
+
+#: templates/modules-list-available.php:129
+msgid "per Year"
+msgstr ""
+
+#: templates/modules-list-available.php:130
+msgid "Get Module"
+msgstr ""
+
+#: templates/modules-list-available.php:137
+msgid "Certified"
+msgstr ""
+
+#: templates/modules-list-available.php:137
+msgid " and tested with your OSDXP version."
+msgstr ""
+
+#: templates/modules-list-installed.php:20
+msgid ""
+"If you have a module in a .zip format, you may install it by uploading it "
+"here."
+msgstr ""
+
+#: templates/modules-list-installed.php:23
+msgid "Module zip file"
+msgstr ""
+
+#: templates/modules-list-installed.php:30
+msgid "Sorry, you are not allowed to manage modules for this site."
+msgstr ""
+
+#: templates/modules-list-installed.php:57
+#: templates/modules-list-installed.php:182
+msgid "Sorry, you are not allowed to activate this module."
+msgstr ""
+
+#: templates/modules-list-installed.php:99
+msgid "Sorry, you are not allowed to activate modules for this site."
+msgstr ""
+
+#: templates/modules-list-installed.php:163
+msgid "Update Modules"
+msgstr ""
+
+#: templates/modules-list-installed.php:205
+msgid "Sorry, you are not allowed to deactivate this module."
+msgstr ""
+
+#: templates/modules-list-installed.php:240
+msgid "Sorry, you are not allowed to deactivate modules for this site."
+msgstr ""
+
+#: templates/modules-list-installed.php:290
+msgid "Sorry, you are not allowed to delete modules for this site."
+msgstr ""
+
+#: templates/modules-list-installed.php:353
+msgid "Delete Module"
+msgstr ""
+
+#: templates/modules-list-installed.php:355
+#: templates/modules-list-installed.php:361
+msgid "Caution:"
+msgstr ""
+
+#: templates/modules-list-installed.php:355
+msgid "This module may be active on other sites in the network."
+msgstr ""
+
+#: templates/modules-list-installed.php:357
+msgid "You are about to remove the following module:"
+msgstr ""
+
+#: templates/modules-list-installed.php:359
+msgid "Delete Modules"
+msgstr ""
+
+#: templates/modules-list-installed.php:361
+msgid "These modules may be active on other sites in the network."
+msgstr ""
+
+#: templates/modules-list-installed.php:363
+msgid "You are about to remove the following modules:"
+msgstr ""
+
+#: templates/modules-list-installed.php:371
+#, php-format
+msgid "%1$s by %2$s (will also <strong>delete its data</strong>)"
+msgstr ""
+
+#: templates/modules-list-installed.php:375
+#, php-format
+msgid "%1$s by %2$s"
+msgstr ""
+
+#: templates/modules-list-installed.php:383
+msgid "Are you sure you wish to delete these files and data?"
+msgstr ""
+
+#: templates/modules-list-installed.php:385
+msgid "Are you sure you wish to delete these files?"
+msgstr ""
+
+#: templates/modules-list-installed.php:398
+msgid "Yes, delete these files and data"
+msgstr ""
+
+#: templates/modules-list-installed.php:398
+msgid "Yes, delete these files"
+msgstr ""
+
+#: templates/modules-list-installed.php:404
+msgid "No, return me to the module list"
+msgstr ""
+
+#: templates/modules-list-installed.php:434
+msgid "Sorry, you are not allowed to resume this module."
+msgstr ""
+
+#: templates/modules-list-installed.php:478
+#, php-format
+msgid ""
+"The module %1$s has been <strong>deactivated</strong> due to an error: %2$s"
+msgstr ""
+
+#: templates/modules-list-installed.php:490
+msgid "You cannot delete a module while it is active on the main site."
+msgstr ""
+
+#: templates/modules-list-installed.php:494
+#, php-format
+msgid ""
+"The module generated %d character of <strong>unexpected output</strong> "
+"during activation."
+msgstr ""
+
+#: templates/modules-list-installed.php:500
+msgid ""
+"If you notice &#8220;headers already sent&#8221; messages, problems with "
+"syndication feeds or other issues, try deactivating or removing this module."
+msgstr ""
+
+#: templates/modules-list-installed.php:502
+msgid ""
+"Module could not be resumed because it triggered a <strong>fatal error</"
+"strong>."
+msgstr ""
+
+#: templates/modules-list-installed.php:504
+msgid ""
+"Module could not be activated because it triggered a <strong>fatal error</"
+"strong>."
+msgstr ""
+
+#: templates/modules-list-installed.php:532
+#, php-format
+msgid "Module could not be deleted due to an error: %s"
+msgstr ""
+
+#: templates/modules-list-installed.php:538
+msgid "The selected module has been <strong>deleted</strong>."
+msgstr ""
+
+#: templates/modules-list-installed.php:540
+msgid "The selected modules have been <strong>deleted</strong>."
+msgstr ""
+
+#: templates/modules-list-installed.php:547
+msgid "Module <strong>activated</strong>."
+msgstr ""
+
+#: templates/modules-list-installed.php:549
+msgid "Selected modules <strong>activated</strong>."
+msgstr ""
+
+#: templates/modules-list-installed.php:551
+msgid "Module <strong>deactivated</strong>."
+msgstr ""
+
+#: templates/modules-list-installed.php:553
+msgid "Selected modules <strong>deactivated</strong>."
+msgstr ""
+
+#: templates/modules-list-installed.php:555
+msgid "All selected modules are up to date."
+msgstr ""
+
+#: templates/modules-list-installed.php:557
+msgid "Module <strong>resumed</strong>."
+msgstr ""
+
+#: templates/modules-list-installed.php:576
+#, php-format
+msgid "Search results for &#8220;%s&#8221;"
+msgstr ""
+
+#: templates/modules-list-installed.php:599
+msgid "GO"
+msgstr ""
+
+#: templates/modules-update.php:28 templates/modules-update.php:55
+#: templates/modules-update.php:76
+msgid "Sorry, you are not allowed to update modules for this site."
+msgstr ""
+
+#: templates/modules-update.php:86
+msgid "Module Reactivation"
+msgstr ""
+
+#: templates/modules-update.php:88
+msgid "Module reactivated successfully."
+msgstr ""
+
+#: templates/modules-update.php:92
+msgid "Module failed to reactivate due to a fatal error."
+msgstr ""
+
+#: templates/modules-update.php:109
+msgid "Upload Module"
+msgstr ""
+
+#: templates/modules-update.php:114
+#, php-format
+msgid "Installing Module from uploaded file: %s"
+msgstr ""
+
+#: vendor/yahnis-elsts/plugin-update-checker/Puc/v4p7/Plugin/Ui.php:213
+#, php-format
+msgid "The %s plugin is up to date."
+msgstr ""
+
+#: vendor/yahnis-elsts/plugin-update-checker/Puc/v4p7/Plugin/Ui.php:215
+#, php-format
+msgid "A new version of the %s plugin is available."
+msgstr ""
+
+#: vendor/yahnis-elsts/plugin-update-checker/Puc/v4p7/Vcs/PluginUpdateChecker.php:98
+msgid "There is no changelog available."
+msgstr ""

@@ -1,0 +1,190 @@
+@font-face {
+  font-family: 'OSDXPI';
+  src:  url('../assets/fonts/OSDXPI.eot?10dxtx');
+  src:  url('../assets/fonts/OSDXPI.eot?10dxtx#iefix') format('embedded-opentype'),
+    url('../assets/fonts/OSDXPI.ttf?10dxtx') format('truetype'),
+    url('../assets/fonts/OSDXPI.woff?10dxtx') format('woff'),
+    url('../assets/fonts/OSDXPI.svg?10dxtx#OSDXPI') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-osdxpi-"], [class*=" icon-osdxpi-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'OSDXPI' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-osdxpi-responsive:before {
+  content: "\e913";
+}
+.icon-osdxpi-tablet-cellphone:before {
+  content: "\e914";
+}
+.icon-osdxpi-application:before {
+  content: "\e915";
+}
+.icon-osdxpi-calendar-clock:before {
+  content: "\e916";
+}
+.icon-osdxpi-link:before {
+  content: "\e917";
+}
+.icon-osdxpi-account-outline:before {
+  content: "\e918";
+}
+.icon-osdxpi-earth:before {
+  content: "\e919";
+}
+.icon-osdxpi-segmentation:before {
+  content: "\e900";
+}
+.icon-osdxpi-personalization:before {
+  content: "\e901";
+}
+.icon-osdxpi-configuration:before {
+  content: "\e902";
+}
+.icon-osdxpi-forwardburger:before {
+  content: "\e903";
+}
+.icon-osdxpi-backburger:before {
+  content: "\e904";
+}
+.icon-osdxpi-legacy-plugins:before {
+  content: "\e905";
+}
+.icon-osdxpi-themes:before {
+  content: "\e906";
+}
+.icon-osdxpi-sites:before {
+  content: "\e907";
+}
+.icon-osdxpi-tools:before {
+  content: "\e908";
+}
+.icon-osdxpi-users:before {
+  content: "\e909";
+}
+.icon-osdxpi-settings:before {
+  content: "\e90a";
+}
+.icon-osdxpi-3d-cube:before {
+  content: "\e90b";
+}
+.icon-power-plug:before {
+  content: "\e90c";
+}
+.icon-brush:before {
+  content: "\e90d";
+}
+.icon-osdxpi-media:before {
+  content: "\e90e";
+}
+.icon-osdxpi-custom-post-type:before {
+  content: "\e90f";
+}
+.icon-osdxpi-articles-outline:before {
+  content: "\e910";
+}
+.icon-osdxpi-pages-outline:before {
+  content: "\e911";
+}
+.icon-osdxpi-home-outline:before {
+  content: "\e912";
+}
+
+
+.dashicons-dashboard {
+  &:before {
+    font-family: 'OSDXPI';
+    content: "\e912";
+  }
+}
+
+.dashicons-admin-page {
+  &:before {
+    font-family: 'OSDXPI';
+    content: "\e911";
+  }
+}
+
+.dashicons-admin-post {
+  &:before {
+    font-family: 'OSDXPI';
+    content: "\e910";
+  }
+}
+
+.dashicons-admin-media {
+  &:before {
+    font-family: 'OSDXPI';
+    content: "\e90e";
+  }
+}
+
+.dashicons-admin-appearance {
+  &:before {
+    font-family: 'OSDXPI';
+    content: "\e90d";
+  }
+}
+
+.dashicons-admin-generic {
+  &:before {
+    font-family: 'OSDXPI';
+    content: "\e90c";
+  }
+}
+
+.dashicons-admin-settings {
+  &:before {
+    font-family: 'OSDXPI';
+    content: "\e90a";
+  }
+}
+
+.dashicons-admin-users {
+  &:before {
+    font-family: 'OSDXPI';
+    content: "\e909";
+  }
+}
+
+.dashicons-admin-tools {
+  &:before {
+    font-family: 'OSDXPI';
+    content: "\e908";
+  }
+}
+
+.dashicons-admin-plugins {
+  &:before {
+    font-family: 'OSDXPI';
+    content: "\e905";
+  }
+}
+.dashicons-admin-multisite {
+  &:before {
+    font-family: 'OSDXPI';
+    content: "\e907";
+  }
+}
+
+.network-admin {
+  .dashicons-admin-appearance {
+    &:before {
+      font-family: 'OSDXPI';
+      content: "\e906";
+    }
+  }
+}

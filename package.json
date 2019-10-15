@@ -1,0 +1,58 @@
+{
+  "name": "osdxp-dashboard-plugin",
+  "version": "0.9",
+  "main": "gulpfile.js",
+  "private": true,
+  "scripts": {
+    "build": "gulp build --development",
+    "prod": "gulp build --production",
+    "watch": "gulp watch",
+    "watch-prod": "gulp watch-prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/osDXP/osdxp-dashboard"
+  },
+  "keywords": [
+    "opensourcedxp-dashboard"
+  ],
+  "author": "Crowd Favorite",
+  "license": "GPLv2 or later",
+  "bugs": {
+    "url": "https://github.com/osDXP/osdxp-dashboard/issues"
+  },
+  "homepage": "https://github.com/osDXP/osdxp-dashboard#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "acorn": "^6.3.0",
+    "autoprefixer": "^9.6.1",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "babel-preset-airbnb": "^3.3.2",
+    "browserslist": "^4.7.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-mode": "1.0.2",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-string-replace": "^1.1.2",
+    "gulp-uglify": "^3.0.2",
+    "js-yaml": "^3.13.1",
+    "node-bourbon": "~4.2.8",
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}

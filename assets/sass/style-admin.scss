@@ -1,0 +1,21 @@
+@import 'variables';
+@import 'mixins';
+@import 'transition';
+@import 'admin-bar';
+
+@import "admin";
+@import "admin-menu";
+@import "common";
+@import "forms";
+@import "list-tables";
+@import "available-modules";
+@import "icons";
+
+//@TODO: REMOVE THIS AND ADD MY SITES AS SUBMENU; uncomment lines in admin-bar.scss
+#wp-admin-bar-my-sites {
+		color: $base-color!important;
+
+	& > a:before {
+		content:none !important;
+	}
+}

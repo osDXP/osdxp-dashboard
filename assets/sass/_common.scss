@@ -1,0 +1,35 @@
+h1 {
+	color: $color-blackcurrant2;
+}
+
+.postbox {
+	box-shadow: 0 5px 10px rgba($color-black, .05);
+
+	&:before {
+		background: linear-gradient(135deg, $base-color 0%, $color-scarlet 100%);
+		content: '';
+		display: block;
+		height: 2px;
+	}
+}
+
+.wrap {
+	.add-new-h2,
+	.add-new-h2:active,
+	.page-title-action,
+	.page-title-action:active {
+		color: $base-color;
+	}
+}
+
+.dxp-dashboard .display-license {
+	color: $color-matterhorn;
+}
+
+.success-message {
+	color: $color-fruit-salad;
+}
+
+.js-osdxp-module-remove-license.button-primary {
+	margin-left: 30px;
+}

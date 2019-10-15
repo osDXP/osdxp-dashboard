@@ -1,0 +1,97 @@
+/*
+ * Button mixin- creates 3d-ish button effect with correct
+ * highlights/shadows, based on a base color.
+ */
+@mixin button( $button-color, $text-color: #fff ) {
+	background: $button-color;
+	border-color: darken( $button-color, 10% ) darken( $button-color, 15% ) darken( $button-color, 15% );
+	color: $text-color;
+	box-shadow: 0 1px 0 darken( $button-color, 15% );
+	text-shadow: 0 -1px 1px darken( $button-color, 15% ),
+		1px 0 1px darken( $button-color, 15% ),
+		0 1px 1px darken( $button-color, 15% ),
+		-1px 0 1px darken( $button-color, 15% );
+
+	&:hover,
+	&:focus {
+		background: lighten( $button-color, 3% );
+		border-color: darken( $button-color, 15% );
+		color: $text-color;
+		box-shadow: 0 1px 0 darken( $button-color, 15% );
+	}
+
+	&:focus {
+		box-shadow: inset 0 1px 0 darken( $button-color, 10% ),
+					0 0 2px 1px #33b3db;
+	}
+
+	&:active,
+	&.active,
+	&.active:focus,
+	&.active:hover {
+		background: darken( $button-color, 10% );
+		border-color: darken( $button-color, 15% );
+	 	box-shadow: inset 0 2px 0 darken( $button-color, 15% );
+	}
+
+	&[disabled],
+	&:disabled,
+	&.button-primary-disabled,
+	&.disabled {
+		color: hsl( hue( $button-color ), 10%, 80% ) !important;
+		background: darken( $button-color, 8% ) !important;
+		border-color: darken( $button-color, 15% ) !important;
+		text-shadow: none !important;
+	}
+
+	&.button-hero {
+		box-shadow: 0 2px 0 darken( $button-color, 15% ) !important;
+		&:active {
+		 	box-shadow: inset 0 3px 0 darken( $button-color, 15% ) !important;
+		}
+	}
+
+}
+/*
+ * Button-secondary mixin- creates 3d-ish button effect with correct
+ * highlights/shadows, based on a base color.
+ */
+@mixin button-secondary( $text-color ) {
+	vertical-align: super;
+	background: #fff;
+	border-color: #fff;
+	color: $text-color;
+	border: 1px solid #CCCCCC;
+	border-radius: 2px;
+	background-color: #FFFFFF;
+	box-shadow: inset -2px -2px 0 0 rgba(0,0,0,0.1);
+	&:hover,
+	&:focus {
+		color: $text-color;
+		background: #FAF9FF;
+		border: 1px solid #4B1BE2;
+	}
+
+	&:focus {
+		box-shadow: inset -2px -2px 0 0 rgba(75,27,226,0.15);
+	}
+
+	&:active,
+	&.active,
+	&.active:focus,
+	&.active:hover {
+		color: $text-color;
+		background: #FAF9FF;
+		border: 1px solid #4B1BE2;
+		box-shadow: inset -2px -2px 0 0 rgba(75,27,226,0.15);
+	}
+
+	&[disabled],
+	&:disabled,
+	&.button-primary-disabled,
+	&.disabled {
+		box-shadow: inset -2px -2px 0 0 rgba(0,0,0,0.1)!important;
+		color: rgba(136,136,136,0.7)!important;
+	}
+
+}

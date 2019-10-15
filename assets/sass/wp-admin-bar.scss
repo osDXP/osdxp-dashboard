@@ -1,0 +1,29 @@
+body:not(.dxp-dashboard) {
+	#wp-admin-bar-switch-to-dxp-backburger a > div:before {
+		background: url("../assets/images/backburger-inverse.png") no-repeat center center;
+		content: '';
+		display: inline-block;
+		height: 32px;
+		width: 20px;
+	}
+
+	#wpadminbar {
+		#wp-admin-bar-switch-to-dxp a,
+		&:not(.mobile) .ab-top-menu > #wp-admin-bar-switch-to-dxp > .ab-item:focus,
+		&.nojq .quicklinks .ab-top-menu > #wp-admin-bar-switch-to-dxp > .ab-item:focus,
+		&:not(.mobile) .ab-top-menu > #wp-admin-bar-switch-to-dxp:hover > .ab-item,
+		.ab-top-menu > #wp-admin-bar-switch-to-dxp.hover > .ab-item {
+			background: transparent url(../assets/images/OSDXP-logo-inverse-100.png) 10px 50% no-repeat;
+			background-size: 80px auto;
+			color: transparent;
+			display: block;
+			font: 0/0 a;
+			text-shadow: none;
+			width: 80px;
+		}
+	}
+
+	#wp-toolbar > ul > #wp-admin-bar-switch-to-dxp {
+		display: block;
+	}
+}

@@ -8,9 +8,6 @@
 namespace OSDXP_Dashboard;
 
 // phpcs:disable
-require OSDXP_DASHBOARD_DIR . 'vendor/autoload.php';
-require OSDXP_DASHBOARD_DIR . 'includes/dependencies/plugin-update-checker/class-osdxp-module-update-checker.php';
-
 /**
  * Hooks needed for various reasons
  *

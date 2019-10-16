@@ -6,4 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'OSDXP_Dashboard\\LicenseAPI' => $baseDir . '/includes/class-licenseapi.php',
+    'OSDXP_Dashboard\\OSDXPAvailableModules' => $baseDir . '/includes/class-osdxp-render-available-modules.php',
+    'OSDXP_Dashboard\\OSDXP_Modules_List_Table' => $baseDir . '/includes/dependencies/wordpress/class-osdxp-modules-list-table.php',
+    'OSDXP_Dashboard\\OsdxpModuleUpdateChecker' => $baseDir . '/includes/dependencies/plugin-update-checker/class-osdxp-module-update-checker.php',
+    'OSDXP_Dashboard\\OsdxpModuleUpdateCheckerUi' => $baseDir . '/includes/dependencies/plugin-update-checker/class-osdxp-module-update-checker-ui.php',
 );

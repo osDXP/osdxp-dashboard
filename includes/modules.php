@@ -60,8 +60,6 @@ function filter_modules($modules)
  */
 function get_osdxp_available_modules()
 {
-	require_once OSDXP_DASHBOARD_DIR . 'includes/class-osdxp-render-available-modules.php';
-
 	$osdxp_available_module = new OSDXPAvailableModules();
 	$available_modules_json = $osdxp_available_module->getModulesData();
 	$available_modules_array =  $osdxp_available_module->transformData($available_modules_json);

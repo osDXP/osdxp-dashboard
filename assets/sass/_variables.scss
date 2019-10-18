@@ -26,6 +26,11 @@ $highlight-color: $color-white !default;
 $notification-color: #d54e21 !default;
 $base-color-secondary: #E81818 !default;
 
+// Media Query Ranges
+$small-screen-up:      783px !default;
+$small-screen:         782px !default;
+$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
+
 // global
 
 $body-background: #f1f1f1 !default;

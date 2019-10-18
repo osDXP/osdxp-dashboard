@@ -12,7 +12,26 @@ add_action('wp_dashboard_setup', __NAMESPACE__ . '\\add_dxp_news_dashboard_widge
 add_action('wp_dashboard_setup', __NAMESPACE__ . '\\remove_wp_events_and_news_dashboard_widget');
 add_action('wp_network_dashboard_setup', __NAMESPACE__ . '\\add_dxp_news_dashboard_widget');
 add_action('wp_network_dashboard_setup', __NAMESPACE__ . '\\remove_wp_events_and_news_dashboard_widget');
+
+add_action('wp_dashboard_setup', __NAMESPACE__ . '\\add_dxp_dashboard_actions_widget');
+add_action('wp_network_dashboard_setup', __NAMESPACE__ . '\\add_dxp_dashboard_actions_widget');
 // phpcs:enable
+
+/**
+ * Method to add the DXP Actions Dashboard widget.
+ *
+ * @return void
+ */
+function add_dxp_dashboard_actions_widget()
+{
+	if (is_dxp_dashboard()) {
+		wp_add_dashboard_widget(
+			'dxp_actions',
+			esc_html__(' ', 'osdxp-dashboard'),
+			__NAMESPACE__ . '\\dxp_dashboard_actions'
+		);
+	}
+}
 
 /**
  * Method to add the DXP News Dashboard widget.
@@ -27,6 +46,29 @@ function add_dxp_news_dashboard_widget()
 			esc_html__('DXP News', 'osdxp-dashboard'),
 			__NAMESPACE__ . '\\dxp_news_dashboard_widget'
 		);
+	}
+}
+
+/**
+ * Method to add dxp dashboard actions.
+ *
+ * @return void
+ */
+function dxp_dashboard_actions() {
+	if (is_network_admin() && is_super_admin()) {
+		require_once(OSDXP_DASHBOARD_DIR . '/templates/dashboard-actions-network-admin.php');
+	}
+
+	elseif (is_multisite() && is_super_admin()) {
+		require_once(OSDXP_DASHBOARD_DIR . '/templates/dashboard-actions-multisite-admin.php');
+	}
+
+	elseif (!is_multisite() && current_user_can('administrator')) {
+		require_once(OSDXP_DASHBOARD_DIR . '/templates/dashboard-actions-single-admin.php');
+	}
+
+	elseif (!current_user_can('administrator') && current_user_can('editor')) {
+		require_once(OSDXP_DASHBOARD_DIR . '/templates/dashboard-actions-editor.php');
 	}
 }
 

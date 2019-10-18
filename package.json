@@ -1,5 +1,5 @@
 {
-  "name": "osdxp-core-plugin",
+  "name": "osdxp-dashboard-plugin",
   "version": "0.0.1",
   "main": "gulpfile.js",
   "private": true,
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/osDXP/osdxp-core"
+    "url": "git://github.com/osDXP/osdxp-dashboard"
   },
   "keywords": [
     "opensourcedxp-dashboard"
@@ -19,9 +19,9 @@
   "author": "Crowd Favorite",
   "license": "GPLv2 or later",
   "bugs": {
-    "url": "https://github.com/osDXP/osdxp-core/issues"
+    "url": "https://github.com/osDXP/osdxp-dashboard/issues"
   },
-  "homepage": "https://github.com/osDXP/osdxp-core#readme",
+  "homepage": "https://github.com/osDXP/osdxp-dashboard#readme",
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "acorn": "^6.3.0",

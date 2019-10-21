@@ -8,8 +8,23 @@
       "homepage": "http://crowdfavorite.com/"
     }
   ],
-  "require":
-    {
+  "require": {
     "yahnis-elsts/plugin-update-checker": "^4.7"
+  },
+  "autoload": {
+      "files" : [
+        "includes/assets.php",
+        "includes/class-licenseapi.php",
+        "includes/config.php",
+        "includes/core.php",
+        "includes/dashboard.php",
+        "includes/licensing.php",
+        "includes/menus.php",
+        "includes/modules.php",
+        "includes/utils.php"
+      ],
+      "psr-4": {
+          "OSDXP_Dashboard\\": "includes/"
+      }
   }
 }

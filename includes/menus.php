@@ -300,8 +300,6 @@ function dxp_admin_remove_menu_items(bool $network = false)
  */
 function dxp_render_available_modules()
 {
-	require_once OSDXP_DASHBOARD_DIR . 'includes/class-osdxp-render-available-modules.php';
-
 	$OSDXP_AvailableModules = new OSDXPAvailableModules();
 	$OSDXP_AvailableModules->showPage();
 }

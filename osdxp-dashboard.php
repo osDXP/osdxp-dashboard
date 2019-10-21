@@ -88,15 +88,7 @@ if (!function_exists('get_plugins')) {
 	require_once ABSPATH . 'wp-admin/includes/plugin.php';
 }
 
-require OSDXP_DASHBOARD_DIR . 'includes/assets.php';
-require OSDXP_DASHBOARD_DIR . 'includes/class-licenseapi.php';
-require OSDXP_DASHBOARD_DIR . 'includes/config.php';
-require OSDXP_DASHBOARD_DIR . 'includes/core.php';
-require OSDXP_DASHBOARD_DIR . 'includes/dashboard.php';
-require OSDXP_DASHBOARD_DIR . 'includes/licensing.php';
-require OSDXP_DASHBOARD_DIR . 'includes/menus.php';
-require OSDXP_DASHBOARD_DIR . 'includes/modules.php';
-require OSDXP_DASHBOARD_DIR . 'includes/utils.php';
+require_once('vendor/autoload.php');
 
 register_deactivation_hook(__FILE__, __NAMESPACE__ . '\\osdxp_deactivate');
 register_activation_hook(__FILE__, __NAMESPACE__ . '\\osdxp_activate');

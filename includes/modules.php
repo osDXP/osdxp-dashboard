@@ -9,7 +9,34 @@ namespace OSDXP_Dashboard;
 
 // phpcs:disable
 add_filter('osdxp_get_modules', __NAMESPACE__ . '\\filter_modules', 9999);
+add_filter('all_plugins', __NAMESPACE__ . '\\filter_plugins', 9999);
 // phpcs:enable
+
+/**
+ * Method to hide DXP modules from plugins list
+ *
+ * @param  array $plugins Plugins array
+ */
+function filter_plugins($plugins)
+{
+	if (!$plugins || !is_array($plugins)) {
+		return [];
+	}
+
+	$osdxp_modules = get_osdxp_available_modules();
+	$osdxp_modules_name = array_column($osdxp_modules, 'name');
+
+	foreach ($plugins as $key => $plugin_data) {
+		$is_osdxp_module = array_search($plugin_data['Name'], $osdxp_modules_name);
+
+		// An OSDXP module.
+		if (false !== $is_osdxp_module) {
+			unset($plugins[$key]);
+		}
+	}
+
+	return $plugins;
+}
 
 /**
  * Method to display DXP modules
@@ -60,8 +87,6 @@ function filter_modules($modules)
  */
 function get_osdxp_available_modules()
 {
-	require_once OSDXP_DASHBOARD_DIR . 'includes/class-osdxp-render-available-modules.php';
-
 	$osdxp_available_module = new OSDXPAvailableModules();
 	$available_modules_json = $osdxp_available_module->getModulesData();
 	$available_modules_array =  $osdxp_available_module->transformData($available_modules_json);

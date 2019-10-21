@@ -6,10 +6,6 @@
  */
 namespace OSDXP_Dashboard;
 
-// phpcs:disable
-require OSDXP_DASHBOARD_DIR . 'includes/dependencies/plugin-update-checker/class-osdxp-module-update-checker-ui.php';
-// phpcs:enable
-
 class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 {
 	protected $updateTransient = 'update_plugins';

@@ -27,7 +27,7 @@ function add_dxp_dashboard_actions_widget()
 	if (is_dxp_dashboard()) {
 		wp_add_dashboard_widget(
 			'dxp_actions',
-			esc_html__(' ', 'osdxp-dashboard'),
+			esc_html__('DXP Actions', 'osdxp-dashboard'),
 			__NAMESPACE__ . '\\dxp_dashboard_actions'
 		);
 	}

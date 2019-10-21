@@ -51,7 +51,6 @@ function load_admin_assets()
 {
 
 	if (is_dxp_dashboard()) {
-
 		// Enqueue the custom plugin styles.
 		wp_enqueue_style(
 			OSDXP_DASHBOARD_HANDLE,

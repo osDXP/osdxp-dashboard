@@ -96,7 +96,9 @@ function get_dxp_menu_pages()
 			) {
 				$custom_page['type'] = OSDXP_DASHBOARD_MENU_TYPE_SUBMENU;
 				$custom_page['parent_slug'] = 'dxp-module-settings';
-				$custom_page['capability'] = isset($custom_page['capability']) ? $custom_page['capability'] : 'manage_options';
+				$custom_page['capability'] = isset($custom_page['capability'])
+					? $custom_page['capability']
+					: 'manage_options';
 
 				$dxp_pages[] = $custom_page;
 			}

@@ -28,6 +28,11 @@ class OSDXPAvailableModules
 	 */
 	protected function getModulesRemoteModulesData(string $url = OSDXP_DASHBOARD_AVAILABLE_MODULES_LIST_URL)
 	{
+		// account for local-only modules
+		if (false === $url) {
+			return false;
+		}
+
 		$response = wp_remote_get($url);
 		if (is_wp_error($response)) {
 			add_action('admin_notices', function () use ($response) {

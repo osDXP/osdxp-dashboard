@@ -5,13 +5,13 @@
  * @package osdxp-dashboard
  */
 
- ?>
+?>
  <div id="dxp-actions">
-	
+
 	<h2 class="title"><?php esc_html_e('Create Functionality', 'osdxp-dashboard'); ?></h2>
 	<div class="row large">
 		<?php if (current_user_can('create_sites')) : ?>
-			<a href="<?php echo network_admin_url('site-new.php'); ?>" class="col">
+			<a href="<?php echo network_admin_url('site-new.php');  // phpcs:ignore?>" class="col">
 				<div class="postbox">
 					<div>
 						<div class="group">
@@ -26,7 +26,7 @@
 		<?php endif; ?>
 
 		<?php if (current_user_can('create_users')) : ?>
-			<a href="<?php echo network_admin_url('user-new.php'); ?>" class="col">
+			<a href="<?php echo network_admin_url('user-new.php');  // phpcs:ignore?>" class="col">
 				<div class="postbox">
 					<div>
 						<div class="group">
@@ -41,7 +41,7 @@
 		<?php endif; ?>
 
 		<?php if (current_user_can('install_plugins')) : ?>
-			<a href="<?php echo network_admin_url('plugin-install.php'); ?>" class="col">
+			<a href="<?php echo network_admin_url('plugin-install.php');  // phpcs:ignore?>" class="col">
 				<div class="postbox">
 					<div>
 						<div class="group">
@@ -59,7 +59,7 @@
 	<h2 class="title"><?php esc_html_e('Manage Functionality', 'osdxp-dashboard'); ?></h2>
 	<div class="row">
 		<?php if (current_user_can('create_users')) : ?>
-			<a href="<?php echo network_admin_url('users.php'); ?>" class="col">
+			<a href="<?php echo network_admin_url('users.php');  // phpcs:ignore?>" class="col">
 		 		<div class="postbox">
 		 			<div>
 						<div class="group">
@@ -73,7 +73,7 @@
 		<?php endif; ?>
 
 		<?php if (current_user_can('create_sites')) : ?>
-			<a href="<?php echo network_admin_url('sites.php'); ?>" class="col">
+			<a href="<?php echo network_admin_url('sites.php');  // phpcs:ignore?>" class="col">
 		 		<div class="postbox">
 		 			<div>
 						<div class="group">
@@ -87,7 +87,7 @@
 		<?php endif; ?>
 
 		<?php if (current_user_can('install_plugins')) : ?>
-			<a href="<?php echo network_admin_url('plugins.php'); ?>" class="col">
+			<a href="<?php echo network_admin_url('plugins.php');  // phpcs:ignore?>" class="col">
 		 		<div class="postbox">
 		 			<div>
 						<div class="group">

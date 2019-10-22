@@ -1060,7 +1060,6 @@ input#title {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
@@ -1115,8 +1114,12 @@ input#title {
   padding-bottom: 5px;
   text-align: right; }
 
-.am-info h3 {
-  margin: 0; }
+.am-info {
+  grid-template-columns: 25% auto; }
+  .am-info img {
+    width: 100%; }
+  .am-info h3 {
+    margin: 0; }
 
 .am-module-footer {
   border-top: 2px solid #e5e5e5;

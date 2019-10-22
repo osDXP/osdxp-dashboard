@@ -54,7 +54,10 @@
 }
 
 .am-info {
-
+  grid-template-columns: 25% auto;
+  img {
+    width: 100%;
+  }
   h3 {
     margin: 0;
   }

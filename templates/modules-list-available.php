@@ -24,12 +24,9 @@ if (isset($_GET["refresh"]) && $_GET['refresh']) { // phpcs:ignore
 					<div class="am-info am-grid-col-container">
 						<div>
 							<?php if (!empty($module_info['logo'])) : ?>
-								<img style="width:100%" src="<?php echo esc_url($module_info['logo']); ?>">
+								<img src="<?php echo esc_url($module_info['logo']); ?>">
 							<?php else : ?>
-								<img
-									style="width:100%"
-									src="<?php echo esc_url(OSDXP_DASHBOARD_PLACEHOLDER_IMAGE_URL); ?>"
-								>
+								<img src="<?php echo esc_url(OSDXP_DASHBOARD_PLACEHOLDER_IMAGE_URL); ?>">
 							<?php endif; ?>
 						</div>
 						<div>

@@ -24,13 +24,13 @@ function filter_plugins($plugins)
 	}
 
 	$osdxp_modules = get_osdxp_available_modules();
-	$osdxp_modules_name = array_column($osdxp_modules, 'name');
+	$module_names = array_column($osdxp_modules, 'name');
 
 	foreach ($plugins as $key => $plugin_data) {
-		$is_osdxp_module = array_search($plugin_data['Name'], $osdxp_modules_name);
-
-		// An OSDXP module.
-		if (false !== $is_osdxp_module) {
+		$module_key = array_search($plugin_data['Name'], $module_names);
+		$module_name = $module_key ? $module_names[$module_key] : false;
+		// An osDXP module but not osDXP dashboard.
+		if (false !== $module_name && 'Open Source DXP Dashboard' !== $module_name) {
 			unset($plugins[$key]);
 		}
 	}

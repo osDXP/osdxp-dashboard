@@ -847,7 +847,7 @@ msgid "Latest Version Installed"
 msgstr ""
 
 #: includes/menus.php:85
-msgid "<div>Return to<br>Legacy WordPress</div>"
+msgid "<div>Return to<br> WordPress</div>"
 msgstr ""
 
 #: includes/menus.php:95

@@ -260,7 +260,7 @@
     width: 36px; }
 
 #wp-admin-bar-switch-to-dxp {
-  /* When hovering over the Switch to DXP/Back to Legacy WordPress icon... */ }
+  /* When hovering over the Switch to DXP/Back to WordPress icon... */ }
   #wp-admin-bar-switch-to-dxp a {
     overflow: hidden; }
     #wp-admin-bar-switch-to-dxp a > div {

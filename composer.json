@@ -21,7 +21,8 @@
         "includes/licensing.php",
         "includes/menus.php",
         "includes/modules.php",
-        "includes/utils.php"
+        "includes/utils.php",
+        "includes/notifications.php"
       ],
       "psr-4": {
           "OSDXP_Dashboard\\": "includes/"

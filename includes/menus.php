@@ -242,16 +242,29 @@ function dxp_admin_add_menu_items(bool $network = false)
  */
 function dxp_accepted_top_pages()
 {
+	// dashboard, pages and posts
 	$menu_list = [
 		'index.php',
 		'edit.php?post_type=page',
 		'edit.php'
 	];
+
+	// cpts
 	$cpts = get_post_types(['_builtin'  => false], 'names');
 	$cpts = apply_filters('osdxp_filter_cpts', $cpts);
 
 	foreach ($cpts as $cpt) {
 		$menu_list[] = 'edit.php?post_type=' . $cpt;
+	}
+
+	// non-dashboard osDXP top-level pages
+	$custom_pages = [];
+	$custom_pages = apply_filters('osdxp_add_module_settings_page', $custom_pages);
+	foreach ($custom_pages as $custom_page) {
+		if (!isset($custom_page['type']) || OSDXP_DASHBOARD_MENU_TYPE_MENU !== $custom_page['type']) {
+			continue;
+		}
+		$menu_list[] = $custom_page['menu_slug'];
 	}
 
 	array_push(

@@ -899,7 +899,8 @@ class OSDXP_Modules_List_Table extends \WP_List_Table
 					}
 
 					echo '<div class="module-actions">';
-					echo '<a target="_blank" class="button-primary" href="' . $module_data['AuthorURI'] . '">' . esc_html__('Manage License', 'osdxp-dashboard') . '</a>';
+					$button_text = apply_filters('osdxp_manage_button_module_' . $plugin_slug, 'Manage License');
+					echo '<a target="_blank" class="button-primary" href="' . $module_data['AuthorURI'] . '">' . esc_html__($button_text, 'osdxp-dashboard') . '</a>';
 					/**
 					 * Filters the array of row meta for each module in the Modules list table.
 					 *

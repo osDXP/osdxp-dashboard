@@ -1,10 +1,12 @@
 <?php
 namespace OSDXP_Dashboard;
+
 if (isset($_GET["refresh"]) && $_GET['refresh']) { // phpcs:ignore
 	delete_transient(OSDXP_DASHBOARD_AVAILABLE_MODULES_TRANSIENT);
+    $jsonData = $this->getModulesData();
+    $data =  $this->transformData($jsonData);
 }
 ?>
-
 
 <h1>
 	<?php esc_html_e('Available Modules', 'osdxp-dashboard');?>
@@ -23,7 +25,18 @@ if (isset($_GET["refresh"]) && $_GET['refresh']) { // phpcs:ignore
 				<div class="am-grid-col-container">
 					<div class="am-info am-grid-col-container">
 						<div>
-							<?php if (!empty($module_info['logo'])) : ?>
+							<?php
+							$valid_logo = !empty($module_info['logo']);
+							$valid_logo = $valid_logo ? filter_var($module_info['logo'], FILTER_VALIDATE_URL) : false;
+							$valid_logo = $valid_logo ? pathinfo($valid_logo, PATHINFO_EXTENSION) : false;
+							$extensions = [
+								'png',
+								'svg',
+								'jpeg',
+								'jpg',
+							];
+							?>
+							<?php if (in_array($valid_logo, $extensions)) : ?>
 								<img src="<?php echo esc_url($module_info['logo']); ?>">
 							<?php else : ?>
 								<img src="<?php echo esc_url(OSDXP_DASHBOARD_PLACEHOLDER_IMAGE_URL); ?>">

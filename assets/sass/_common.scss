@@ -1,35 +1,80 @@
 h1 {
-	color: $color-blackcurrant2;
+  color: $color-blackcurrant2;
 }
 
 .postbox {
-	box-shadow: 0 5px 10px rgba($color-black, .05);
+  box-shadow: 0 5px 10px rgba($color-black, .05);
 
-	&:before {
-		background: linear-gradient(135deg, $base-color 0%, $color-scarlet 100%);
-		content: '';
-		display: block;
-		height: 2px;
-	}
+  &:before {
+    background: linear-gradient(135deg, $base-color 0%, $color-scarlet 100%);
+    content: '';
+    display: block;
+    height: 2px;
+  }
 }
 
 .wrap {
-	.add-new-h2,
-	.add-new-h2:active,
-	.page-title-action,
-	.page-title-action:active {
-		color: $base-color;
-	}
+  .add-new-h2,
+  .add-new-h2:active,
+  .page-title-action,
+  .page-title-action:active {
+    color: $base-color;
+  }
 }
 
 .dxp-dashboard .display-license {
-	color: $color-matterhorn;
+  color: $color-matterhorn;
 }
 
 .success-message {
-	color: $color-fruit-salad;
+  color: $color-fruit-salad;
 }
 
 .js-osdxp-module-remove-license.button-primary {
-	margin-left: 30px;
+  margin-left: 30px;
+}
+
+.osdxp-nav-tabs {
+  border-bottom: 1px solid $color-very-light-gray;
+  display: flex;
+  margin-top: 1em;
+
+  li {
+    border-bottom: none;
+    border-radius: 2px 2px 0 0;
+    border: 1px solid $color-very-light-gray;
+    font-size: 12px;
+    height: 34px;
+    line-height: 34px;
+    margin: 0 5px 0 0;
+
+    @media (min-width: 480px) {
+      font-size: 14px;
+      margin: 0 10px 0 0;
+    }
+
+    &.active {
+      background: linear-gradient(180deg, $color-white 0%, $color-white-smoke 100%);
+      border: none;
+      box-shadow: inset -1px 0 0 0 $color-very-light-gray, inset 0 2px 0 0 $base-color, inset 1px 0 0 0 $color-very-light-gray;
+      margin-bottom: -2px;
+      padding-bottom: 2px;
+
+      a {
+        color: $base-color;
+      }
+    }
+
+    a {
+      color: $color-charcoal;
+      display: block;
+      font-weight: 600;
+      padding: 0 12px;
+      text-decoration: none;
+
+      &:active, &:hover {
+        color: $base-color;
+      }
+    }
+  }
 }

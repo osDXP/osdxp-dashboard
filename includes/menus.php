@@ -88,7 +88,7 @@ function add_switch_to_dxp_button_to_admin_bar_menu($wp_admin_bar)
 					'id'    => 'switch-to-dxp',
 					'title' => sprintf(
 						'<div>%s</div>',
-						__('<div>Return to<br>Legacy WordPress</div>', 'osdxp-dashboard')
+						__('<div>Return to<br> WordPress</div>', 'osdxp-dashboard')
 					),
 					'href'  => '/wp-admin/?dxp=off', // return to wp-admin dashboard
 				]

@@ -828,6 +828,10 @@ h2.screen-reader-text + .subsubsub {
       #media-search + .subsubsub > li > a.current,
       h2.screen-reader-text + .subsubsub > li > a.current {
         border: 1px solid #4B1BE2; }
+      @media screen and (max-width: 480px) {
+        #media-search + .subsubsub > li > a,
+        h2.screen-reader-text + .subsubsub > li > a {
+          border: 0; } }
   #media-search + .subsubsub > li + li > a,
   h2.screen-reader-text + .subsubsub > li + li > a {
     border-left: none; }

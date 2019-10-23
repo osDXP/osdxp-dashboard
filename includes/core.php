@@ -10,7 +10,8 @@ namespace OSDXP_Dashboard;
 // phpcs:disable
 add_action('init', __NAMESPACE__ . '\\init_dxp_dashboard');
 add_action('login_redirect', __NAMESPACE__ . '\\set_dxp_meta_on_login', 10, 3);
-
+add_action('admin_init', __NAMESPACE__ . '\\limit_admin_color_options', 1);
+add_filter('get_user_option_admin_color', __NAMESPACE__ . '\\force_user_color');
 add_filter('admin_footer_text', __NAMESPACE__ . '\\override_admin_footer_text', 11);
 add_filter('update_footer', __NAMESPACE__ . '\\override_update_footer', 11);
 // phpcs:enable
@@ -241,4 +242,37 @@ function override_update_footer($text)
 	}
 
 	return $dxp_text . '<br>' . $wp_text;
+}
+
+/**
+ * Method to remove admin color theme picker if on osDXP.
+ *
+ * @return void
+ */
+function limit_admin_color_options()
+{
+	if (!is_dxp_dashboard()) {
+		return;
+	}
+	global $_wp_admin_css_colors;
+
+	$fresh_color_data = $_wp_admin_css_colors['fresh'];
+	$fresh_color_data->icon_colors = [
+		'base' => '#fff',
+		'focus' => '#3C15B4',
+		'current' => '#3C15B4',
+	];
+
+	$_wp_admin_css_colors = array( 'fresh' => $fresh_color_data );
+}
+
+/**
+ * Method to force color theme if on osDXP.
+ *
+ * @param  $color string of color theme
+ * @return string
+ */
+function force_user_color($color)
+{
+	return is_dxp_dashboard() ? 'fresh' : $color;
 }

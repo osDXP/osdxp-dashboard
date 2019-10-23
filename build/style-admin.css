@@ -589,16 +589,6 @@ span.subtitle.search-results {
 #bulk-action-selector-top, #bulk-action-selector-bottom {
   min-width: 150px; }
 
-input[type=checkbox]:checked:before {
-  color: #4B1BE2; }
-
-input[type=radio]:checked:before {
-  background: #4B1BE2; }
-
-.wp-core-ui input[type="reset"]:hover,
-.wp-core-ui input[type="reset"]:active {
-  color: #25048B; }
-
 /* Core UI */
 .wp-core-ui .button,
 .wp-core-ui .button-secondary {
@@ -721,6 +711,16 @@ input[type=radio]:checked:before {
   color: #4B1BE2; }
   .wp-core-ui #the-comment-list .unapprove a:hover {
     color: #25048B; }
+
+.wp-core-ui input[type="reset"]:hover,
+.wp-core-ui input[type="reset"]:active {
+  color: #25048B; }
+
+.wp-core-ui input[type=checkbox]:checked:before {
+  color: #4B1BE2; }
+
+.wp-core-ui input[type=radio]:checked:before {
+  background: #4B1BE2; }
 
 .wp-core-ui input,
 .wp-core-ui select,

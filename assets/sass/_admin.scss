@@ -49,20 +49,7 @@ a:focus {
 		vertical-align: middle;
 	}
 	select {
-		//appearance: none;
-		//border-radius: 2px;
 		height: 34px;
-		//padding-left: 10px;
-		//padding-right: 20px;
-
-		// &:before {
-		// 	content: "\f142";
-		// 	display: block;
-		// 	position: absolute;
-		// 	font: normal 20px/1 dashicons;
-		// 	top: 0;
-		// 	right: 0;
-		// }
 	}
 }
 .notice-info {
@@ -115,19 +102,6 @@ span.subtitle.search-results {
 
 #bulk-action-selector-top, #bulk-action-selector-bottom {
 	min-width: 150px;
-}
-
-input[type=checkbox]:checked:before {
-	color: $form-checked;
-}
-
-input[type=radio]:checked:before {
-	background: $form-checked;
-}
-
-.wp-core-ui input[type="reset"]:hover,
-.wp-core-ui input[type="reset"]:active {
-	color: $link-focus;
 }
 
 
@@ -299,6 +273,19 @@ input[type=radio]:checked:before {
 		&:hover {
 			color: $link-focus;
 		}
+	}
+
+	input[type="reset"]:hover,
+	input[type="reset"]:active {
+		color: $link-focus;
+	}
+
+	input[type=checkbox]:checked:before {
+		color: $form-checked;
+	}
+
+	input[type=radio]:checked:before {
+		background: $form-checked;
 	}
 
 	input,

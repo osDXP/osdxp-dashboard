@@ -16,4 +16,5 @@ return array(
     'c2657873473474d6490127c4a7e6cdd1' => $baseDir . '/includes/menus.php',
     '34d3aba17674de223ab58b6807ffaf14' => $baseDir . '/includes/modules.php',
     'acc9f2579fece20728bfeed1a4d7ebce' => $baseDir . '/includes/utils.php',
+    '5dd59f8beed6a6251f319543198aec7e' => $baseDir . '/includes/notifications.php',
 );

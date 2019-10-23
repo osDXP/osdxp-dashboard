@@ -590,6 +590,10 @@ span.subtitle.search-results {
   min-width: 150px; }
 
 /* Core UI */
+.wp-core-ui.plugin-editor-php .button,
+.wp-core-ui.plugin-editor-php .button-secondary {
+  vertical-align: middle; }
+
 .wp-core-ui .button,
 .wp-core-ui .button-secondary {
   background: #fff;

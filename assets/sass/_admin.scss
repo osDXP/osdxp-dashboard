@@ -19,17 +19,17 @@ body {
 }
 
 /* All elements ':focus' state */
-h1:focus, 
-h2:focus, 
-h3:focus, 
-h4:focus, 
-h5:focus, 
-h6:focus, 
+h1:focus,
+h2:focus,
+h3:focus,
+h4:focus,
+h5:focus,
+h6:focus,
 p:focus,
-span:focus, 
+span:focus,
 ul:focus,
-ol:focus, 
-li:focus, 
+ol:focus,
+li:focus,
 button:focus,
 img:focus,
 .js .postbox .handlediv:focus .toggle-indicator:before,
@@ -56,14 +56,14 @@ a:focus {
 	border-left-color: $base-color;
 }
 #contextual-help-back {
-	background-color: rgba(60,21,180,0.05); 
+	background-color: rgba(60,21,180,0.05);
 }
 .contextual-help-tabs {
 	.active {
 		border-left-color: $base-color;
 		background-color: rgba(60,21,180,0.05);
 	}
-} 
+}
 
 /* Links */
 
@@ -108,6 +108,13 @@ span.subtitle.search-results {
 /* Core UI */
 
 .wp-core-ui {
+	&.plugin-editor-php {
+		.button,
+		.button-secondary {
+			vertical-align: middle;
+		}
+	}
+
 	.button,
 	.button-secondary {
 		background: $color-white;
@@ -294,7 +301,6 @@ span.subtitle.search-results {
 		box-shadow: none;
 	}
 }
-
 
 .wrap .add-new-h2:hover, /* deprecated */
 .wrap .page-title-action {

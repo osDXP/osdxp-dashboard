@@ -28,7 +28,7 @@ function filter_plugins($plugins)
 
 	foreach ($plugins as $key => $plugin_data) {
 		$module_key = array_search($plugin_data['Name'], $module_names);
-		$module_name = $module_key ? $module_names[$module_key] : false;
+		$module_name = (false !== $module_key) ? $module_names[$module_key] : false;
 		// An osDXP module but not osDXP dashboard.
 		if (false !== $module_name && 'Open Source DXP Dashboard' !== $module_name) {
 			unset($plugins[$key]);

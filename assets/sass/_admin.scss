@@ -18,6 +18,27 @@ body {
 	background: $body-background;
 }
 
+/* All elements ':focus' state */
+h1:focus, 
+h2:focus, 
+h3:focus, 
+h4:focus, 
+h5:focus, 
+h6:focus, 
+p:focus,
+span:focus, 
+ul:focus,
+ol:focus, 
+li:focus, 
+button:focus,
+img:focus,
+.js .postbox .handlediv:focus .toggle-indicator:before,
+a:focus {
+	box-shadow: 0 0 0 1px $base-color, 0 0 2px 1px rgba($base-color,.7);
+	outline: 0;
+}
+
+
 /* Links */
 
 a {
@@ -223,6 +244,22 @@ input[type=radio]:checked:before {
 
 	.wp-ui-text-icon {
 		color: $menu-icon;
+	}
+
+	.button-link {
+		color: $link;
+
+		&:hover {
+			color: $link-focus;
+		}
+	}
+
+	#the-comment-list .unapprove a {
+		color: $link;
+
+		&:hover {
+			color: $link-focus;
+		}
 	}
 }
 

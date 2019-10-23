@@ -520,6 +520,25 @@ html.wp-toolbar {
 body {
   background: #f1f1f1; }
 
+/* All elements ':focus' state */
+h1:focus,
+h2:focus,
+h3:focus,
+h4:focus,
+h5:focus,
+h6:focus,
+p:focus,
+span:focus,
+ul:focus,
+ol:focus,
+li:focus,
+button:focus,
+img:focus,
+.js .postbox .handlediv:focus .toggle-indicator:before,
+a:focus {
+  box-shadow: 0 0 0 1px #4B1BE2, 0 0 2px 1px rgba(75, 27, 226, 0.7);
+  outline: 0; }
+
 /* Links */
 a {
   color: #4B1BE2; }
@@ -669,6 +688,16 @@ input[type=radio]:checked:before {
 
 .wp-core-ui .wp-ui-text-icon {
   color: #fff; }
+
+.wp-core-ui .button-link {
+  color: #4B1BE2; }
+  .wp-core-ui .button-link:hover {
+    color: #25048B; }
+
+.wp-core-ui #the-comment-list .unapprove a {
+  color: #4B1BE2; }
+  .wp-core-ui #the-comment-list .unapprove a:hover {
+    color: #25048B; }
 
 .wrap .add-new-h2:hover,
 .wrap .page-title-action:hover {

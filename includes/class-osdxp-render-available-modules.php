@@ -90,13 +90,29 @@ class OSDXPAvailableModules
 	 */
 	public function transformData(string $json)
 	{
-		$data = json_decode($json, true);
+		$data = array_change_key_case_recursive(
+			json_decode(
+				$json,
+				true
+			)
+		);
+
+		$data_names = array_column($data['data'], 'name');
 		$partner_data = [];
-		$partner_data = apply_filters('osdxp_get_available_modules', $partner_data);
+		$partner_data = array_change_key_case_recursive(
+			apply_filters(
+				'osdxp_get_available_modules',
+				$partner_data
+			)
+		);
 		foreach ($partner_data as $key => $partner) {
+			if (in_array($partner['name'], $data_names)) {
+				continue;
+			}
 			$data['data'][$key] = $partner;
 		}
-		return array_change_key_case_recursive($data['data']);
+
+		return $data['data'];
 	}
 
 	/**

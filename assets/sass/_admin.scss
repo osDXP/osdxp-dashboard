@@ -37,7 +37,46 @@ a:focus {
 	box-shadow: 0 0 0 1px $base-color, 0 0 2px 1px rgba($base-color,.7);
 	outline: 0;
 }
+#screen-meta-links .show-settings:focus {
+	border-color: $base-color;
+	box-shadow: 0 0 3px rgba($base-color,.8);
+}
+.wp-admin {
+	input:not([type="checkbox"]):not([type="radio"]) {
+		height: 34px;
+		margin-bottom: 0;
+		margin-top: 0;
+		vertical-align: middle;
+	}
+	select {
+		//appearance: none;
+		//border-radius: 2px;
+		height: 34px;
+		//padding-left: 10px;
+		//padding-right: 20px;
 
+		// &:before {
+		// 	content: "\f142";
+		// 	display: block;
+		// 	position: absolute;
+		// 	font: normal 20px/1 dashicons;
+		// 	top: 0;
+		// 	right: 0;
+		// }
+	}
+}
+.notice-info {
+	border-left-color: $base-color;
+}
+#contextual-help-back {
+	background-color: rgba(60,21,180,0.05); 
+}
+.contextual-help-tabs {
+	.active {
+		border-left-color: $base-color;
+		background-color: rgba(60,21,180,0.05);
+	}
+} 
 
 /* Links */
 
@@ -261,13 +300,27 @@ input[type=radio]:checked:before {
 			color: $link-focus;
 		}
 	}
+
+	input,
+	select,
+	textarea {
+		box-shadow: none;
+	}
 }
 
 
 .wrap .add-new-h2:hover, /* deprecated */
-.wrap .page-title-action:hover {
-	background-color: $menu-background;
-	color: $menu-text;
+.wrap .page-title-action {
+	&:hover {
+		background-color: $menu-background;
+		border-color: $menu-background;
+		box-shadow: -2px -2px 0 rgba($color-black, 0.2);
+		color: $menu-text;
+	}
+}
+.wrap .page-title-action:focus {
+	border-color: $base-color;
+	box-shadow: 0 0 2px rgba($base-color,.8);
 }
 
 .view-switch a.current:before {
@@ -275,7 +328,7 @@ input[type=radio]:checked:before {
 }
 
 .view-switch a:hover:before {
-	color: $menu-bubble-background;
+	color: $menu-background;
 }
 
 /* List tables */
@@ -317,12 +370,7 @@ input[type=radio]:checked:before {
 h2.screen-reader-text + .subsubsub { /* Posts, pages, custom post types. */
 	margin: 8px 0;
 
-	li:first-child {
-		border-radius: 2px 0 0 2px;
-	}
-
 	li:last-child {
-		border-radius: 0 2px 2px 0;
 		border-right: 1px solid $base-color;
 		margin-right: 0;
 	}
@@ -331,6 +379,18 @@ h2.screen-reader-text + .subsubsub { /* Posts, pages, custom post types. */
 		left: -9999px;
 		margin-right: -12px;
 		position: relative;
+
+		&:first-child {
+			> a {
+				border-radius: 3px 0 0 3px;
+			}
+		}
+
+		&:last-child {
+			> a {
+				border-radius: 0 3px 3px 0;
+			}
+		}
 
 		> a {
 			border: 1px solid $base-color;

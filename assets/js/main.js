@@ -120,11 +120,12 @@
       });
     });
 
-    // var dxpActions = $('#dxp-actions');
-    // var dxpActionsContainer = dxpActions.closest('.postbox-container');
-    // var dxpActionsHideLabel = $('label[for="dxp_actions-hide"]');
-    // dxpActions.prependTo('.wrap');
-    // dxpActionsContainer.remove();
-    // dxpActionsHideLabel.remove();
+    var dxpActions = $('#dxp-actions');
+    var dxpActionsContainer = dxpActions.closest('#dxp_actions.postbox');
+    var dxpActionsHideLabel = $('label[for="dxp_actions-hide"]');
+    dxpActions.prependTo('.wrap');
+    dxpActionsContainer.remove();
+    dxpActionsHideLabel.remove();
+
   });
 })(jQuery);

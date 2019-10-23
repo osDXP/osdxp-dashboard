@@ -126,5 +126,6 @@
     dxpActions.prependTo('.wrap');
     dxpActionsContainer.remove();
     dxpActionsHideLabel.remove();
+
   });
 })(jQuery);

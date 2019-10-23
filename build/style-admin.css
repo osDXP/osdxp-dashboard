@@ -1068,6 +1068,43 @@ h1 {
 .js-osdxp-module-remove-license.button-primary {
   margin-left: 30px; }
 
+.osdxp-nav-tabs {
+  border-bottom: 1px solid #CCCCCC;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1em; }
+  .osdxp-nav-tabs li {
+    border-bottom: none;
+    border-radius: 2px 2px 0 0;
+    border: 1px solid #CCCCCC;
+    font-size: 12px;
+    height: 34px;
+    line-height: 34px;
+    margin: 0 5px 0 0; }
+    @media (min-width: 480px) {
+      .osdxp-nav-tabs li {
+        font-size: 14px;
+        margin: 0 10px 0 0; } }
+    .osdxp-nav-tabs li.active {
+      background: -webkit-linear-gradient(top, #fff 0%, #F4F4F4 100%);
+      background: linear-gradient(180deg, #fff 0%, #F4F4F4 100%);
+      border: none;
+      box-shadow: inset -1px 0 0 0 #CCCCCC, inset 0 2px 0 0 #4B1BE2, inset 1px 0 0 0 #CCCCCC;
+      margin-bottom: -2px;
+      padding-bottom: 2px; }
+      .osdxp-nav-tabs li.active a {
+        color: #4B1BE2; }
+    .osdxp-nav-tabs li a {
+      color: #444444;
+      display: block;
+      font-weight: 600;
+      padding: 0 12px;
+      text-decoration: none; }
+      .osdxp-nav-tabs li a:active, .osdxp-nav-tabs li a:hover {
+        color: #4B1BE2; }
+
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="checkbox"]:focus,

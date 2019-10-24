@@ -85,6 +85,30 @@
 		 		</div>
 		 	</a>
 		<?php endif; ?>
+		
+		<?php
+			if( is_plugin_active( 'multilingualpress/multilingualpress.php' ) )
+			{
+				$language_manager = (array)get_network_option( 0, 'multilingualpress_modules', [] );
+				if( ! empty( $language_manager ) && ! empty( $language_manager['language-manager'] ) )
+				{
+					?>
+                    <a href="/wp-admin/network/admin.php?page=language-manager" class="col">
+                        <div class="postbox">
+                            <div>
+                                <div class="group">
+                                    <div class="dashicons-before dashicons-admin-site-alt3"></div>
+                                    <span><?php esc_html_e('Settings', 'osdxp-dashboard'); ?></span>
+                                    <p><?php esc_html_e('Add New Language', 'osdxp-dashboard'); ?></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+					<?php
+				}
+			}
+		?>
+  
 	</div>
 
  </div>

@@ -67,7 +67,7 @@ function load_admin_assets()
 			OSDXP_DASHBOARD_URL . (WP_DEBUG ? 'build/app.js' : 'build/app.min.js'),
 			[ 'jquery' ],
 			filemtime(OSDXP_DASHBOARD_DIR . (WP_DEBUG ? 'build/app.js' : 'build/app.min.js')),
-			true
+			false
 		);
 
 		wp_localize_script(

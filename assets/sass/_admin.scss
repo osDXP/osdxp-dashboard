@@ -232,7 +232,7 @@ span.subtitle.search-results {
 		&:hover {
 			background: $color-ultramarine;
 			border-color: $color-ultramarine;
-			color: $text-color;
+			color: $menu-bubble-background;
 			box-shadow: -2px -2px 0 rgba($color-black, .2);
 		}
 
@@ -241,6 +241,7 @@ span.subtitle.search-results {
 		&.active:focus,
 		&.active:hover {
 			box-shadow: 2px 2px 0 rgba($color-black, .2) inset;
+			color: $menu-bubble-background;
 		}
 
 		&[disabled],

@@ -684,10 +684,11 @@ span.subtitle.search-results {
   .wp-core-ui .button-primary:hover {
     background: #25048B;
     border-color: #25048B;
-    color: #fff;
+    color: #49D9FF;
     box-shadow: -2px -2px 0 rgba(0, 0, 0, 0.2); }
   .wp-core-ui .button-primary:active, .wp-core-ui .button-primary.active, .wp-core-ui .button-primary.active:focus, .wp-core-ui .button-primary.active:hover {
-    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2) inset; }
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2) inset;
+    color: #49D9FF; }
   .wp-core-ui .button-primary[disabled], .wp-core-ui .button-primary:disabled, .wp-core-ui .button-primary.button-primary-disabled, .wp-core-ui .button-primary.disabled {
     background: #25048B;
     border-color: #25048B;

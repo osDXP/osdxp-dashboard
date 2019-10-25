@@ -8,9 +8,9 @@ if (isset($_GET["refresh"]) && $_GET['refresh']) { // phpcs:ignore
 }
 ?>
 
-<h1>
+<h1 class="available-modules-header">
 	<?php esc_html_e('Available Modules', 'osdxp-dashboard');?>
-	<a href="<?php echo network_admin_url('admin.php?page=dxp-modules&refresh=1'); // phpcs:ignore?>" style="vertical-align:text-bottom" class="button-secondary">
+	<a href="<?php echo network_admin_url('admin.php?page=dxp-modules&refresh=1'); // phpcs:ignore?>" class="button-secondary check-available-modules">
 		<?php esc_html_e('Check for new modules', 'osdxp-dashboard');?>
 	</a>
 </h1>

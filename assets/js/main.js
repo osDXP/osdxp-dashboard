@@ -127,5 +127,8 @@
     dxpActionsContainer.remove();
     dxpActionsHideLabel.remove();
 
+    $(".dxp-dashboard #wp-admin-bar-root-default li").each( function() {
+        $(this).addClass('current');
+    });
   });
 })(jQuery);

@@ -104,6 +104,26 @@ span.subtitle.search-results {
 	min-width: 150px;
 }
 
+.nav-tab-wrapper {
+	.nav-tab {
+		background: $body-background;
+		border-color: $color-very-light-gray;
+		border-radius: 3px 3px 0 0;
+		color: $color-charcoal;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 20px;
+
+		&.nav-tab-active,
+		&:hover {
+			color: $base-color;
+		}
+
+		&.nav-tab-active {
+			border-top: 2px solid $base-color;
+		}
+	}
+}
 
 /* Core UI */
 

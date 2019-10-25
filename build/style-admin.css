@@ -589,6 +589,19 @@ span.subtitle.search-results {
 #bulk-action-selector-top, #bulk-action-selector-bottom {
   min-width: 150px; }
 
+.nav-tab-wrapper .nav-tab {
+  background: #f1f1f1;
+  border-color: #CCCCCC;
+  border-radius: 3px 3px 0 0;
+  color: #444444;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px; }
+  .nav-tab-wrapper .nav-tab.nav-tab-active, .nav-tab-wrapper .nav-tab:hover {
+    color: #4B1BE2; }
+  .nav-tab-wrapper .nav-tab.nav-tab-active {
+    border-top: 2px solid #4B1BE2; }
+
 /* Core UI */
 .wp-core-ui.plugin-editor-php .button,
 .wp-core-ui.plugin-editor-php .button-secondary {

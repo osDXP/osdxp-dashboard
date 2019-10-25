@@ -670,8 +670,11 @@ span.subtitle.search-results {
 .wp-core-ui .button-primary {
   background: #4B1BE2;
   border-color: #4B1BE2;
+  border-radius: 2px;
   color: #fff;
   box-shadow: -2px -2px 0 #34139e inset;
+  font-size: 14px;
+  line-height: 20px;
   text-shadow: 0 -1px 1px #34139e, 1px 0 1px #34139e, 0 1px 1px #34139e, -1px 0 1px #34139e; }
   .wp-core-ui .button-primary:focus {
     background: #4B1BE2;
@@ -694,6 +697,9 @@ span.subtitle.search-results {
     box-shadow: 0 2px 0 #34139e !important; }
     .wp-core-ui .button-primary.button-hero:active {
       box-shadow: inset 0 3px 0 #34139e !important; }
+  .wp-core-ui .button-primary.button-large {
+    padding-left: 14px;
+    padding-right: 14px; }
 
 .wp-core-ui .wp-ui-primary {
   background-color: #4B1BE2;

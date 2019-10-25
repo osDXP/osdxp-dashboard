@@ -674,7 +674,6 @@ span.subtitle.search-results {
   color: #fff;
   box-shadow: -2px -2px 0 #34139e inset;
   font-size: 14px;
-  line-height: 20px;
   text-shadow: 0 -1px 1px #34139e, 1px 0 1px #34139e, 0 1px 1px #34139e, -1px 0 1px #34139e; }
   .wp-core-ui .button-primary:focus {
     background: #4B1BE2;

@@ -11,7 +11,7 @@
 	<h2 class="title"><?php esc_html_e('Manage Functionality', 'osdxp-dashboard'); ?></h2>
 	<div class="row large">
 		<?php if (current_user_can('create_users')) : ?>
- // phpcs:ignore			<a href="<?php echo admin_url('users.php');  // phpcs:ignore?>" class="col">
+			<a href="<?php echo admin_url('users.php');  // phpcs:ignore?>" class="col">
 				<div class="postbox">
 					<div>
 						<div class="group">
@@ -99,20 +99,6 @@
 				</div>
 			</a>
 		<?php endif; ?>
-
-		<?php /* TO DO:
-			<a href="#" class="col">
-		 		<div class="postbox">
-		 			<div>
-						<div class="group">
-							<div class="dashicons-before dashicons-admin-site-alt3"></div>
-							<span><?php esc_html_e('Settings', 'osdxp-dashboard'); ?></span>
-							<p><?php esc_html_e('Add New Language', 'osdxp-dashboard'); ?></p>
-						</div>
-					</div>
-		 		</div>
-		 	</a>
-		*/ ?>
 
 		<?php if (current_user_can('edit_theme_options')) : ?>
 			<a href="<?php echo admin_url('nav-menus.php?action=edit&menu=0');  // phpcs:ignore?>" class="col">

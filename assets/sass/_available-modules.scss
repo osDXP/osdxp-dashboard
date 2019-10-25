@@ -8,6 +8,13 @@
 
 .am-header {}
 
+.available-modules-header {
+    .check-available-modules {
+        margin-top: 15px;
+        vertical-align: text-bottom;
+    }
+}
+
 .am-grid-container {
   display: grid;
   grid-gap: 1em;

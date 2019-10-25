@@ -1157,8 +1157,6 @@ input#title {
 
 .wp-list-table {
   height: 100%; }
-  .wp-list-table .column-description {
-    height: 100%; }
 
 .osdxp-module-description-column {
   display: -webkit-box;
@@ -1176,12 +1174,19 @@ input#title {
           justify-content: space-between;
   overflow: auto; }
 
+.toplevel_page_dxp-modules-installed .wp-list-table.plugins .plugin-title {
+  white-space: normal; }
+
 .am-container-base,
 .am-pricing,
 .am-grid-col-container,
 .am-header,
 .am-module-footer {
   padding: 15px; }
+
+.available-modules-header .check-available-modules {
+  margin-top: 15px;
+  vertical-align: text-bottom; }
 
 .am-grid-container {
   display: grid;

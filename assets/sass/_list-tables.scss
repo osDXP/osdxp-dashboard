@@ -14,10 +14,6 @@
 
 .wp-list-table {
 	height: 100%;
-
-	.column-description {
-		height: 100%;
-	}
 }
 
 
@@ -26,4 +22,10 @@
 	flex-direction: column;
 	justify-content: space-between;
 	overflow: auto;
+}
+
+.toplevel_page_dxp-modules-installed {
+	.wp-list-table.plugins .plugin-title {
+		white-space: normal;
+	}
 }

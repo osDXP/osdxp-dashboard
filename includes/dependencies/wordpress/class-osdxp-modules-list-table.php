@@ -838,7 +838,7 @@ class OSDXP_Modules_List_Table extends \WP_List_Table
 				case 'status':
 					$classes = 'column-status desc';
 
-					echo "<td style='width:15%' class='column-primary $classes{$extra_classes}'>";
+					echo "<td width='15%' class='column-primary $classes{$extra_classes}'>";
 
 					/**
 					 * Display license information template
@@ -924,10 +924,10 @@ class OSDXP_Modules_List_Table extends \WP_List_Table
 					echo '</td>';
 					break;
 				case 'cb':
-					echo "<th scope='row' class='check-column'>$checkbox</th>";
+					echo "<th width='5%' scope='row' class='check-column'>$checkbox</th>";
 					break;
 				case 'name':
-					echo '<td style="width:35%" class="plugin-title">';
+					echo '<td width="20%" class="plugin-title">';
 
 					// Output module logo.
 					if (!empty($module_data['logo'])) {
@@ -966,7 +966,7 @@ class OSDXP_Modules_List_Table extends \WP_List_Table
 				case 'description':
 					$classes = 'column-description desc';
 
-					echo '<td style="width:50%" class="' . $classes . '"">
+					echo '<td width="60%" class="' . $classes . '"">
 						<div class="osdxp-module-description-column">
 						<div class="plugin-description">' . $description . '</div>
 						<div class="' . $class . ' second plugin-version-author-uri">';

@@ -1174,6 +1174,14 @@ input#title {
   .module-actions a + a {
     margin-top: 10px !important; }
 
+.wp-core-ui .module-actions .button,
+.wp-core-ui .module-actions .button-primary,
+.wp-core-ui .module-actions .button-secondary {
+  vertical-align: bottom; }
+
+.license-input-wrapper button.button-primary {
+  vertical-align: middle; }
+
 .wp-list-table {
   height: 100%; }
 

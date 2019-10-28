@@ -58,9 +58,9 @@
 
 	<h2 class="title"><?php esc_html_e('Create Functionality', 'osdxp-dashboard'); ?></h2>
 	<div class="row">
-		
+
 		<?php if (current_user_can('create_users')) : ?>
-            <a href="<?php echo admin_url('user-new.php'); ?>" class="col">
+            <a href="<?php echo admin_url('user-new.php'); // phpcs:ignore?>" class="col">
                 <div class="postbox">
                     <div>
                         <div class="group">
@@ -72,7 +72,7 @@
                 </div>
             </a>
 		<?php endif; ?>
-  
+
 		<?php if (current_user_can('publish_pages')) : ?>
 			<a href="<?php echo admin_url('post-new.php?post_type=page');  // phpcs:ignore?>" class="col">
 		 		<div class="postbox">
@@ -100,14 +100,12 @@
 		 		</div>
 		 	</a>
 		<?php endif; ?>
-		
+
 		<?php
-			if( is_plugin_active( 'multilingualpress/multilingualpress.php' ) )
-			{
-				$language_manager = (array)get_network_option( 0, 'multilingualpress_modules', [] );
-				if( ! empty( $language_manager ) && ! empty( $language_manager['language-manager'] ) )
-				{
-					?>
+        if (is_plugin_active('multilingualpress/multilingualpress.php')) {
+            $language_manager = (array)get_network_option(0, 'multilingualpress_modules', []);
+            if (! empty($language_manager) && ! empty($language_manager['language-manager'])) {
+                ?>
                     <a href="/wp-admin/network/admin.php?page=language-manager" class="col">
                         <div class="postbox">
                             <div>
@@ -120,10 +118,10 @@
                         </div>
                     </a>
 					<?php
-				}
-			}
+            }
+        }
 		?>
-  
+
 	</div>
 
  </div>

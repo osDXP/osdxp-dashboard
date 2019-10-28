@@ -58,7 +58,7 @@ function osdxp_module_update_row($file, $module_data)
 	);
 
 	$module_name = wp_kses($module_data['Name'], $modules_allowedtags);
-	$details_url = self_admin_url('admin.php?page=dxp-modules-information&noheader&tab=module-information&module=' . $response->slug . '&section=changelog&TB_iframe=true&width=700&height=650');
+	$details_url = esc_url($response->url);
 
 	/** @var OSDXP_Modules_List_Table $osdxp_modules_list_table */
 	$osdxp_modules_list_table = new OSDXP_Dashboard\OSDXP_Modules_List_Table();
@@ -82,11 +82,7 @@ function osdxp_module_update_row($file, $module_data)
 				__('There is a new version of %1$s available. <a href="%2$s" %3$s>View version %4$s details</a>.'),
 				$module_name,
 				esc_url($details_url),
-				sprintf(
-					'class="thickbox open-plugin-details-modal" aria-label="%s"',
-					/* translators: 1: module name, 2: version number */
-					esc_attr(sprintf(__('View %1$s version %2$s details'), $module_name, $response->new_version))
-				),
+				'target="_blank"',
 				esc_attr($response->new_version)
 			);
 		} elseif (empty($response->package)) {
@@ -95,11 +91,7 @@ function osdxp_module_update_row($file, $module_data)
 				__('There is a new version of %1$s available. <a href="%2$s" %3$s>View version %4$s details</a>. <em>Automatic update is unavailable for this module.</em>'),
 				$module_name,
 				esc_url($details_url),
-				sprintf(
-					'class="thickbox open-plugin-details-modal" aria-label="%s"',
-					/* translators: 1: module name, 2: version number */
-					esc_attr(sprintf(__('View %1$s version %2$s details'), $module_name, $response->new_version))
-				),
+				'target="_blank"',
 				esc_attr($response->new_version)
 			);
 		} else {
@@ -109,11 +101,7 @@ function osdxp_module_update_row($file, $module_data)
 					__('There is a new version of %1$s available. <a href="%2$s" %3$s>View version %4$s details</a> or <a href="%5$s" %6$s>update now</a>.'),
 					$module_name,
 					esc_url($details_url),
-					sprintf(
-						'class="thickbox open-plugin-details-modal" aria-label="%s"',
-						/* translators: 1: plugin name, 2: version number */
-						esc_attr(sprintf(__('View %1$s version %2$s details'), $module_name, $response->new_version))
-					),
+					'target="_blank"',
 					esc_attr($response->new_version),
 					wp_nonce_url(self_admin_url('admin.php?page=dxp-modules-update&noheader&action=upgrade-module&module=') . $file, 'upgrade-module_' . $file),
 					sprintf(
@@ -128,11 +116,7 @@ function osdxp_module_update_row($file, $module_data)
 					__('There is a new version of %1$s available, but it doesn&#8217;t work with your version of PHP. <a href="%2$s" %3$s>View version %4$s details</a> or <a href="%5$s">learn more about updating PHP</a>.'),
 					$module_name,
 					esc_url($details_url),
-					sprintf(
-						'class="thickbox open-plugin-details-modal" aria-label="%s"',
-						/* translators: 1: module name, 2: version number */
-						esc_attr(sprintf(__('View %1$s version %2$s details'), $module_name, $response->new_version))
-					),
+					'target="_blank"',
 					esc_attr($response->new_version),
 					esc_url(wp_get_update_php_url())
 				);

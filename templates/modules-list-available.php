@@ -64,7 +64,7 @@ if (isset($_GET["refresh"]) && $_GET['refresh']) { // phpcs:ignore
 									<?php
 									echo (empty($module_info['price'])) // phpcs:ignore
 										? ''
-										: esc_html($module_info['price']);
+										: '$' . esc_html($module_info['price']);
 									?>
 								</strong>
 							</div>

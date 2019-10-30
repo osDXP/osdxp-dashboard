@@ -49,7 +49,7 @@ define('OSDXP_DASHBOARD_PLUGIN_LOGO', OSDXP_DASHBOARD_URL . 'assets/images/sampl
 define('OSDXP_DASHBOARD_PLACEHOLDER_IMAGE_URL', OSDXP_DASHBOARD_URL . 'assets/images/placeholder.png');
 
 // Defining various licensing and update checks constants.
-define('OSDXP_DASHBOARD_GET_KEY_URL', 'https://applications.crowdfavorite.com');
+define('OSDXP_DASHBOARD_GET_KEY_URL', 'https://modules.osdxp.org');
 define('OSDXP_DASHBOARD_API_URL', OSDXP_DASHBOARD_GET_KEY_URL . '/api');
 define('OSDXP_DASHBOARD_UPDATE_URL', 'https://osdxp.org/modules/osdxp-dashboard.json');
 define('OSDXP_DASHBOARD_UPDATE_API_URL', OSDXP_DASHBOARD_API_URL . '/update');

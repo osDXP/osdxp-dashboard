@@ -166,10 +166,10 @@ function dxp_admin_add_menu_items(bool $network = false)
 	//change plugins page title to legacy plugins and settings to configurations
 	if ($network) {
 		$menu[20][0] = 'Legacy ' . $menu[20][0];
-		$menu[25][0] = 'OS DXP ' . $menu[25][0];
+		$menu[25][0] = 'osDXP ' . $menu[25][0];
 	} else {
 		$menu[5][0] = 'Articles';
-		$menu[80][0] = 'OS DXP ' . $menu[80][0];
+		$menu[80][0] = 'osDXP ' . $menu[80][0];
 	}
 
 	if (! $dxp_menu_pages || ! is_array($dxp_menu_pages)) {

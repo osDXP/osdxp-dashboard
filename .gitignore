@@ -1,3 +1,5 @@
 node_modules/
 *.todo
 build/*.map
+vendor/
+.DS_Store

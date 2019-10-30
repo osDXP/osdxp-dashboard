@@ -8,5 +8,8 @@ Open Source DXP Dashboard - WordPress plugin that creates a DXP experience, tran
 
 ## Installation
 
+If installing from source code, run `composer install`.
+
 After downloading, upload the zip into the WordPress plugins, then activate it.
+
 That's it, enjoy osDXP!

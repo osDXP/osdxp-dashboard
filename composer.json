@@ -24,8 +24,6 @@
         "includes/utils.php",
         "includes/notifications.php"
       ],
-      "psr-4": {
-          "OSDXP_Dashboard\\": "includes/"
-      }
+      "classmap": ["includes/"]
   }
 }

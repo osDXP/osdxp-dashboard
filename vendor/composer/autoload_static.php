@@ -20,33 +20,21 @@ class ComposerStaticInit77c90c4949a4c0fcfed8baebc8bc36c3
         '5dd59f8beed6a6251f319543198aec7e' => __DIR__ . '/../..' . '/includes/notifications.php',
     );
 
-    public static $prefixLengthsPsr4 = array (
-        'O' => 
-        array (
-            'OSDXP_Dashboard\\' => 16,
-        ),
-    );
-
-    public static $prefixDirsPsr4 = array (
-        'OSDXP_Dashboard\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/includes',
-        ),
-    );
-
     public static $classMap = array (
+        'OSDXP_Bulk_Module_Upgrader_Skin' => __DIR__ . '/../..' . '/includes/dependencies/wordpress/class-osdxp-bulk-module-upgrader-skin.php',
         'OSDXP_Dashboard\\LicenseAPI' => __DIR__ . '/../..' . '/includes/class-licenseapi.php',
         'OSDXP_Dashboard\\OSDXPAvailableModules' => __DIR__ . '/../..' . '/includes/class-osdxp-render-available-modules.php',
         'OSDXP_Dashboard\\OSDXP_Modules_List_Table' => __DIR__ . '/../..' . '/includes/dependencies/wordpress/class-osdxp-modules-list-table.php',
         'OSDXP_Dashboard\\OsdxpModuleUpdateChecker' => __DIR__ . '/../..' . '/includes/dependencies/plugin-update-checker/class-osdxp-module-update-checker.php',
         'OSDXP_Dashboard\\OsdxpModuleUpdateCheckerUi' => __DIR__ . '/../..' . '/includes/dependencies/plugin-update-checker/class-osdxp-module-update-checker-ui.php',
+        'OSDXP_Module_Installer_Skin' => __DIR__ . '/../..' . '/includes/dependencies/wordpress/class-osdxp-module-installer-skin.php',
+        'OSDXP_Module_Upgrader' => __DIR__ . '/../..' . '/includes/dependencies/wordpress/class-osdxp-module-upgrader.php',
+        'OSDXP_Module_Upgrader_Skin' => __DIR__ . '/../..' . '/includes/dependencies/wordpress/class-osdxp-module-upgrader-skin.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit77c90c4949a4c0fcfed8baebc8bc36c3::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit77c90c4949a4c0fcfed8baebc8bc36c3::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInit77c90c4949a4c0fcfed8baebc8bc36c3::$classMap;
 
         }, null, ClassLoader::class);

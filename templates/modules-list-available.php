@@ -94,7 +94,7 @@ if (isset($_GET["refresh"]) && $_GET['refresh']) { // phpcs:ignore
 					<p>
 						<span class="certified">&#10003;</span>
 						<strong><?php esc_html_e('Certified', 'osdxp-dashboard');?></strong>
-						<?php esc_html_e(' and tested with your OSDXP version.', 'osdxp-dashboard');?>
+						<?php esc_html_e(' and tested with your osDXP version.', 'osdxp-dashboard');?>
 					</p>
 				</div>
 			</div>

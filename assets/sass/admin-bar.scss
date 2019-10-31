@@ -373,8 +373,9 @@
 }
 
 #wpadminbar #wp-admin-bar-site-name > .ab-item:first-child {
-	background: url("../assets/images/OSDXP-logo-100.png") no-repeat center center;
+	background: url("../assets/images/osDXP_logo.svg") no-repeat center center;
 	text-indent: -9999px;
+	background-size: 100px auto;
 
 	&:before {
 		/* Remove home icon on mobile. */

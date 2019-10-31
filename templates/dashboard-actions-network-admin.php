@@ -15,7 +15,7 @@
 				<div class="postbox">
 					<div>
 						<div class="group">
-							<div class="dashicons-before dashicons-admin-home"></div>
+							<div class="dashicons-before dashicons-admin-multisite"></div>
 							<span><?php esc_html_e('Sites', 'osdxp-dashboard'); ?></span>
 							<p><?php esc_html_e('Create New Site', 'osdxp-dashboard'); ?></p>
 						</div>
@@ -77,7 +77,7 @@
 		 		<div class="postbox">
 		 			<div>
 						<div class="group">
-							<div class="dashicons-before dashicons-admin-home"></div>
+							<div class="dashicons-before dashicons-admin-multisite"></div>
 							<span><?php esc_html_e('Sites', 'osdxp-dashboard'); ?></span>
 							<p><?php esc_html_e('Manage Sites', 'osdxp-dashboard'); ?></p>
 						</div>

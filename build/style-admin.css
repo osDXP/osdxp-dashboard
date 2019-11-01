@@ -1438,7 +1438,7 @@ input#title {
   content: "\e906"; }
 
 #dxp-actions {
-  padding: 20px 0 40px 0; }
+  padding: 0 0 40px 0; }
   #dxp-actions .title {
     display: block;
     margin-top: 30px; }

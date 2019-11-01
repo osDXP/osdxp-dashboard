@@ -104,12 +104,15 @@
         renderMessages(response, $wrapper);
       });
     });
+    //
     var dxpActions = $('#dxp-actions');
     var dxpActionsContainer = dxpActions.closest('#dxp_actions.postbox');
     var dxpActionsHideLabel = $('label[for="dxp_actions-hide"]');
-    dxpActions.prependTo('.wrap');
+    // dxpActions.prependTo('.wrap');
+    dxpActions.prependTo('#dashboard-widgets').addClass('meta-box-sortables no-padding-top');
     dxpActionsContainer.remove();
     dxpActionsHideLabel.remove();
+
     $(".dxp-dashboard #wp-admin-bar-root-default li").each(function () {
       $(this).addClass('current');
     });

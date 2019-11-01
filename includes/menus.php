@@ -99,7 +99,7 @@ function add_switch_to_dxp_button_to_admin_bar_menu($wp_admin_bar)
 			[
 				'id'    => 'switch-to-dxp-backburger',
 				'title' => '<div></div><span class="screen-reader-text">'
-							. esc_html__('Switch to DXP', 'osdxp-dashboard')
+							. esc_html__('Switch to osDXP', 'osdxp-dashboard')
 							. '</span>',
 				'href'  => admin_url('?dxp=on'), //set the user meta&init plugin based on dxp param
 
@@ -110,7 +110,7 @@ function add_switch_to_dxp_button_to_admin_bar_menu($wp_admin_bar)
 				'parent' => 'switch-to-dxp-backburger',
 				'id'    => 'switch-to-dxp',
 				'title' => '<span class="screen-reader-text">'
-							. esc_html__('Switch to DXP', 'osdxp-dashboard')
+							. esc_html__('Switch to osDXP', 'osdxp-dashboard')
 							. '</span>',
 				'href'  => admin_url('?dxp=on'), //set the user meta&init plugin based on dxp param
 			]
@@ -455,7 +455,7 @@ function edit_my_sites_menu($wp_admin_bar)
 				array(
 					'parent' => 'network-admin',
 					'id'     => 'network-admin-o',
-					'title'  => esc_html__('OS DXP Settings', 'osdxp-dashboard'),
+					'title'  => esc_html__('osDXP Settings', 'osdxp-dashboard'),
 					'href'   => network_admin_url('settings.php'),
 				)
 			);

@@ -15,7 +15,7 @@ if (isset($_GET["refresh"]) && $_GET['refresh']) { // phpcs:ignore
 	</a>
 </h1>
 
-<p><?php esc_html_e('Modules extend and expand the functionality of Open Source DXP', 'osdxp-dashboard');?></p>
+<p><?php esc_html_e('Modules extend and expand the functionality of osDXP', 'osdxp-dashboard');?></p>
 
 <div class="am-grid-container">
 	<?php
@@ -94,7 +94,7 @@ if (isset($_GET["refresh"]) && $_GET['refresh']) { // phpcs:ignore
 					<p>
 						<span class="certified">&#10003;</span>
 						<strong><?php esc_html_e('Certified', 'osdxp-dashboard');?></strong>
-						<?php esc_html_e(' and tested with your OSDXP version.', 'osdxp-dashboard');?>
+						<?php esc_html_e(' and tested with your osDXP version.', 'osdxp-dashboard');?>
 					</p>
 				</div>
 			</div>

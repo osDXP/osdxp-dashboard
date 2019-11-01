@@ -15,7 +15,7 @@ if (isset($_GET["refresh"]) && $_GET['refresh']) { // phpcs:ignore
 	</a>
 </h1>
 
-<p><?php esc_html_e('Modules extend and expand the functionality of Open Source DXP', 'osdxp-dashboard');?></p>
+<p><?php esc_html_e('Modules extend and expand the functionality of osDXP', 'osdxp-dashboard');?></p>
 
 <div class="am-grid-container">
 	<?php

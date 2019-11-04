@@ -9,12 +9,11 @@
     }
   ],
   "require": {
-    "yahnis-elsts/plugin-update-checker": "^4.7"
+    "yahnis-elsts/plugin-update-checker": "~4.7.0"
   },
   "autoload": {
       "files" : [
         "includes/assets.php",
-        "includes/class-licenseapi.php",
         "includes/config.php",
         "includes/core.php",
         "includes/dashboard.php",

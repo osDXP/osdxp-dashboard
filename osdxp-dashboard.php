@@ -51,7 +51,7 @@ define('OSDXP_DASHBOARD_PLACEHOLDER_IMAGE_URL', OSDXP_DASHBOARD_URL . 'assets/im
 // Defining various licensing and update checks constants.
 define('OSDXP_DASHBOARD_GET_KEY_URL', 'https://modules.osdxp.org');
 define('OSDXP_DASHBOARD_API_URL', OSDXP_DASHBOARD_GET_KEY_URL . '/api');
-define('OSDXP_DASHBOARD_UPDATE_URL', 'https://osdxp.org/modules/osdxp-dashboard.json');
+define('OSDXP_DASHBOARD_UPDATE_URL', 'https://osdxp.org/wp-content/modules/osdxp-dashboard.json');
 define('OSDXP_DASHBOARD_UPDATE_API_URL', OSDXP_DASHBOARD_API_URL . '/update');
 define('OSDXP_DASHBOARD_API_KEY_OPTION', 'osdxp_license');
 define('OSDXP_DASHBOARD_LICENSE_DATA_OPTION_NAME', 'osdxp_license_data');

@@ -25,13 +25,15 @@ function filter_plugins($plugins)
 
 	$osdxp_modules = get_osdxp_available_modules();
 	$module_names = array_column($osdxp_modules, 'name');
+	$module_slugs = array_keys($osdxp_modules);
 
-	foreach ($plugins as $key => $plugin_data) {
-		$module_key = array_search($plugin_data['Name'], $module_names);
-		$module_name = (false !== $module_key) ? $module_names[$module_key] : false;
+	foreach ($plugins as $slug => $plugin_data) {
+		$name_key = array_search($plugin_data['Name'], $module_names);
+		$module_name = (false !== $name_key) ? $module_names[$name_key] : in_array($slug, $module_slugs, true);
+
 		// An osDXP module but not osDXP dashboard.
-		if (false !== $module_name && 'Open Source DXP Dashboard' !== $module_name) {
-			unset($plugins[$key]);
+		if ($module_name && 'Open Source DXP Dashboard' !== $module_name) {
+			unset($plugins[$slug]);
 		}
 	}
 
@@ -41,43 +43,50 @@ function filter_plugins($plugins)
 /**
  * Method to display DXP modules
  *
- * @param array $modules Modules array.
+ * @param array $plugins Plugins array.
  *
  * @return array
  *
  * @see class-osdxp-modules-list.php apply_filters( 'osdxp_get_modules', get_plugins() )
  */
-function filter_modules($modules)
+function filter_modules($plugins)
 {
-	if (!$modules || !is_array($modules)) {
+	if (!$plugins || !is_array($plugins)) {
 		return [];
 	}
 
-	$osdxp_modules = get_osdxp_available_modules();
-	$osdxp_modules_name = array_combine(array_keys($osdxp_modules), array_column($osdxp_modules, 'name'));
+	$modules = get_osdxp_available_modules();
+	$module_names = array_combine(array_keys($modules), array_column($modules, 'name'));
 
-	foreach ($modules as $key => $module_data) {
-		$osdxp_key = array_search($module_data['Name'], $osdxp_modules_name);
-		$available_module_data = (false !== $osdxp_key) ? $osdxp_modules[$osdxp_key] : $osdxp_key;
+	foreach ($plugins as $slug => $module_data) {
+		if (isset($modules[$slug])) {
+			$available_module_data = $modules[$slug];
+		} elseif (false !== $name_key = array_search($module_data['Name'], $module_names)) {
+			$available_module_data = $modules[$name_key];
+		} else {
+			$available_module_data = false;
+		}
 
 		// Not an OSDXP module.
-		if (!isset($module_data['Name']) || empty($available_module_data)) {
-			unset($modules[$key]);
+		if (false === $available_module_data) {
+			unset($plugins[$slug]);
 			continue;
 		} elseif (!empty($available_module_data['logo'])) {
 			$module_data['logo'] = $available_module_data['logo'];
 		}
 
+		//set name from endpoint
+		$module_data['Name'] = $available_module_data['name'];
 		//set logo to placeholder if missing
 		$module_data['logo'] = empty($module_data['logo'])
 			? OSDXP_DASHBOARD_PLACEHOLDER_IMAGE_URL
 			: esc_url($module_data['logo']);
 		$module_data['logo'] = '<img src="' . $module_data['logo'] . '">';
 
-		$modules[$key] = $module_data;
+		$plugins[$slug] = $module_data;
 	}
 
-	return $modules;
+	return $plugins;
 }
 
 /**

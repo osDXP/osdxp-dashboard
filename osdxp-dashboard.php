@@ -36,15 +36,16 @@ namespace OSDXP_Dashboard;
 
 // phpcs:disable
 // Define bootstrap constants
-define('OSDXP_DASHBOARD_DIR', plugin_dir_path(__FILE__));
-define('OSDXP_DASHBOARD_URL', plugins_url('/', __FILE__));
+define('OSDXP_DASHBOARD_FILE', __FILE__);
+define('OSDXP_DASHBOARD_DIR', plugin_dir_path(OSDXP_DASHBOARD_FILE));
+define('OSDXP_DASHBOARD_URL', plugins_url('/', __OSDXP_DASHBOARD_FILEFILE__));
 
 // Always mention the plugin version (enclose in quotes so it is processed as a string).
 define('OSDXP_DASHBOARD_VER', '1.0.2');
 define('OSDXP_DASHBOARD_SITE', 'https://opensourcedxp.com/');
 
 define('OSDXP_DASHBOARD_PLUGIN_NAME', 'Open Source DXP Dashboard');
-define('OSDXP_DASHBOARD_PLUGIN_BASENAME', plugin_basename(__FILE__));
+define('OSDXP_DASHBOARD_PLUGIN_BASENAME', plugin_basename(OSDXP_DASHBOARD_FILE));
 define('OSDXP_DASHBOARD_PLUGIN_LOGO', OSDXP_DASHBOARD_URL . 'assets/images/sample.png');
 define('OSDXP_DASHBOARD_PLACEHOLDER_IMAGE_URL', OSDXP_DASHBOARD_URL . 'assets/images/placeholder.png');
 
@@ -83,12 +84,18 @@ define('OSDXP_DASHBOARD_MENU_TYPE_MENU', 'menu');
 define('OSDXP_DASHBOARD_MENU_TYPE_SUBMENU', 'submenu');
 define('OSDXP_DASHBOARD_MENU_TYPE_ENDPOINT', 'endpoint');
 // phpcs:enable
-// We need get_plugins to filter for modules
-if (!function_exists('get_plugins')) {
-	require_once ABSPATH . 'wp-admin/includes/plugin.php';
-}
 
-require_once('vendor/autoload.php');
+call_user_func_array(function ($absPath, $rootPath, $mainFilePath) {
+    // We need get_plugins to filter for modules
+    if (!function_exists('get_plugins')) {
+        require_once "{$absPath}wp-admin/includes/plugin.php";
+    }
 
-register_deactivation_hook(__FILE__, __NAMESPACE__ . '\\osdxp_deactivate');
-register_activation_hook(__FILE__, __NAMESPACE__ . '\\osdxp_activate');
+    $autoload = "{$rootPath}vendor/autoload.php";
+    if (is_readable($autoload)) {
+        require_once $autoload;
+    }
+
+    register_deactivation_hook($mainFilePath, __NAMESPACE__ . '\\osdxp_deactivate');
+    register_activation_hook($mainFilePath, __NAMESPACE__ . '\\osdxp_activate');
+}, [ABSPATH, OSDXP_DASHBOARD_DIR, OSDXP_DASHBOARD_FILE]);

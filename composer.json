@@ -9,7 +9,7 @@
     }
   ],
   "require": {
-    "yahnis-elsts/plugin-update-checker": "~4.7.0"
+    "yahnis-elsts/plugin-update-checker": "~4.8.0"
   },
   "autoload": {
       "files" : [

@@ -2,11 +2,11 @@
 /**
  * Module update checker extended from vendor PUC
  *
- * @see   Puc_v4p7_Plugin_UpdateChecker
+ * @see   Puc_v4p8_Plugin_UpdateChecker
  */
 namespace OSDXP_Dashboard;
 
-class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
+class OsdxpModuleUpdateChecker extends \Puc_v4p8_UpdateChecker
 {
 	protected $updateTransient = 'update_plugins';
 	protected $translationType = 'plugin';
@@ -16,7 +16,7 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 	public $muPluginFile = ''; //For MU modules, the module filename relative to the mu-plugins directory.
 
 		/**
-		 * @var Puc_v4p7_Plugin_Package
+		 * @var Puc_v4p8_Plugin_Package
 		 */
 	protected $package;
 
@@ -82,11 +82,11 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 		 * Create an instance of the scheduler.
 		 *
 		 * @param int $checkPeriod
-		 * @return Puc_v4p7_Scheduler
+		 * @return Puc_v4p8_Scheduler
 		 */
 	protected function createScheduler($checkPeriod)
 	{
-		$scheduler = new \Puc_v4p7_Scheduler($this, $checkPeriod, array('load-plugins.php'));
+		$scheduler = new \Puc_v4p8_Scheduler($this, $checkPeriod, array('load-plugins.php'));
 		register_deactivation_hook($this->pluginFile, array($scheduler, 'removeUpdaterCron'));
 		return $scheduler;
 	}
@@ -134,14 +134,14 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 		 * @uses wp_remote_get()
 		 *
 		 * @param array $queryArgs Additional query arguments to append to the request. Optional.
-		 * @return Puc_v4p7_Plugin_Info
+		 * @return Puc_v4p8_Plugin_Info
 		 */
 	public function requestInfo($queryArgs = array())
 	{
-		list($pluginInfo, $result) = $this->requestMetadata('Puc_v4p7_Plugin_Info', 'request_info', $queryArgs);
+		list($pluginInfo, $result) = $this->requestMetadata('Puc_v4p8_Plugin_Info', 'request_info', $queryArgs);
 
 		if ($pluginInfo !== null) {
-			/** @var Puc_v4p7_Plugin_Info $pluginInfo */
+			/** @var Puc_v4p8_Plugin_Info $pluginInfo */
 			$pluginInfo->filename = $this->pluginFile;
 			$pluginInfo->slug = $this->slug;
 		}
@@ -155,7 +155,7 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 		 *
 		 * @uses PluginUpdateChecker::requestInfo()
 		 *
-		 * @return Puc_v4p7_Update|null An instance of Plugin_Update, or NULL when no updates are available.
+		 * @return Puc_v4p8_Update|null An instance of Plugin_Update, or NULL when no updates are available.
 		 */
 	public function requestUpdate()
 	{
@@ -165,7 +165,7 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 		if ($pluginInfo === null) {
 			return null;
 		}
-		$update = \Puc_v4p7_Plugin_Update::fromPluginInfo($pluginInfo);
+		$update = \Puc_v4p8_Plugin_Update::fromPluginInfo($pluginInfo);
 
 		$update = $this->filterUpdateResult($update);
 
@@ -282,13 +282,13 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 		 * Uses cached update data. To retrieve update information straight from
 		 * the metadata URL, call requestUpdate() instead.
 		 *
-		 * @return Puc_v4p7_Plugin_Update|null
+		 * @return Puc_v4p8_Plugin_Update|null
 		 */
 	public function getUpdate()
 	{
 		$update = parent::getUpdate();
 		if (isset($update)) {
-			/** @var Puc_v4p7_Plugin_Update $update */
+			/** @var Puc_v4p8_Plugin_Update $update */
 			$update->filename = $this->pluginFile;
 		}
 		return $update;
@@ -402,21 +402,21 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 
 	protected function createDebugBarExtension()
 	{
-		return new \Puc_v4p7_DebugBar_PluginExtension($this);
+		return new \Puc_v4p8_DebugBar_PluginExtension($this);
 	}
 
 		/**
 		 * Create a package instance that represents this plugin or theme.
 		 *
-		 * @return Puc_v4p7_InstalledPackage
+		 * @return Puc_v4p8_InstalledPackage
 		 */
 	protected function createInstalledPackage()
 	{
-		return new \Puc_v4p7_Plugin_Package($this->pluginAbsolutePath, $this);
+		return new \Puc_v4p8_Plugin_Package($this->pluginAbsolutePath, $this);
 	}
 
 		/**
-		 * @return Puc_v4p7_Plugin_Package
+		 * @return Puc_v4p8_Plugin_Package
 		 */
 	public function getInstalledPackage()
 	{
@@ -433,7 +433,7 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 	 * @param string $metaClass Parse the JSON as an instance of this class. It must have a static fromJson method.
 	 * @param string $filterRoot
 	 * @param array $queryArgs Additional query arguments.
-	 * @return array [Puc_v4p7_Metadata|null, array|WP_Error]
+	 * @return array [Puc_v4p8_Metadata|null, array|WP_Error]
 	 * A metadata instance and the value returned by wp_remote_get().
 	 */
 	protected function requestMetadata($metaClass, $filterRoot, $queryArgs = array())

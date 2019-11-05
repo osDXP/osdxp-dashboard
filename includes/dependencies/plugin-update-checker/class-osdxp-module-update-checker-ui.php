@@ -340,6 +340,7 @@ class OsdxpModuleUpdateCheckerUi
 		remove_action('admin_init', array($this, 'onAdminInit'));
 		remove_filter('plugin_row_meta', array($this, 'addViewDetailsLink'), 10);
 		remove_filter('plugin_row_meta', array($this, 'addCheckForUpdatesLink'), 10);
+		remove_filter('osdxp_module_column_status', array($this, 'addCheckForUpdatesButton'), 10, 2);
 		remove_action('all_admin_notices', array($this, 'displayManualCheckResult'));
 	}
 }

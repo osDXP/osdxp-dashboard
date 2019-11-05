@@ -38,7 +38,7 @@ namespace OSDXP_Dashboard;
 // Define bootstrap constants
 define('OSDXP_DASHBOARD_FILE', __FILE__);
 define('OSDXP_DASHBOARD_DIR', plugin_dir_path(OSDXP_DASHBOARD_FILE));
-define('OSDXP_DASHBOARD_URL', plugins_url('/', __OSDXP_DASHBOARD_FILEFILE__));
+define('OSDXP_DASHBOARD_URL', plugins_url('/', OSDXP_DASHBOARD_FILE));
 
 // Always mention the plugin version (enclose in quotes so it is processed as a string).
 define('OSDXP_DASHBOARD_VER', '1.0.2');

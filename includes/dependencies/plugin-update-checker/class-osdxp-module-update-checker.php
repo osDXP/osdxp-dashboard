@@ -2,11 +2,11 @@
 /**
  * Module update checker extended from vendor PUC
  *
- * @see   Puc_v4p7_Plugin_UpdateChecker
+ * @see   Puc_v4p8_Plugin_UpdateChecker
  */
 namespace OSDXP_Dashboard;
 
-class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
+class OsdxpModuleUpdateChecker extends \Puc_v4p8_UpdateChecker
 {
 	protected $updateTransient = 'update_plugins';
 	protected $translationType = 'plugin';
@@ -15,24 +15,24 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 	public $pluginFile = '';  //Module filename relative to the modules directory.
 	public $muPluginFile = ''; //For MU modules, the module filename relative to the mu-plugins directory.
 
-		/**
-		 * @var Puc_v4p7_Plugin_Package
-		 */
+	/**
+	 * @var Puc_v4p8_Plugin_Package
+	 */
 	protected $package;
 
 	private $extraUi = null;
-		// phpcs:disable
-		/**
-		 * Class constructor.
-		 *
-		 * @param string $metadataUrl The URL of the module's metadata file.
-		 * @param string $pluginFile Fully qualified path to the main module file.
-		 * @param string $slug The module's 'slug'. If not specified, the filename part of $pluginFile sans '.php' will be used as the slug.
-		 * @param integer $checkPeriod How often to check for updates (in hours). Defaults to checking every 12 hours. Set to 0 to disable automatic update checks.
-		 * @param string $optionName Where to store book-keeping info about update checks. Defaults to 'external_updates-$slug'.
-		 * @param string $muPluginFile Optional. The module filename relative to the mu-plugins directory.
-		 */
-		// phpcs:enable
+	// phpcs:disable
+	/**
+	 * Class constructor.
+	 *
+	 * @param string $metadataUrl The URL of the module's metadata file.
+	 * @param string $pluginFile Fully qualified path to the main module file.
+	 * @param string $slug The module's 'slug'. If not specified, the filename part of $pluginFile sans '.php' will be used as the slug.
+	 * @param integer $checkPeriod How often to check for updates (in hours). Defaults to checking every 12 hours. Set to 0 to disable automatic update checks.
+	 * @param string $optionName Where to store book-keeping info about update checks. Defaults to 'external_updates-$slug'.
+	 * @param string $muPluginFile Optional. The module filename relative to the mu-plugins directory.
+	 */
+	// phpcs:enable
 	public function __construct(
 		$metadataUrl,
 		$pluginFile,
@@ -78,25 +78,25 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 		$this->extraUi = new OsdxpModuleUpdateCheckerUi($this);
 	}
 
-		/**
-		 * Create an instance of the scheduler.
-		 *
-		 * @param int $checkPeriod
-		 * @return Puc_v4p7_Scheduler
-		 */
+	/**
+	 * Create an instance of the scheduler.
+	 *
+	 * @param int $checkPeriod
+	 * @return Puc_v4p8_Scheduler
+	 */
 	protected function createScheduler($checkPeriod)
 	{
-		$scheduler = new \Puc_v4p7_Scheduler($this, $checkPeriod, array('load-plugins.php'));
+		$scheduler = new \Puc_v4p8_Scheduler($this, $checkPeriod, array('load-plugins.php'));
 		register_deactivation_hook($this->pluginFile, array($scheduler, 'removeUpdaterCron'));
 		return $scheduler;
 	}
 
-		/**
-		 * Install the hooks required to run periodic update checks and inject update info
-		 * into WP data structures.
-		 *
-		 * @return void
-		 */
+	/**
+	 * Install the hooks required to run periodic update checks and inject update info
+	 * into WP data structures.
+	 *
+	 * @return void
+	 */
 	protected function installHooks()
 	{
 		//Override requests for plugin information
@@ -105,20 +105,20 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 		parent::installHooks();
 	}
 
-		/**
-		 * Remove update checker hooks.
-		 *
-		 * The intent is to prevent a fatal error that can happen if the module has an uninstall
-		 * hook. During uninstallation, WP includes the main module file (which creates a PUC instance),
-		 * the uninstall hook runs, WP deletes the module files and then updates some transients.
-		 * If PUC hooks are still around at this time, they could throw an error while trying to
-		 * autoload classes from files that no longer exist.
-		 *
-		 * The "site_transient_{$transient}" filter is the main problem here, but let's also remove
-		 * most other PUC hooks to be safe.
-		 *
-		 * @internal
-		 */
+	/**
+	 * Remove update checker hooks.
+	 *
+	 * The intent is to prevent a fatal error that can happen if the module has an uninstall
+	 * hook. During uninstallation, WP includes the main module file (which creates a PUC instance),
+	 * the uninstall hook runs, WP deletes the module files and then updates some transients.
+	 * If PUC hooks are still around at this time, they could throw an error while trying to
+	 * autoload classes from files that no longer exist.
+	 *
+	 * The "site_transient_{$transient}" filter is the main problem here, but let's also remove
+	 * most other PUC hooks to be safe.
+	 *
+	 * @internal
+	 */
 	public function removeHooks()
 	{
 		parent::removeHooks();
@@ -128,20 +128,20 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 		remove_filter('plugins_api', array($this, 'injectInfo'), 20);
 	}
 
-		/**
-		 * Retrieve module info from the configured API endpoint.
-		 *
-		 * @uses wp_remote_get()
-		 *
-		 * @param array $queryArgs Additional query arguments to append to the request. Optional.
-		 * @return Puc_v4p7_Plugin_Info
-		 */
+	/**
+	 * Retrieve module info from the configured API endpoint.
+	 *
+	 * @uses wp_remote_get()
+	 *
+	 * @param array $queryArgs Additional query arguments to append to the request. Optional.
+	 * @return Puc_v4p8_Plugin_Info
+	 */
 	public function requestInfo($queryArgs = array())
 	{
-		list($pluginInfo, $result) = $this->requestMetadata('Puc_v4p7_Plugin_Info', 'request_info', $queryArgs);
+		list($pluginInfo, $result) = $this->requestMetadata('Puc_v4p8_Plugin_Info', 'request_info', $queryArgs);
 
 		if ($pluginInfo !== null) {
-			/** @var Puc_v4p7_Plugin_Info $pluginInfo */
+			/** @var Puc_v4p8_Plugin_Info $pluginInfo */
 			$pluginInfo->filename = $this->pluginFile;
 			$pluginInfo->slug = $this->slug;
 		}
@@ -150,13 +150,13 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 		return $pluginInfo;
 	}
 
-		/**
-		 * Retrieve the latest update (if any) from the configured API endpoint.
-		 *
-		 * @uses PluginUpdateChecker::requestInfo()
-		 *
-		 * @return Puc_v4p7_Update|null An instance of Plugin_Update, or NULL when no updates are available.
-		 */
+	/**
+	 * Retrieve the latest update (if any) from the configured API endpoint.
+	 *
+	 * @uses PluginUpdateChecker::requestInfo()
+	 *
+	 * @return Puc_v4p8_Update|null An instance of Plugin_Update, or NULL when no updates are available.
+	 */
 	public function requestUpdate()
 	{
 		//For the sake of simplicity, this function just calls requestInfo()
@@ -165,29 +165,29 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 		if ($pluginInfo === null) {
 			return null;
 		}
-		$update = \Puc_v4p7_Plugin_Update::fromPluginInfo($pluginInfo);
+		$update = \Puc_v4p8_Plugin_Update::fromPluginInfo($pluginInfo);
 
 		$update = $this->filterUpdateResult($update);
 
 		return $update;
 	}
 
-		/**
-		 * Intercept plugins_api() calls that request information about our module and
-		 * use the configured API endpoint to satisfy them.
-		 *
-		 * @see plugins_api()
-		 *
-		 * @param mixed $result
-		 * @param string $action
-		 * @param array|object $args
-		 * @return mixed
-		 */
+	/**
+	 * Intercept plugins_api() calls that request information about our module and
+	 * use the configured API endpoint to satisfy them.
+	 *
+	 * @see plugins_api()
+	 *
+	 * @param mixed $result
+	 * @param string $action
+	 * @param array|object $args
+	 * @return mixed
+	 */
 	public function injectInfo($result, $action = null, $args = null)
 	{
 		$relevant = ($action == 'plugin_information') && isset($args->slug) && (
-				($args->slug == $this->slug) || ($args->slug == dirname($this->pluginFile))
-			);
+			($args->slug == $this->slug) || ($args->slug == dirname($this->pluginFile))
+		);
 		if (!$relevant) {
 			return $result;
 		}
@@ -208,11 +208,11 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 		return !$this->isUnknownMuPlugin();
 	}
 
-		/**
-		 * @param stdClass|null $updates
-		 * @param stdClass $updateToAdd
-		 * @return stdClass
-		 */
+	/**
+	 * @param stdClass|null $updates
+	 * @param stdClass $updateToAdd
+	 * @return stdClass
+	 */
 	protected function addUpdateToList($updates, $updateToAdd)
 	{
 		if ($this->package->isMuPlugin()) {
@@ -223,10 +223,10 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 		return parent::addUpdateToList($updates, $updateToAdd);
 	}
 
-		/**
-		 * @param stdClass|null $updates
-		 * @return stdClass|null
-		 */
+	/**
+	 * @param stdClass|null $updates
+	 * @return stdClass|null
+	 */
 	protected function removeUpdateFromList($updates)
 	{
 		$updates = parent::removeUpdateFromList($updates);
@@ -236,12 +236,12 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 		return $updates;
 	}
 
-		/**
-		 * For modules, the update array is indexed by the modules filename relative to the "modules"
-		 * directory. Example: "module-name/module.php".
-		 *
-		 * @return string
-		 */
+	/**
+	 * For modules, the update array is indexed by the modules filename relative to the "modules"
+	 * directory. Example: "module-name/module.php".
+	 *
+	 * @return string
+	 */
 	protected function getUpdateListKey()
 	{
 		if ($this->package->isMuPlugin()) {
@@ -250,151 +250,151 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 		return $this->pluginFile;
 	}
 
-		/**
-		 * Alias for isBeingUpgraded().
-		 *
-		 * @deprecated
-		 * @param WP_Upgrader|null $upgrader The upgrader that's performing the current update.
-		 * @return bool
-		 */
+	/**
+	 * Alias for isBeingUpgraded().
+	 *
+	 * @deprecated
+	 * @param WP_Upgrader|null $upgrader The upgrader that's performing the current update.
+	 * @return bool
+	 */
 	public function isPluginBeingUpgraded($upgrader = null)
 	{
 		return $this->isBeingUpgraded($upgrader);
 	}
 
-		/**
-		 * Is there an update being installed for this module, right now?
-		 *
-		 * @param WP_Upgrader|null $upgrader
-		 * @return bool
-		 */
+	/**
+	 * Is there an update being installed for this module, right now?
+	 *
+	 * @param WP_Upgrader|null $upgrader
+	 * @return bool
+	 */
 	public function isBeingUpgraded($upgrader = null)
 	{
 		return $this->upgraderStatus->isPluginBeingUpgraded($this->pluginFile, $upgrader);
 	}
 
-		/**
-		 * Get the details of the currently available update, if any.
-		 *
-		 * If no updates are available, or if the last known update version is below or equal
-		 * to the currently installed version, this method will return NULL.
-		 *
-		 * Uses cached update data. To retrieve update information straight from
-		 * the metadata URL, call requestUpdate() instead.
-		 *
-		 * @return Puc_v4p7_Plugin_Update|null
-		 */
+	/**
+	 * Get the details of the currently available update, if any.
+	 *
+	 * If no updates are available, or if the last known update version is below or equal
+	 * to the currently installed version, this method will return NULL.
+	 *
+	 * Uses cached update data. To retrieve update information straight from
+	 * the metadata URL, call requestUpdate() instead.
+	 *
+	 * @return Puc_v4p8_Plugin_Update|null
+	 */
 	public function getUpdate()
 	{
 		$update = parent::getUpdate();
 		if (isset($update)) {
-			/** @var Puc_v4p7_Plugin_Update $update */
+			/** @var Puc_v4p8_Plugin_Update $update */
 			$update->filename = $this->pluginFile;
 		}
 		return $update;
 	}
 
-		/**
-		 * Get the translated module title.
-		 *
-		 * @deprecated
-		 * @return string
-		 */
+	/**
+	 * Get the translated module title.
+	 *
+	 * @deprecated
+	 * @return string
+	 */
 	public function getPluginTitle()
 	{
 		return $this->package->getPluginTitle();
 	}
 
-		/**
-		 * Check if the current user has the required permissions to install updates.
-		 *
-		 * @return bool
-		 */
+	/**
+	 * Check if the current user has the required permissions to install updates.
+	 *
+	 * @return bool
+	 */
 	public function userCanInstallUpdates()
 	{
 		return current_user_can('update_plugins');
 	}
 
-		/**
-		 * Check if the module file is inside the mu-plugins directory.
-		 *
-		 * @deprecated
-		 * @return bool
-		 */
+	/**
+	 * Check if the module file is inside the mu-plugins directory.
+	 *
+	 * @deprecated
+	 * @return bool
+	 */
 	protected function isMuPlugin()
 	{
 		return $this->package->isMuPlugin();
 	}
 
-		/**
-		 * MU modules are partially supported, but only when we know which file in mu-plugins
-		 * corresponds to this module.
-		 *
-		 * @return bool
-		 */
+	/**
+	 * MU modules are partially supported, but only when we know which file in mu-plugins
+	 * corresponds to this module.
+	 *
+	 * @return bool
+	 */
 	protected function isUnknownMuPlugin()
 	{
 		return empty($this->muPluginFile) && $this->package->isMuPlugin();
 	}
 
-		/**
-		 * Get absolute path to the main module file.
-		 *
-		 * @return string
-		 */
+	/**
+	 * Get absolute path to the main module file.
+	 *
+	 * @return string
+	 */
 	public function getAbsolutePath()
 	{
 		return $this->pluginAbsolutePath;
 	}
 
-		/**
-		 * Register a callback for filtering query arguments.
-		 *
-		 * The callback function should take one argument - an associative array of query arguments.
-		 * It should return a modified array of query arguments.
-		 *
-		 * @uses add_filter() This method is a convenience wrapper for add_filter().
-		 *
-		 * @param callable $callback
-		 * @return void
-		 */
+	/**
+	 * Register a callback for filtering query arguments.
+	 *
+	 * The callback function should take one argument - an associative array of query arguments.
+	 * It should return a modified array of query arguments.
+	 *
+	 * @uses add_filter() This method is a convenience wrapper for add_filter().
+	 *
+	 * @param callable $callback
+	 * @return void
+	 */
 	public function addQueryArgFilter($callback)
 	{
 		$this->addFilter('request_info_query_args', $callback);
 	}
 
-		/**
-		 * Register a callback for filtering arguments passed to wp_remote_get().
-		 *
-		 * The callback function should take one argument - an associative array of arguments -
-		 * and return a modified array or arguments. See the WP documentation on wp_remote_get()
-		 * for details on what arguments are available and how they work.
-		 *
-		 * @uses add_filter() This method is a convenience wrapper for add_filter().
-		 *
-		 * @param callable $callback
-		 * @return void
-		 */
+	/**
+	 * Register a callback for filtering arguments passed to wp_remote_get().
+	 *
+	 * The callback function should take one argument - an associative array of arguments -
+	 * and return a modified array or arguments. See the WP documentation on wp_remote_get()
+	 * for details on what arguments are available and how they work.
+	 *
+	 * @uses add_filter() This method is a convenience wrapper for add_filter().
+	 *
+	 * @param callable $callback
+	 * @return void
+	 */
 	public function addHttpRequestArgFilter($callback)
 	{
 		$this->addFilter('request_info_options', $callback);
 	}
 
-		/**
-		 * Register a callback for filtering the module info retrieved from the external API.
-		 *
-		 * The callback function should take two arguments. If the module info was retrieved
-		 * successfully, the first argument passed will be an instance of  PluginInfo. Otherwise,
-		 * it will be NULL. The second argument will be the corresponding return value of
-		 * wp_remote_get (see WP docs for details).
-		 *
-		 * The callback function should return a new or modified instance of PluginInfo or NULL.
-		 *
-		 * @uses add_filter() This method is a convenience wrapper for add_filter().
-		 *
-		 * @param callable $callback
-		 * @return void
-		 */
+	/**
+	 * Register a callback for filtering the module info retrieved from the external API.
+	 *
+	 * The callback function should take two arguments. If the module info was retrieved
+	 * successfully, the first argument passed will be an instance of  PluginInfo. Otherwise,
+	 * it will be NULL. The second argument will be the corresponding return value of
+	 * wp_remote_get (see WP docs for details).
+	 *
+	 * The callback function should return a new or modified instance of PluginInfo or NULL.
+	 *
+	 * @uses add_filter() This method is a convenience wrapper for add_filter().
+	 *
+	 * @param callable $callback
+	 * @return void
+	 */
 	public function addResultFilter($callback)
 	{
 		$this->addFilter('request_info_result', $callback, 10, 2);
@@ -402,26 +402,27 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 
 	protected function createDebugBarExtension()
 	{
-		return new \Puc_v4p7_DebugBar_PluginExtension($this);
+		return new \Puc_v4p8_DebugBar_PluginExtension($this);
 	}
 
-		/**
-		 * Create a package instance that represents this plugin or theme.
-		 *
-		 * @return Puc_v4p7_InstalledPackage
-		 */
+	/**
+	 * Create a package instance that represents this plugin or theme.
+	 *
+	 * @return Puc_v4p8_InstalledPackage
+	 */
 	protected function createInstalledPackage()
 	{
-		return new \Puc_v4p7_Plugin_Package($this->pluginAbsolutePath, $this);
+		return new \Puc_v4p8_Plugin_Package($this->pluginAbsolutePath, $this);
 	}
 
-		/**
-		 * @return Puc_v4p7_Plugin_Package
-		 */
+	/**
+	 * @return Puc_v4p8_Plugin_Package
+	 */
 	public function getInstalledPackage()
 	{
 		return $this->package;
 	}
+
 	/* -------------------------------------------------------------------
 	 * JSON-based update API
 	 * -------------------------------------------------------------------
@@ -433,7 +434,7 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 	 * @param string $metaClass Parse the JSON as an instance of this class. It must have a static fromJson method.
 	 * @param string $filterRoot
 	 * @param array $queryArgs Additional query arguments.
-	 * @return array [Puc_v4p7_Metadata|null, array|WP_Error]
+	 * @return array [Puc_v4p8_Metadata|null, array|WP_Error]
 	 * A metadata instance and the value returned by wp_remote_get().
 	 */
 	protected function requestMetadata($metaClass, $filterRoot, $queryArgs = array())

@@ -15,9 +15,9 @@ class OsdxpModuleUpdateCheckerUi
 	private $updateChecker;
 	private $manualCheckErrorTransient = '';
 
-		/**
-		 * @param OsdxpModuleUpdateChecker $updateChecker
-		 */
+	/**
+	 * @param OsdxpModuleUpdateChecker $updateChecker
+	 */
 	public function __construct($updateChecker)
 	{
 		$this->updateChecker = $updateChecker;
@@ -38,28 +38,28 @@ class OsdxpModuleUpdateCheckerUi
 		}
 	}
 
-		/**
-		 * Add a "View Details" link to the module row in the "Modules" page. By default,
-		 * the new link will appear before the "Visit module site" link (if present).
-		 *
-		 * You can change the link text by using the "puc_view_details_link-$slug" filter.
-		 * Returning an empty string from the filter will disable the link.
-		 *
-		 * You can change the position of the link using the
-		 * "puc_view_details_link_position-$slug" filter.
-		 * Returning 'before' or 'after' will place the link immediately before/after
-		 * the "Visit module site" link.
-		 * Returning 'append' places the link after any existing links at the time of the hook.
-		 * Returning 'replace' replaces the "Visit module site" link.
-		 * Returning anything else disables the link when there is a "Visit module site" link.
-		 *
-		 * If there is no "Visit module site" link 'append' is always used!
-		 *
-		 * @param array $pluginMeta Array of meta links.
-		 * @param string $pluginFile
-		 * @param array $pluginData Array of module header data.
-		 * @return array
-		 */
+	/**
+	 * Add a "View Details" link to the module row in the "Modules" page. By default,
+	 * the new link will appear before the "Visit module site" link (if present).
+	 *
+	 * You can change the link text by using the "puc_view_details_link-$slug" filter.
+	 * Returning an empty string from the filter will disable the link.
+	 *
+	 * You can change the position of the link using the
+	 * "puc_view_details_link_position-$slug" filter.
+	 * Returning 'before' or 'after' will place the link immediately before/after
+	 * the "Visit module site" link.
+	 * Returning 'append' places the link after any existing links at the time of the hook.
+	 * Returning 'replace' replaces the "Visit module site" link.
+	 * Returning anything else disables the link when there is a "Visit module site" link.
+	 *
+	 * If there is no "Visit module site" link 'append' is always used!
+	 *
+	 * @param array $pluginMeta Array of meta links.
+	 * @param string $pluginFile
+	 * @param array $pluginData Array of module header data.
+	 * @return array
+	 */
 	public function addViewDetailsLink($pluginMeta, $pluginFile, $pluginData = array())
 	{
 		if ($this->isMyPluginFile($pluginFile) && !isset($pluginData['slug'])) {
@@ -67,7 +67,7 @@ class OsdxpModuleUpdateCheckerUi
 			if (!empty($linkText)) {
 				$viewDetailsLinkPosition = 'append';
 
-				//Find the "Visit plugin site" link (if present).
+			//Find the "Visit plugin site" link (if present).
 				$visitPluginSiteLinkIndex = count($pluginMeta) - 1;
 				if ($pluginData['PluginURI']) {
 					$escapedPluginUri = esc_url($pluginData['PluginURI']);
@@ -116,18 +116,18 @@ class OsdxpModuleUpdateCheckerUi
 		return $pluginMeta;
 	}
 
-		/**
-		 * Add a "Check for updates" link to the module row in the "Modules" page. By default,
-		 * the new link will appear after the "Visit module site" link if present, otherwise
-		 * after the "View module details" link.
-		 *
-		 * You can change the link text by using the "puc_manual_check_link-$slug" filter.
-		 * Returning an empty string from the filter will disable the link.
-		 *
-		 * @param array $pluginMeta Array of meta links.
-		 * @param string $pluginFile
-		 * @return array
-		 */
+	/**
+	 * Add a "Check for updates" link to the module row in the "Modules" page. By default,
+	 * the new link will appear after the "Visit module site" link if present, otherwise
+	 * after the "View module details" link.
+	 *
+	 * You can change the link text by using the "puc_manual_check_link-$slug" filter.
+	 * Returning an empty string from the filter will disable the link.
+	 *
+	 * @param array $pluginMeta Array of meta links.
+	 * @param string $pluginFile
+	 * @return array
+	 */
 	public function addCheckForUpdatesLink($pluginMeta, $pluginFile)
 	{
 		if ($this->isMyPluginFile($pluginFile)) {
@@ -183,32 +183,32 @@ class OsdxpModuleUpdateCheckerUi
 	protected function isMyPluginFile($pluginFile)
 	{
 		return ($pluginFile == $this->updateChecker->pluginFile)
-			|| (!empty($this->updateChecker->muPluginFile) && ($pluginFile == $this->updateChecker->muPluginFile));
+		|| (!empty($this->updateChecker->muPluginFile) && ($pluginFile == $this->updateChecker->muPluginFile));
 	}
 
-		/**
-		 * Check for updates when the user clicks the "Check for updates" link.
-		 *
-		 * @see self::addCheckForUpdatesLink()
-		 *
-		 * @return void
-		 */
+	/**
+	 * Check for updates when the user clicks the "Check for updates" link.
+	 *
+	 * @see self::addCheckForUpdatesLink()
+	 *
+	 * @return void
+	 */
 	public function handleManualCheck()
 	{
 		$shouldCheck =
-			isset($_GET['puc_check_for_updates'], $_GET['puc_slug'])
-			&& $_GET['puc_slug'] == $this->updateChecker->slug
-			&& check_admin_referer('puc_check_for_updates');
+		isset($_GET['puc_check_for_updates'], $_GET['puc_slug'])
+		&& $_GET['puc_slug'] == $this->updateChecker->slug
+		&& check_admin_referer('puc_check_for_updates');
 
 		if ($shouldCheck) {
 			$update = $this->updateChecker->checkForUpdates();
 			$status = ($update === null) ? 'no_update' : 'update_available';
 
 			if (($update === null) && !empty($this->lastRequestApiErrors)) {
-				//Some errors are not critical. For example, if PUC tries to retrieve the readme.txt
-				//file from GitHub and gets a 404, that's an API error, but it doesn't prevent updates
-				//from working. Maybe the module simply doesn't have a readme.
-				//Let's only show important errors.
+			//Some errors are not critical. For example, if PUC tries to retrieve the readme.txt
+			//file from GitHub and gets a 404, that's an API error, but it doesn't prevent updates
+			//from working. Maybe the module simply doesn't have a readme.
+			//Let's only show important errors.
 				$foundCriticalErrors = false;
 				$questionableErrorCodes = array(
 					'puc-github-http-error',
@@ -242,22 +242,22 @@ class OsdxpModuleUpdateCheckerUi
 		}
 	}
 
-		/**
-		 * Display the results of a manual update check.
-		 *
-		 * @see self::handleManualCheck()
-		 *
-		 * You can change the result message by using the "puc_manual_check_message-$slug" filter.
-		 */
+	/**
+	 * Display the results of a manual update check.
+	 *
+	 * @see self::handleManualCheck()
+	 *
+	 * You can change the result message by using the "puc_manual_check_message-$slug" filter.
+	 */
 	public function displayManualCheckResult()
 	{
-		// phpcs:disable
+	// phpcs:disable
 		if (isset($_GET['puc_update_check_result'], $_GET['puc_slug'])&& ($_GET['puc_slug'] == $this->updateChecker->slug)) {
 			$status = strval($_GET['puc_update_check_result']);
 			$title = $this->updateChecker->getInstalledPackage()->getPluginTitle();
 			$noticeClass = 'updated notice-success';
 			$details = '';
-		// phpcs:enable
+	// phpcs:enable
 			if ($status == 'no_update') {
 				$message = sprintf(
 					_x('The %s module is up to date.', 'the plugin title', 'plugin-update-checker'),
@@ -288,23 +288,23 @@ class OsdxpModuleUpdateCheckerUi
 				);
 				$noticeClass = 'error notice-error';
 			}
-			// phpcs:disable
+		// phpcs:disable
 			printf(
 				'<div class="notice %s is-dismissible"><p>%s</p>%s</div>',
 				$noticeClass,
 				apply_filters($this->updateChecker->getUniqueName('manual_check_message'), $message, $status),
 				$details
 			);
-			// phpcs:enable
+		// phpcs:enable
 		}
 	}
 
-		/**
-		 * Format the list of errors that were thrown during an update check.
-		 *
-		 * @param array $errors
-		 * @return string
-		 */
+	/**
+	 * Format the list of errors that were thrown during an update check.
+	 *
+	 * @param array $errors
+	 * @return string
+	 */
 	protected function formatManualCheckErrors($errors)
 	{
 		if (empty($errors)) {

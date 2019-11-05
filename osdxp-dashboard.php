@@ -96,6 +96,16 @@ call_user_func_array(function ($absPath, $rootPath, $mainFilePath) {
         require_once $autoload;
     }
 
+    require_once "{$rootPath}includes/assets.php";
+    require_once "{$rootPath}includes/config.php";
+    require_once "{$rootPath}includes/core.php";
+    require_once "{$rootPath}includes/dashboard.php";
+    require_once "{$rootPath}includes/licensing.php";
+    require_once "{$rootPath}includes/menus.php";
+    require_once "{$rootPath}includes/modules.php";
+    require_once "{$rootPath}includes/utils.php";
+    require_once "{$rootPath}includes/notifications.php";
+
     register_deactivation_hook($mainFilePath, __NAMESPACE__ . '\\osdxp_deactivate');
     register_activation_hook($mainFilePath, __NAMESPACE__ . '\\osdxp_activate');
 }, [ABSPATH, OSDXP_DASHBOARD_DIR, OSDXP_DASHBOARD_FILE]);

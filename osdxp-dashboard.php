@@ -84,12 +84,15 @@ define('OSDXP_DASHBOARD_MENU_TYPE_MENU', 'menu');
 define('OSDXP_DASHBOARD_MENU_TYPE_SUBMENU', 'submenu');
 define('OSDXP_DASHBOARD_MENU_TYPE_ENDPOINT', 'endpoint');
 // phpcs:enable
-// We need get_plugins to filter for modules
-if (!function_exists('get_plugins')) {
-	require_once ABSPATH . 'wp-admin/includes/plugin.php';
-}
 
-require_once('vendor/autoload.php');
+call_user_func_array(function ($absPath, $rootPath, $mainFilePath) {
+    // We need get_plugins to filter for modules
+    if (!function_exists('get_plugins')) {
+        require_once "{$absPath}wp-admin/includes/plugin.php";
+    }
 
-register_deactivation_hook(OSDXP_DASHBOARD_FILE, __NAMESPACE__ . '\\osdxp_deactivate');
-register_activation_hook(OSDXP_DASHBOARD_FILE, __NAMESPACE__ . '\\osdxp_activate');
+    require_once('vendor/autoload.php');
+
+    register_deactivation_hook($mainFilePath, __NAMESPACE__ . '\\osdxp_deactivate');
+    register_activation_hook($mainFilePath, __NAMESPACE__ . '\\osdxp_activate');
+}, [ABSPATH, OSDXP_DASHBOARD_DIR, OSDXP_DASHBOARD_FILE]);

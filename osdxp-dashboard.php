@@ -7,7 +7,7 @@
  * Author URI:          http://www.crowdfavorite.com
  * Requires at least:   5.2
  * Requires PHP:        7.2
- * Version:             1.0.2
+ * Version:             1.0.3
  * License:             GPL2
  * License URI:         https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * Text domain:         osdxp-dashboard
@@ -41,7 +41,7 @@ define('OSDXP_DASHBOARD_DIR', plugin_dir_path(OSDXP_DASHBOARD_FILE));
 define('OSDXP_DASHBOARD_URL', plugins_url('/', OSDXP_DASHBOARD_FILE));
 
 // Always mention the plugin version (enclose in quotes so it is processed as a string).
-define('OSDXP_DASHBOARD_VER', '1.0.2');
+define('OSDXP_DASHBOARD_VER', '1.0.3');
 define('OSDXP_DASHBOARD_SITE', 'https://opensourcedxp.com/');
 
 define('OSDXP_DASHBOARD_PLUGIN_NAME', 'Open Source DXP Dashboard');

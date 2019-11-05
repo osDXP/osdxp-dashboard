@@ -12,17 +12,6 @@
     "yahnis-elsts/plugin-update-checker": "~4.7.0"
   },
   "autoload": {
-      "files" : [
-        "includes/assets.php",
-        "includes/config.php",
-        "includes/core.php",
-        "includes/dashboard.php",
-        "includes/licensing.php",
-        "includes/menus.php",
-        "includes/modules.php",
-        "includes/utils.php",
-        "includes/notifications.php"
-      ],
       "classmap": ["includes/"]
   }
 }

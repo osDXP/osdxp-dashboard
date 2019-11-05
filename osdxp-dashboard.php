@@ -91,7 +91,10 @@ call_user_func_array(function ($absPath, $rootPath, $mainFilePath) {
         require_once "{$absPath}wp-admin/includes/plugin.php";
     }
 
-    require_once('vendor/autoload.php');
+    $autoload = "{$rootPath}vendor/autoload.php";
+    if (is_readable($autoload)) {
+        require_once $autoload;
+    }
 
     register_deactivation_hook($mainFilePath, __NAMESPACE__ . '\\osdxp_deactivate');
     register_activation_hook($mainFilePath, __NAMESPACE__ . '\\osdxp_activate');

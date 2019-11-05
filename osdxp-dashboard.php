@@ -36,15 +36,16 @@ namespace OSDXP_Dashboard;
 
 // phpcs:disable
 // Define bootstrap constants
-define('OSDXP_DASHBOARD_DIR', plugin_dir_path(__FILE__));
-define('OSDXP_DASHBOARD_URL', plugins_url('/', __FILE__));
+define('OSDXP_DASHBOARD_FILE', __FILE__);
+define('OSDXP_DASHBOARD_DIR', plugin_dir_path(OSDXP_DASHBOARD_FILE));
+define('OSDXP_DASHBOARD_URL', plugins_url('/', __OSDXP_DASHBOARD_FILEFILE__));
 
 // Always mention the plugin version (enclose in quotes so it is processed as a string).
 define('OSDXP_DASHBOARD_VER', '1.0.2');
 define('OSDXP_DASHBOARD_SITE', 'https://opensourcedxp.com/');
 
 define('OSDXP_DASHBOARD_PLUGIN_NAME', 'Open Source DXP Dashboard');
-define('OSDXP_DASHBOARD_PLUGIN_BASENAME', plugin_basename(__FILE__));
+define('OSDXP_DASHBOARD_PLUGIN_BASENAME', plugin_basename(OSDXP_DASHBOARD_FILE));
 define('OSDXP_DASHBOARD_PLUGIN_LOGO', OSDXP_DASHBOARD_URL . 'assets/images/sample.png');
 define('OSDXP_DASHBOARD_PLACEHOLDER_IMAGE_URL', OSDXP_DASHBOARD_URL . 'assets/images/placeholder.png');
 
@@ -90,5 +91,5 @@ if (!function_exists('get_plugins')) {
 
 require_once('vendor/autoload.php');
 
-register_deactivation_hook(__FILE__, __NAMESPACE__ . '\\osdxp_deactivate');
-register_activation_hook(__FILE__, __NAMESPACE__ . '\\osdxp_activate');
+register_deactivation_hook(OSDXP_DASHBOARD_FILE, __NAMESPACE__ . '\\osdxp_deactivate');
+register_activation_hook(OSDXP_DASHBOARD_FILE, __NAMESPACE__ . '\\osdxp_activate');

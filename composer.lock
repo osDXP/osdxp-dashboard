@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "91515a5b515df21c94771400fdffaa78",
+    "content-hash": "4e32a9d9bd590e54bb36c1a0c21d469b",
     "packages": [
         {
             "name": "yahnis-elsts/plugin-update-checker",
-            "version": "v4.7",
+            "version": "v4.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/YahnisElsts/plugin-update-checker.git",
-                "reference": "6da68b119277a400fad0ca6ec54f223b10bd8230"
+                "reference": "908249c92e81c46cb66e4d81632c5e917dc879ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/YahnisElsts/plugin-update-checker/zipball/6da68b119277a400fad0ca6ec54f223b10bd8230",
-                "reference": "6da68b119277a400fad0ca6ec54f223b10bd8230",
+                "url": "https://api.github.com/repos/YahnisElsts/plugin-update-checker/zipball/908249c92e81c46cb66e4d81632c5e917dc879ae",
+                "reference": "908249c92e81c46cb66e4d81632c5e917dc879ae",
                 "shasum": ""
             },
             "require": {
@@ -26,7 +26,7 @@
             "type": "library",
             "autoload": {
                 "files": [
-                    "plugin-update-checker.php"
+                    "load-v4p8.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -49,7 +49,7 @@
                 "theme updates",
                 "wordpress"
             ],
-            "time": "2019-07-05T18:39:53+00:00"
+            "time": "2019-10-08T12:15:30+00:00"
         }
     ],
     "packages-dev": [],

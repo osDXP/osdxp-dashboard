@@ -63,6 +63,8 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 		}
 		add_filter($slugCheckFilter, array($this, 'getAbsolutePath'));
 
+        parent::__construct($metadataUrl, dirname($this->pluginFile), $slug, $checkPeriod, $optionName);
+
 		//Backwards compatibility: If the module is a mu-plugin but no $muPluginFile is specified, assume
 		//it's the same as $pluginFile given that it's not in a subdirectory (WP only looks in the base dir).
 		if ((strpbrk($this->pluginFile, '/\\') === false) && $this->isUnknownMuPlugin()) {
@@ -72,8 +74,6 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p7_UpdateChecker
 		//To prevent a crash during module uninstallation, remove updater hooks when the user removes the module.
 		//Details: https://github.com/YahnisElsts/plugin-update-checker/issues/138#issuecomment-335590964
 		add_action('uninstall_' . $this->pluginFile, array($this, 'removeHooks'));
-
-		parent::__construct($metadataUrl, dirname($this->pluginFile), $slug, $checkPeriod, $optionName);
 
 		$this->extraUi = new OsdxpModuleUpdateCheckerUi($this);
 	}

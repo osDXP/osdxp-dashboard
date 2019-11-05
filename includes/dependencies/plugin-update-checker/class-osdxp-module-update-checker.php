@@ -45,13 +45,13 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p8_UpdateChecker
 		$this->pluginFile = plugin_basename($this->pluginAbsolutePath);
 		$this->muPluginFile = $muPluginFile;
 
-	//If no slug is specified, use the name of the main module file as the slug.
-	//For example, 'my-cool-module/cool-module.php' becomes 'cool-module'.
+		//If no slug is specified, use the name of the main module file as the slug.
+		//For example, 'my-cool-module/cool-module.php' becomes 'cool-module'.
 		if (empty($slug)) {
 			$slug = basename($this->pluginFile, '.php');
 		}
 
-	//Module slugs must be unique.
+		//Module slugs must be unique.
 		$slugCheckFilter = 'puc_is_slug_in_use-' . $slug;
 		$slugUsedBy = apply_filters($slugCheckFilter, false);
 		if ($slugUsedBy) {
@@ -63,17 +63,17 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p8_UpdateChecker
 		}
 		add_filter($slugCheckFilter, array($this, 'getAbsolutePath'));
 
-	//Backwards compatibility: If the module is a mu-plugin but no $muPluginFile is specified, assume
-	//it's the same as $pluginFile given that it's not in a subdirectory (WP only looks in the base dir).
+        parent::__construct($metadataUrl, dirname($this->pluginFile), $slug, $checkPeriod, $optionName);
+
+		//Backwards compatibility: If the module is a mu-plugin but no $muPluginFile is specified, assume
+		//it's the same as $pluginFile given that it's not in a subdirectory (WP only looks in the base dir).
 		if ((strpbrk($this->pluginFile, '/\\') === false) && $this->isUnknownMuPlugin()) {
 			$this->muPluginFile = $this->pluginFile;
 		}
 
-	//To prevent a crash during module uninstallation, remove updater hooks when the user removes the module.
-	//Details: https://github.com/YahnisElsts/plugin-update-checker/issues/138#issuecomment-335590964
+		//To prevent a crash during module uninstallation, remove updater hooks when the user removes the module.
+		//Details: https://github.com/YahnisElsts/plugin-update-checker/issues/138#issuecomment-335590964
 		add_action('uninstall_' . $this->pluginFile, array($this, 'removeHooks'));
-
-		parent::__construct($metadataUrl, dirname($this->pluginFile), $slug, $checkPeriod, $optionName);
 
 		$this->extraUi = new OsdxpModuleUpdateCheckerUi($this);
 	}
@@ -99,7 +99,7 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p8_UpdateChecker
 	 */
 	protected function installHooks()
 	{
-	//Override requests for plugin information
+		//Override requests for plugin information
 		add_filter('plugins_api', array($this, 'injectInfo'), 20, 3);
 
 		parent::installHooks();
@@ -159,8 +159,8 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p8_UpdateChecker
 	 */
 	public function requestUpdate()
 	{
-	//For the sake of simplicity, this function just calls requestInfo()
-	//and transforms the result accordingly.
+		//For the sake of simplicity, this function just calls requestInfo()
+		//and transforms the result accordingly.
 		$pluginInfo = $this->requestInfo(array('checking_for_updates' => '1'));
 		if ($pluginInfo === null) {
 			return null;
@@ -203,8 +203,8 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p8_UpdateChecker
 
 	protected function shouldShowUpdates()
 	{
-	//No update notifications for mu-plugins unless explicitly enabled. The MU module file
-	//is usually different from the main module file so the update wouldn't show up properly anyway.
+		//No update notifications for mu-plugins unless explicitly enabled. The MU module file
+		//is usually different from the main module file so the update wouldn't show up properly anyway.
 		return !$this->isUnknownMuPlugin();
 	}
 
@@ -216,8 +216,8 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p8_UpdateChecker
 	protected function addUpdateToList($updates, $updateToAdd)
 	{
 		if ($this->package->isMuPlugin()) {
-		//WP does not support automatic update installation for mu-plugins, but we can
-		//still display a notice.
+			//WP does not support automatic update installation for mu-plugins, but we can
+			//still display a notice.
 			$updateToAdd->package = null;
 		}
 		return parent::addUpdateToList($updates, $updateToAdd);

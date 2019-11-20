@@ -37,8 +37,6 @@ function style_admin_dashboard($classes)
 		set_dxp_meta_for_user(OSDXP_DASHBOARD_IS_ACTIVE);
 	}
 
-
-
 	return $classes;
 }
 
@@ -54,9 +52,9 @@ function load_admin_assets()
 		// Enqueue the custom plugin styles.
 		wp_enqueue_style(
 			OSDXP_DASHBOARD_HANDLE,
-			OSDXP_DASHBOARD_URL . (WP_DEBUG ? 'build/style-admin.css' : 'build/style-admin.min.css'),
+			OSDXP_DASHBOARD_URL . ((defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) ? 'build/style-admin.css' : 'build/style-admin.min.css'),
 			[],
-			filemtime(OSDXP_DASHBOARD_DIR . (WP_DEBUG ? 'build/style-admin.css' : 'build/style-admin.min.css')),
+			filemtime(OSDXP_DASHBOARD_DIR . ((defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) ? 'build/style-admin.css' : 'build/style-admin.min.css')),
 			false
 		);
 
@@ -64,9 +62,9 @@ function load_admin_assets()
 		// This is the compiled js file.
 		wp_register_script(
 			OSDXP_DASHBOARD_HANDLE,
-			OSDXP_DASHBOARD_URL . (WP_DEBUG ? 'build/app.js' : 'build/app.min.js'),
+			OSDXP_DASHBOARD_URL . ((defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) ? 'build/app.js' : 'build/app.min.js'),
 			[ 'jquery' ],
-			filemtime(OSDXP_DASHBOARD_DIR . (WP_DEBUG ? 'build/app.js' : 'build/app.min.js')),
+			filemtime(OSDXP_DASHBOARD_DIR . ((defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) ? 'build/app.js' : 'build/app.min.js')),
 			false
 		);
 
@@ -89,9 +87,9 @@ function load_admin_assets()
 	} else {
 		wp_enqueue_style(
 			OSDXP_DASHBOARD_HANDLE,
-			OSDXP_DASHBOARD_URL . (WP_DEBUG ? 'build/style-wp-admin.css' : 'build/style-wp-admin.min.css'),
+			OSDXP_DASHBOARD_URL . ((defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) ? 'build/style-wp-admin.css' : 'build/style-wp-admin.min.css'),
 			[],
-			filemtime(OSDXP_DASHBOARD_DIR . (WP_DEBUG ? 'build/style-wp-admin.css' : 'build/style-wp-admin.min.css')),
+			filemtime(OSDXP_DASHBOARD_DIR . ((defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) ? 'build/style-wp-admin.css' : 'build/style-wp-admin.min.css')),
 			false
 		);
 	}
@@ -108,17 +106,17 @@ function load_frontend_assets()
 		// Enqueue the plugin admin bar custom style.
 		wp_enqueue_style(
 			OSDXP_DASHBOARD_HANDLE . '-admin-bar',
-			OSDXP_DASHBOARD_URL . (WP_DEBUG ? 'build/admin-bar.css' : 'build/admin-bar.min.css'),
+			OSDXP_DASHBOARD_URL . ((defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) ? 'build/admin-bar.css' : 'build/admin-bar.min.css'),
 			[ 'admin-bar' ],
-			filemtime(OSDXP_DASHBOARD_DIR . (WP_DEBUG ? 'build/admin-bar.css' : 'build/admin-bar.min.css')),
+			filemtime(OSDXP_DASHBOARD_DIR . ((defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) ? 'build/admin-bar.css' : 'build/admin-bar.min.css')),
 			false
 		);
 	} else {
 		wp_enqueue_style(
 			OSDXP_DASHBOARD_HANDLE . '-wp-admin-bar',
-			OSDXP_DASHBOARD_URL . (WP_DEBUG ? 'build/wp-admin-bar.css' : 'build/wp-admin-bar.min.css'),
+			OSDXP_DASHBOARD_URL . ((defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) ? 'build/wp-admin-bar.css' : 'build/wp-admin-bar.min.css'),
 			[ 'admin-bar' ],
-			filemtime(OSDXP_DASHBOARD_DIR . (WP_DEBUG ? 'build/wp-admin-bar.css' : 'build/wp-admin-bar.min.css'))
+			filemtime(OSDXP_DASHBOARD_DIR . ((defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) ? 'build/wp-admin-bar.css' : 'build/wp-admin-bar.min.css'))
 		);
 	}
 }

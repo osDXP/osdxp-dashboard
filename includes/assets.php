@@ -1,4 +1,5 @@
 <?php
+
 /**
  * File containing hooks and functionality related to assets.
  *

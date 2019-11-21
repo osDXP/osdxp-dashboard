@@ -1,13 +1,14 @@
 <?php
+
 /**
  * Plugin Name:         Open Source DXP Dashboard
  * Description:         An Augmentation of WordPress, creating a task-oriented Digital Experience Platform environment.
- * Plugin URI:          http://www.crowdfavorite.com
- * Author:              Crowd Favorite
- * Author URI:          http://www.crowdfavorite.com
+ * Plugin URI:          https://osdxp.org
+ * Author:              osDXP.org
+ * Author URI:          https://osdxp.org
  * Requires at least:   5.2
  * Requires PHP:        7.2
- * Version:             1.0.3
+ * Version:             1.0.3.1
  * License:             GPL2
  * License URI:         https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * Text domain:         osdxp-dashboard
@@ -16,7 +17,7 @@
  */
 
 /*
-Copyright (C) 2019 Crowd Favorite crowdfavorite@gmail.com
+Copyright (C) 2019-2020 osDXP.org
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License, version 2, as
@@ -42,7 +43,7 @@ define('OSDXP_DASHBOARD_URL', plugins_url('/', OSDXP_DASHBOARD_FILE));
 
 // Always mention the plugin version (enclose in quotes so it is processed as a string).
 define('OSDXP_DASHBOARD_VER', '1.0.3');
-define('OSDXP_DASHBOARD_SITE', 'https://opensourcedxp.com/');
+define('OSDXP_DASHBOARD_SITE', 'https://osdxp.org/');
 
 define('OSDXP_DASHBOARD_PLUGIN_NAME', 'Open Source DXP Dashboard');
 define('OSDXP_DASHBOARD_PLUGIN_BASENAME', plugin_basename(OSDXP_DASHBOARD_FILE));
@@ -68,7 +69,7 @@ define('OSDXP_DASHBOARD_REST_NAMESPACE', 'osdxp-dashboard/v1');
 
 // Define RSS settings
 if (!defined('OSDXP_DASHBOARD_NEWS_RSS_URL')) {
-	define('OSDXP_DASHBOARD_NEWS_RSS_URL', 'https://crowdfavorite.com/feed/'); // @TODO: change this.
+	define('OSDXP_DASHBOARD_NEWS_RSS_URL', 'https://osdxp.org/feed/'); // @TODO: change this.
 }
 
 if (!defined('OSDXP_DASHBOARD_NEWS_RSS_MAX_ITEMS_COUNT')) {

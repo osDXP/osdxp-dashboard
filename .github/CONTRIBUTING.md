@@ -39,7 +39,7 @@ Our bug tracker utilizes several labels to help organize and identify issues. He
 - `bug` - Issues that have been confirmed with a reduced test case and identify a bug in osDXP Dashboard.
 - `css` - Issues stemming from our compiled CSS or source Sass files.
 - `docs` - Issues for improving or updating our documentation.
-- `feature` - Issues asking for a new feature to be added, or an existing one to be extended or modified. New features require a minor version bump (e.g., `v3.0.0` to `v3.1.0`).
+- `feature` - Issues asking for a new feature to be added, or an existing one to be extended or modified.
 - `help wanted` - Issues we need or would love help from the community to resolve.
 - `js` - Issues stemming from our compiled or source JavaScript files.
 - `meta` - Issues with the project itself or our GitHub repository.
@@ -172,13 +172,13 @@ included in the project:
     with a clear title and description against the `develop` branch.
 
 **IMPORTANT**: By submitting a patch, you agree to allow the project owners to
-license your work under the terms of the [GPLv2 License](/LICENSE).
+license your work under the terms of the [GPLv2 License](../LICENSE).
 
 
 ## Code guidelines
 
 ### PHP
-osDXP repos follow an extended [PSR12 ruleset](/phpcs.xml) that includes WordPress Security sniffs with the added change of preffering tabs instead of spaces for indentation.
+osDXP repos follow an extended [PSR12 ruleset](../phpcs.xml) that includes WordPress Security sniffs with the added change of preffering tabs instead of spaces for indentation.
 **You code should adhere to this ruleset.**
 
 ### CSS

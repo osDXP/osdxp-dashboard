@@ -8,7 +8,7 @@
  * Author URI:          https://osdxp.org
  * Requires at least:   5.2
  * Requires PHP:        7.2
- * Version:             1.0.3.1
+ * Version:             1.0.3
  * License:             GPL2
  * License URI:         https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * Text domain:         osdxp-dashboard

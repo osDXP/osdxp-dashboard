@@ -9,6 +9,7 @@
 	<rule ref="PSR12">
 		<exclude name="Generic.WhiteSpace.DisallowTabIndent"/>
 	</rule>
+	<rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/>
 
 	<!-- WordPress security rules are included to check for sanitization of WordPress code -->
 	<rule ref="WordPress.DB.PreparedSQLPlaceholders"/>
@@ -52,7 +53,6 @@
 	<!-- Exclude node and vendor directories -->
 	<exclude-pattern>*/node_modules/*</exclude-pattern>
 	<exclude-pattern>*/vendor/*</exclude-pattern>
-	<exclude-pattern>*/wordpress/*</exclude-pattern>
 
 	<!-- Check the files in the project directory. Where this xml file should be located. -->
 	<file>.</file>

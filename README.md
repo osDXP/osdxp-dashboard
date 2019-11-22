@@ -49,12 +49,10 @@ Read the [Getting started page](https://osdxp.github.io/docs/getting-started/) f
 
 ## Status
 
-[![Packagist Prerelease](https://img.shields.io/packagist/vpre/osDXP/osdxp-dashboard.svg)](https://packagist.org/packages/osDXP/osdxp-dashboard)
-[![peerDependency Status](https://img.shields.io/david/peer/osDXP/osdxp-dashboard.svg)](https://david-dm.org/osDXP/osdxp-dashboard?type=peer)
-[![devDependency Status](https://img.shields.io/david/dev/osDXP/osdxp-dashboard.svg)](https://david-dm.org/osDXP/osdxp-dashboard?type=dev)
+[![Latest Release](https://img.shields.io/github/v/release/osDXP/osdxp-dashboard)](https://github.com/osDXP/osdxp-dashboard/releases)
 [![CSS gzip size](https://img.badgesize.io/osDXP/osdxp-dashboard/master/build/style-admin.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/osDXP/osdxp-dashboard/tree/master/build/style-admin.min.css)
 [![JS gzip size](https://img.badgesize.io/osDXP/osdxp-dashboard/master/build/app.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/osDXP/osdxp-dashboard/tree/master/build/app.min.js)
-
+[![License](https://img.shields.io/github/license/osDXP/osdxp-dashboard)](https://github.com/osDXP/osdxp-dashboard/blob/master/LICENSE)
 
 ## Bugs and feature requests
 

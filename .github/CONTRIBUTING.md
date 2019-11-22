@@ -64,8 +64,7 @@ Guidelines for bug reports:
 2. **Check if the issue has been fixed** &mdash; try to reproduce it using the
    latest `master` or `develop` branch in the repository.
 
-3. **Isolate the problem** &mdash; ideally create a reduced test
-   case and a live example.
+3. **Isolate the problem** &mdash; ideally create or record a live example.
 
 
 A good bug report shouldn't leave others needing to chase you up for more
@@ -86,7 +85,6 @@ Example:
 > 2. This is the second step
 > 3. Further steps, etc.
 >
-> `<url>` - a link to the reduced test case
 >
 > Any other information you want to share that is relevant to the issue being
 > reported. This might include the lines of code that you have identified as

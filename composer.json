@@ -1,11 +1,11 @@
 {
-  "name": "crowdfavorite/osdxp-dashboard",
+  "name": "osDXP/osdxp-dashboard",
   "type": "wordpress-plugin",
   "authors": [
     {
-      "name": "Crowd Favorite",
-      "email": "support@crowdfavorite.com",
-      "homepage": "http://crowdfavorite.com/"
+      "name": "osDXP",
+      "email": "support@osdxp.org",
+      "homepage": "https://osdxp.org/"
     }
   ],
   "require": {

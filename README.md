@@ -8,7 +8,7 @@
 
 
 <p align="center">
-  WordPress plugin that creates a DXP experience, transforming wp-admin into a more productive environment.
+  An Augmentation of WordPress, creating a task-oriented Digital Experience Platform environment.
   <br>
   <a href="https://osdxp.github.io/docs/"><strong>Explore osDXP Dashboard docs »</strong></a>
   <br>

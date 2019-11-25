@@ -101,10 +101,10 @@
 		<?php endif; ?>
 
 		<?php
-		$custom_create_functionality_modules = [];
-		$custom_create_functionality_modules = apply_filters('osdxp_dashboard_create_functionality', $custom_create_functionality_modules);
+		$custom_manage_functionality_modules = [];
+		$custom_manage_functionality_modules = apply_filters('osdxp_dashboard_manage_functionality', $custom_manage_functionality_modules);
 
-		foreach ($custom_create_functionality_modules as $custom_module) {
+		foreach ($custom_manage_functionality_modules as $custom_module) {
 			?>
 			<a href="<?php esc_url($custom_module['link']); ?>" class="col">
 				<div class="postbox">

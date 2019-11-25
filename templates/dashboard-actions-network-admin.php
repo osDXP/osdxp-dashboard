@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Dashboard actions.
  *
@@ -60,44 +61,44 @@
 	<div class="row">
 		<?php if (current_user_can('create_users')) : ?>
 			<a href="<?php echo network_admin_url('users.php');  // phpcs:ignore?>" class="col">
-		 		<div class="postbox">
-		 			<div>
+				<div class="postbox">
+					<div>
 						<div class="group">
 							<div class="dashicons-before dashicons-admin-users"></div>
 							<span><?php esc_html_e('Users', 'osdxp-dashboard'); ?></span>
 							<p><?php esc_html_e('Manage Users', 'osdxp-dashboard'); ?></p>
 						</div>
 					</div>
-		 		</div>
-		 	</a>
+				</div>
+			</a>
 		<?php endif; ?>
 
 		<?php if (current_user_can('create_sites')) : ?>
 			<a href="<?php echo network_admin_url('sites.php');  // phpcs:ignore?>" class="col">
-		 		<div class="postbox">
-		 			<div>
+				<div class="postbox">
+					<div>
 						<div class="group">
 							<div class="dashicons-before dashicons-admin-multisite"></div>
 							<span><?php esc_html_e('Sites', 'osdxp-dashboard'); ?></span>
 							<p><?php esc_html_e('Manage Sites', 'osdxp-dashboard'); ?></p>
 						</div>
 					</div>
-		 		</div>
-		 	</a>
+				</div>
+			</a>
 		<?php endif; ?>
 
 		<?php if (current_user_can('install_plugins')) : ?>
 			<a href="<?php echo network_admin_url('plugins.php');  // phpcs:ignore?>" class="col">
-		 		<div class="postbox">
-		 			<div>
+				<div class="postbox">
+					<div>
 						<div class="group">
 							<div class="dashicons-before dashicons-admin-generic"></div>
 							<span><?php esc_html_e('Modules', 'osdxp-dashboard'); ?></span>
 							<p><?php esc_html_e('Manage Modules', 'osdxp-dashboard'); ?></p>
 						</div>
 					</div>
-		 		</div>
-		 	</a>
+				</div>
+			</a>
 		<?php endif; ?>
 
 		<?php

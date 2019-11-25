@@ -68,13 +68,8 @@ define('OSDXP_DASHBOARD_AVAILABLE_MODULES_TRANSIENT_EXPIRE', 4 * HOUR_IN_SECONDS
 define('OSDXP_DASHBOARD_REST_NAMESPACE', 'osdxp-dashboard/v1');
 
 // Define RSS settings
-if (!defined('OSDXP_DASHBOARD_NEWS_RSS_URL')) {
-	define('OSDXP_DASHBOARD_NEWS_RSS_URL', 'https://osdxp.org/feed/'); // @TODO: change this.
-}
-
-if (!defined('OSDXP_DASHBOARD_NEWS_RSS_MAX_ITEMS_COUNT')) {
-	define('OSDXP_DASHBOARD_NEWS_RSS_MAX_ITEMS_COUNT', 5); // @TODO: change this.
-}
+define('OSDXP_DASHBOARD_NEWS_RSS_URL', 'https://osdxp.org/feed/');
+define('OSDXP_DASHBOARD_NEWS_RSS_MAX_ITEMS_COUNT', 5);
 
 // Define the plugin assets handle, this is used to give unique names to the plugin scripts.
 define('OSDXP_DASHBOARD_HANDLE', 'osdxp-dashboard');

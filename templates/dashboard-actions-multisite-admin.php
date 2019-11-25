@@ -108,7 +108,7 @@
 
 		foreach ($custom_create_functionality_modules as $custom_module) {
 			?>
-			<a href="<?php esc_url($custom_module['link']); ?>" class="col">
+			<a href="<?php echo esc_url($custom_module['link']); ?>" class="col">
 				<div class="postbox">
 					<div>
 						<div class="group">

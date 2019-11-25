@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Dashboard actions.
  *
@@ -60,45 +61,45 @@
 	<div class="row">
 
 		<?php if (current_user_can('create_users')) : ?>
-            <a href="<?php echo admin_url('user-new.php'); // phpcs:ignore?>" class="col">
-                <div class="postbox">
-                    <div>
-                        <div class="group">
-                            <div class="dashicons-before dashicons-admin-users"></div>
-                            <span><?php esc_html_e('Users', 'osdxp-dashboard'); ?></span>
-                            <p><?php esc_html_e('Create New User', 'osdxp-dashboard'); ?></p>
-                        </div>
-                    </div>
-                </div>
-            </a>
+			<a href="<?php echo admin_url('user-new.php'); // phpcs:ignore?>" class="col">
+				<div class="postbox">
+					<div>
+						<div class="group">
+							<div class="dashicons-before dashicons-admin-users"></div>
+							<span><?php esc_html_e('Users', 'osdxp-dashboard'); ?></span>
+							<p><?php esc_html_e('Create New User', 'osdxp-dashboard'); ?></p>
+						</div>
+					</div>
+				</div>
+			</a>
 		<?php endif; ?>
 
 		<?php if (current_user_can('publish_pages')) : ?>
 			<a href="<?php echo admin_url('post-new.php?post_type=page');  // phpcs:ignore?>" class="col">
-		 		<div class="postbox">
-		 			<div>
+				<div class="postbox">
+					<div>
 						<div class="group">
 							<div class="dashicons-before dashicons-admin-page"></div>
 							<span><?php esc_html_e('Pages', 'osdxp-dashboard'); ?></span>
 							<p><?php esc_html_e('Create New Page', 'osdxp-dashboard'); ?></p>
 						</div>
 					</div>
-		 		</div>
-		 	</a>
+				</div>
+			</a>
 		<?php endif; ?>
 
 		<?php if (current_user_can('edit_theme_options')) : ?>
 			<a href="<?php echo admin_url('nav-menus.php?action=edit&menu=0');  // phpcs:ignore?>" class="col">
-		 		<div class="postbox">
-		 			<div>
+				<div class="postbox">
+					<div>
 						<div class="group">
 							<div class="dashicons-before dashicons-menu-alt"></div>
 							<span><?php esc_html_e('Menus', 'osdxp-dashboard'); ?></span>
 							<p><?php esc_html_e('Create New Menu', 'osdxp-dashboard'); ?></p>
 						</div>
 					</div>
-		 		</div>
-		 	</a>
+				</div>
+			</a>
 		<?php endif; ?>
 
 		<?php

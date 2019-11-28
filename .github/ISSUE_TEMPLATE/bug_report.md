@@ -3,7 +3,6 @@ name: Bug report
 about: Tell us about a bug you may have identified in osDXP Dashboard.
 
 ---
-https://github.com/osDXP/osdxp-dashboard/blob/community-guidelines/misc-files/phpcs.xml
 Before opening:
 
 - [Search for duplicate or closed issues](https://github.com/osDXP/osdxp-dashboard/issues?utf8=%E2%9C%93&q=is%3Aissue)

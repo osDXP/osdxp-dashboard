@@ -41,9 +41,9 @@
 
 Several quick start options are available:
 
-- [Download the latest release.](https://github.com/osDXP/osdxp-dashboard/releases/download/v1.1.0/osdxp-dashboard.zip)
+- [Download the latest release.](https://github.com/osDXP/osdxp-dashboard/releases/)
 - Clone the repo: `git clone https://github.com/osDXP/osdxp-dashboard.git` (run `composer install` after cloning)
-- Install with [Composer](https://getcomposer.org/): `composer require osDXP/osdxp-dashboard:1.1.0`
+- Install with [Composer](https://getcomposer.org/): `composer require osDXP/osdxp-dashboard`
 
 Read the [Getting started page](https://osdxp.github.io/docs/getting-started/) for more information.
 

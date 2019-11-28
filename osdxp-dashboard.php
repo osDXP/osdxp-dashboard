@@ -8,7 +8,7 @@
  * Author URI:          https://osdxp.org
  * Requires at least:   5.2
  * Requires PHP:        7.2
- * Version:             1.0.3
+ * Version:             1.1.0
  * License:             GPL2
  * License URI:         https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * Text domain:         osdxp-dashboard
@@ -42,7 +42,7 @@ define('OSDXP_DASHBOARD_DIR', plugin_dir_path(OSDXP_DASHBOARD_FILE));
 define('OSDXP_DASHBOARD_URL', plugins_url('/', OSDXP_DASHBOARD_FILE));
 
 // Always mention the plugin version (enclose in quotes so it is processed as a string).
-define('OSDXP_DASHBOARD_VER', '1.0.3');
+define('OSDXP_DASHBOARD_VER', '1.1.0');
 define('OSDXP_DASHBOARD_SITE', 'https://osdxp.org/');
 
 define('OSDXP_DASHBOARD_PLUGIN_NAME', 'Open Source DXP Dashboard');
@@ -73,7 +73,7 @@ define('OSDXP_DASHBOARD_NEWS_RSS_MAX_ITEMS_COUNT', 5);
 
 // Define the plugin assets handle, this is used to give unique names to the plugin scripts.
 define('OSDXP_DASHBOARD_HANDLE', 'osdxp-dashboard');
-define('OSDXP_DASHBOARD_LOCALIZED_OBJECT_NAME', 'OSDXPDashboard');
+define('OSDXP_DASHBOARD_LOCALIZED_OBJECT_NAME', 'osDXPDashboard');
 
 // Define page types available to add
 define('OSDXP_DASHBOARD_MENU_TYPE_MENU', 'menu');

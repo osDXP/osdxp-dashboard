@@ -1,6 +1,6 @@
 {
-  "name": "osdxp-dashboard-plugin",
-  "version": "0.0.1",
+  "name": "osdxp-dashboard",
+  "version": "1.1.0",
   "main": "gulpfile.js",
   "private": true,
   "scripts": {
@@ -16,8 +16,8 @@
   "keywords": [
     "opensourcedxp-dashboard"
   ],
-  "author": "Crowd Favorite",
-  "license": "GPLv2 or later",
+  "author": "osDXP",
+  "license": "GPLv2",
   "bugs": {
     "url": "https://github.com/osDXP/osdxp-dashboard/issues"
   },

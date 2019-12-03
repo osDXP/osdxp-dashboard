@@ -50,6 +50,7 @@
 	<!-- Exclude node and vendor directories -->
 	<exclude-pattern>*/node_modules/*</exclude-pattern>
 	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/dependencies/*</exclude-pattern>
 
 	<!-- Check the files in the project directory. Where this xml file should be located. -->
 	<file>.</file>

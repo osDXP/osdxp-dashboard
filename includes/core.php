@@ -1,4 +1,5 @@
 <?php
+
 /**
  * File containing core functionality.
  *

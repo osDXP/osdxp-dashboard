@@ -82,26 +82,26 @@ define('OSDXP_DASHBOARD_MENU_TYPE_ENDPOINT', 'endpoint');
 // phpcs:enable
 
 call_user_func_array(function ($absPath, $rootPath, $mainFilePath) {
-    // We need get_plugins to filter for modules
-    if (!function_exists('get_plugins')) {
-        require_once "{$absPath}wp-admin/includes/plugin.php";
-    }
+	// We need get_plugins to filter for modules
+	if (!function_exists('get_plugins')) {
+		require_once "{$absPath}wp-admin/includes/plugin.php";
+	}
 
-    $autoload = "{$rootPath}vendor/autoload.php";
-    if (is_readable($autoload)) {
-        require_once $autoload;
-    }
+	$autoload = "{$rootPath}vendor/autoload.php";
+	if (is_readable($autoload)) {
+		require_once $autoload;
+	}
 
-    require_once "{$rootPath}includes/assets.php";
-    require_once "{$rootPath}includes/config.php";
-    require_once "{$rootPath}includes/core.php";
-    require_once "{$rootPath}includes/dashboard.php";
-    require_once "{$rootPath}includes/licensing.php";
-    require_once "{$rootPath}includes/menus.php";
-    require_once "{$rootPath}includes/modules.php";
-    require_once "{$rootPath}includes/utils.php";
-    require_once "{$rootPath}includes/notifications.php";
+	require_once "{$rootPath}includes/assets.php";
+	require_once "{$rootPath}includes/config.php";
+	require_once "{$rootPath}includes/core.php";
+	require_once "{$rootPath}includes/dashboard.php";
+	require_once "{$rootPath}includes/licensing.php";
+	require_once "{$rootPath}includes/menus.php";
+	require_once "{$rootPath}includes/modules.php";
+	require_once "{$rootPath}includes/utils.php";
+	require_once "{$rootPath}includes/notifications.php";
 
-    register_deactivation_hook($mainFilePath, __NAMESPACE__ . '\\osdxp_deactivate');
-    register_activation_hook($mainFilePath, __NAMESPACE__ . '\\osdxp_activate');
+	register_deactivation_hook($mainFilePath, __NAMESPACE__ . '\\osdxp_deactivate');
+	register_activation_hook($mainFilePath, __NAMESPACE__ . '\\osdxp_activate');
 }, [ABSPATH, OSDXP_DASHBOARD_DIR, OSDXP_DASHBOARD_FILE]);

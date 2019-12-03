@@ -107,11 +107,11 @@ if ($action) {
 			}
 
 			if (isset($_GET['from']) && 'import' == $_GET['from']) {
-				wp_redirect(self_admin_url('import.php?import=' . str_replace('-importer', '', dirname($module)))); // overrides the ?error=true one above and redirects to the Imports page, stripping the -importer suffix
+				wp_redirect(self_admin_url('import.php?import=' . str_replace('-importer', '', dirname($module)))); // phpcs:ignore -- overrides the ?error=true one above and redirects to the Imports page, stripping the -importer suffix
 			} elseif (isset($_GET['from']) && 'press-this' == $_GET['from']) {
 				wp_redirect(self_admin_url('press-this.php'));
 			} else {
-				wp_redirect(self_admin_url("admin.php?page=dxp-modules-installed&activate=true&module_status=$status&paged=$page&s=$s")); // overrides the ?error=true one above
+				wp_redirect(self_admin_url("admin.php?page=dxp-modules-installed&activate=true&module_status=$status&paged=$page&s=$s")); // phpcs:ignore -- overrides the ?error=true one above
 			}
 			exit;
 
@@ -586,7 +586,8 @@ if (isset($_GET['error'])) :
 	?>
 	<div id="message" class="error"><p><?php echo esc_attr($errmsg); ?></p>
 	<?php
-	if (!isset($_GET['main'])
+	if (
+		!isset($_GET['main'])
 		&& !isset($_GET['charsout'])
 		&& wp_verify_nonce($_GET['_error_nonce'], 'module-activation-error_' . $module)
 	) {
@@ -675,7 +676,8 @@ if (strlen($s)) {
 <hr class="wp-header-end">
 
 <?php
-/**
+
+/*
  * Fires before the modules list table is rendered.
  *
  * This hook also fires before the modules list table is rendered in the Network Admin.

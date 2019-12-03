@@ -76,7 +76,7 @@ function osdxp_module_update_row($file, $module_data)
 
 		echo '<tr class="plugin-update-tr' . $active_class . '" id="' . esc_attr($response->slug . '-update') . '" data-slug="' . esc_attr($response->slug) . '" data-plugin="' . esc_attr($file) . '"><td colspan="4" class="plugin-update colspanchange"><div class="update-message notice inline ' . $notice_type . ' notice-alt"><p>';
 
-		if (! current_user_can('update_plugins')) {
+		if (!current_user_can('update_plugins')) {
 			/* translators: 1: module name, 2: details URL, 3: additional link attributes, 4: version number */
 			printf(
 				__('There is a new version of %1$s available. <a href="%2$s" %3$s>View version %4$s details</a>.'),

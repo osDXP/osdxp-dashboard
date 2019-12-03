@@ -1,4 +1,5 @@
 <?php
+
 /**
  * API integration with license server.
  *
@@ -16,7 +17,7 @@ class LicenseAPI
 	 *
 	 * @var string
 	 */
-	const USER_AGENT = 'OSDXP-DASHBOARD';
+	private const USER_AGENT = 'OSDXP-DASHBOARD';
 
 	/**
 	 * The user's API key.

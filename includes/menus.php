@@ -1,4 +1,5 @@
 <?php
+
 /**
  * File containing hooks and functionality related to menus.
  *
@@ -49,7 +50,8 @@ function hide_endpoints_from_sidebar()
 
 	foreach ($dxp_menu_pages as $menu_page) {
 		// Validate and confirm endpoint, check if it's being displayed(has parent_slug)
-		if (is_valid_dxp_menu_page($menu_page)
+		if (
+			is_valid_dxp_menu_page($menu_page)
 			&& $menu_page['type'] === OSDXP_DASHBOARD_MENU_TYPE_ENDPOINT
 			&& isset($menu_page['parent_slug'])
 		) {

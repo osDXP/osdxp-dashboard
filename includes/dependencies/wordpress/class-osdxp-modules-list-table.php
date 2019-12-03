@@ -1,4 +1,5 @@
 <?php
+
 /**
  * List Table API: OSDXP_Modules_List_Table class
  *
@@ -6,6 +7,7 @@
  *
  * @package osdxp-dashboard
  */
+
 namespace OSDXP_Dashboard;
 
 /** WP_List_Table class */
@@ -220,8 +222,10 @@ class OSDXP_Modules_List_Table extends \WP_List_Table
 					// On the non-network screen, filter out network-active modules
 					unset($modules['all'][ $module_file ]);
 				}
-			} elseif (( ! $screen->in_admin('network') && is_plugin_active($module_file) )
-				|| ( $screen->in_admin('network') && is_plugin_active_for_network($module_file) ) ) {
+			} elseif (
+				( ! $screen->in_admin('network') && is_plugin_active($module_file) )
+				|| ( $screen->in_admin('network') && is_plugin_active_for_network($module_file) )
+			) {
 				// On the non-network screen, populate the active list with modules that are individually activated
 				// On the network-admin screen, populate the active list with modules that are network activated
 				$modules['active'][ $module_file ] = $module_data;
@@ -665,11 +669,11 @@ class OSDXP_Modules_List_Table extends \WP_List_Table
 				$is_active   = false;
 				$description = '<p><strong>' . $dropins[ $module_file ][0] . ' <span class="error-message">' . esc_html__('Inactive:', 'osdxp-dashboard') . '</span></strong> ' .
 					sprintf(
-						/* translators: 1: drop-in constant name, 2: wp-config.php */
+					/* translators: 1: drop-in constant name, 2: wp-config.php */
 						__('Requires %1$s in %2$s file.'),
-						"<code>define('" . $dropins[ $module_file ][1] . "', true);</code>",
-						'<code>wp-config.php</code>'
-					) . '</p>';
+					"<code>define('" . $dropins[ $module_file ][1] . "', true);</code>",
+					'<code>wp-config.php</code>'
+				) . '</p>';
 			}
 			if ($module_data['Description']) {
 				$description .= '<p>' . $module_data['Description'] . '</p>';

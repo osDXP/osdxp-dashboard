@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Module update checker extended from vendor PUC
  *
  * @see   Puc_v4p8_Plugin_UpdateChecker
  */
+
 namespace OSDXP_Dashboard;
 
 class OsdxpModuleUpdateChecker extends \Puc_v4p8_UpdateChecker
@@ -63,7 +65,7 @@ class OsdxpModuleUpdateChecker extends \Puc_v4p8_UpdateChecker
 		}
 		add_filter($slugCheckFilter, array($this, 'getAbsolutePath'));
 
-        parent::__construct($metadataUrl, dirname($this->pluginFile), $slug, $checkPeriod, $optionName);
+		parent::__construct($metadataUrl, dirname($this->pluginFile), $slug, $checkPeriod, $optionName);
 
 		//Backwards compatibility: If the module is a mu-plugin but no $muPluginFile is specified, assume
 		//it's the same as $pluginFile given that it's not in a subdirectory (WP only looks in the base dir).

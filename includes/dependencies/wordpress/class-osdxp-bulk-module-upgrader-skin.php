@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Upgrader API: CF_Bulk_Module_Upgrader_Skin class
  *

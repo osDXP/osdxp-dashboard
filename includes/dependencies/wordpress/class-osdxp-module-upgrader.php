@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Upgrade API: OSDXP_Module_Upgrader class
  *

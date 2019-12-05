@@ -41,23 +41,6 @@
 			</a>
 		<?php endif; ?>
 
-		<?php if ((current_user_can('publish_pages') || current_user_can('publish_posts')) && class_exists('CFConditionalContent')) : // phpcs:ignore?>
-			<a href="<?php echo admin_url('post-new.php?post_type=cf_cc_condition'); // phpcs:ignore?>" class="col">
-				<div class="postbox">
-					<div>
-						<div class="group">
-							<div class="dashicons-before dashicons-admin-post"></div>
-							<span><?php esc_html_e('Conditional Content', 'osdxp-dashboard'); ?></span>
-							<p><?php esc_html_e('Add New Condition', 'osdxp-dashboard'); ?></p>
-						</div>
-						<div class="button button-primary">
-							<?php esc_html_e('New Condition', 'osdxp-dashboard'); ?>
-						</div>
-					</div>
-				</div>
-			</a>
-		<?php endif; ?>
-
 		<?php
 		$custom_create_functionality_modules = [];
 		$custom_create_functionality_modules = apply_filters(
@@ -72,11 +55,11 @@
 					<div>
 						<div class="group">
 							<div class="dashicons-before <?php echo esc_attr($custom_module['icon']); ?>"></div>
-							<span><?php esc_html_e($custom_module['title'], 'osdxp-dashboard'); ?></span>
-							<p><?php esc_html_e($custom_module['subtitle'], 'osdxp-dashboard'); ?></p>
+							<span><?php echo esc_html($custom_module['title']); ?></span>
+							<p><?php echo esc_html($custom_module['subtitle']); ?></p>
 						</div>
 						<div class="button button-primary">
-							<?php esc_html_e($custom_module['button_text'], 'osdxp-dashboard'); ?>
+							<?php echo esc_html($custom_module['button_text']); ?>
 						</div>
 					</div>
 				</div>
@@ -116,20 +99,6 @@
 			</a>
 		<?php endif; ?>
 
-		<?php if ((current_user_can('publish_pages') || current_user_can('publish_posts')) && class_exists('CFConditionalContent')) :  // phpcs:ignore?>
-			<a href="<?php echo admin_url('admin.php?page=cf-conditional-content-settings');  // phpcs:ignore?>" class="col">
-				<div class="postbox">
-					<div>
-						<div class="group">
-							<div class="dashicons-before dashicons-admin-post"></div>
-							<span><?php esc_html_e('Conditional Content', 'osdxp-dashboard'); ?></span>
-							<p><?php esc_html_e('Manage Conditions', 'osdxp-dashboard'); ?></p>
-						</div>
-					</div>
-				</div>
-			</a>
-		<?php endif; ?>
-
 		<?php if (current_user_can('upload_files')) : ?>
 			<a href="<?php echo admin_url('upload.php');  // phpcs:ignore?>" class="col">
 				<div class="postbox">
@@ -158,8 +127,8 @@
 					<div>
 						<div class="group">
 							<div class="dashicons-before <?php echo esc_attr($custom_module['icon']); ?>"></div>
-							<span><?php esc_html_e($custom_module['title'], 'osdxp-dashboard'); ?></span>
-							<p><?php esc_html_e($custom_module['subtitle'], 'osdxp-dashboard'); ?></p>
+							<span><?php echo esc_html($custom_module['title']); ?></span>
+							<p><?php echo esc_html($custom_module['subtitle']); ?></p>
 						</div>
 					</div>
 				</div>

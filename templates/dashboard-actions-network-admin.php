@@ -70,11 +70,11 @@
 					<div>
 						<div class="group">
 							<div class="dashicons-before <?php echo esc_attr($custom_module['icon']); ?>"></div>
-							<span><?php esc_html_e($custom_module['title'], 'osdxp-dashboard'); ?></span>
-							<p><?php esc_html_e($custom_module['subtitle'], 'osdxp-dashboard'); ?></p>
+							<span><?php echo esc_html($custom_module['title']); ?></span>
+							<p><?php echo esc_html($custom_module['subtitle']); ?></p>
 						</div>
 						<div class="button button-primary">
-							<?php esc_html_e($custom_module['button_text'], 'osdxp-dashboard'); ?>
+							<?php echo esc_html($custom_module['button_text']); ?>
 						</div>
 					</div>
 				</div>
@@ -142,8 +142,8 @@
 					<div>
 						<div class="group">
 							<div class="dashicons-before <?php echo esc_attr($custom_module['icon']); ?>"></div>
-							<span><?php esc_html_e($custom_module['title'], 'osdxp-dashboard'); ?></span>
-							<p><?php esc_html_e($custom_module['subtitle'], 'osdxp-dashboard'); ?></p>
+							<span><?php echo esc_html($custom_module['title']); ?></span>
+							<p><?php echo esc_html($custom_module['subtitle']); ?></p>
 						</div>
 					</div>
 				</div>

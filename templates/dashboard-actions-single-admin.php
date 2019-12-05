@@ -58,7 +58,10 @@
 
 		<?php
 		$custom_manage_functionality_modules = [];
-		$custom_manage_functionality_modules = apply_filters('osdxp_dashboard_single_manage_functionality', $custom_manage_functionality_modules);
+		$custom_manage_functionality_modules = apply_filters(
+			'osdxp_dashboard_single_manage_functionality',
+			$custom_manage_functionality_modules
+		);
 
 		foreach ($custom_manage_functionality_modules as $custom_module) {
 			?>
@@ -67,10 +70,12 @@
 					<div>
 						<div class="group">
 							<div class="dashicons-before <?php echo esc_attr($custom_module['icon']); ?>"></div>
-							<span><?php esc_html_e($custom_module['title'], 'osdxp-dashboard'); ?></span>
-							<p><?php esc_html_e($custom_module['subtitle'], 'osdxp-dashboard'); ?></p>
+							<span><?php echo esc_html($custom_module['title']); ?></span>
+							<p><?php echo esc_html($custom_module['subtitle']); ?></p>
 						</div>
-						<div class="button button-primary"><?php esc_html_e($custom_module['button_text'], 'osdxp-dashboard'); ?></div>
+						<div class="button button-primary">
+							<?php echo esc_html($custom_module['button_text']); ?>
+						</div>
 					</div>
 				</div>
 			</a>
@@ -139,7 +144,10 @@
 
 		<?php
 		$custom_create_functionality_modules = [];
-		$custom_create_functionality_modules = apply_filters('osdxp_dashboard_single_create_functionality', $custom_create_functionality_modules);
+		$custom_create_functionality_modules = apply_filters(
+			'osdxp_dashboard_single_create_functionality',
+			$custom_create_functionality_modules
+		);
 
 		foreach ($custom_create_functionality_modules as $custom_module) {
 			?>
@@ -148,8 +156,8 @@
 					<div>
 						<div class="group">
 							<div class="dashicons-before <?php echo esc_attr($custom_module['icon']); ?>"></div>
-							<span><?php esc_html_e($custom_module['title'], 'osdxp-dashboard'); ?></span>
-							<p><?php esc_html_e($custom_module['subtitle'], 'osdxp-dashboard'); ?></p>
+							<span><?php echo esc_html($custom_module['title']); ?></span>
+							<p><?php echo esc_html($custom_module['subtitle']); ?></p>
 						</div>
 					</div>
 				</div>

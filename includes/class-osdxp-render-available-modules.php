@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This class provides functionality to obtain and display the openDXP
  * available modules.

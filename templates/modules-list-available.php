@@ -1,10 +1,11 @@
 <?php
+
 namespace OSDXP_Dashboard;
 
 if (isset($_GET["refresh"]) && $_GET['refresh']) { // phpcs:ignore
 	delete_transient(OSDXP_DASHBOARD_AVAILABLE_MODULES_TRANSIENT);
-    $jsonData = $this->getModulesData();
-    $data =  $this->transformData($jsonData);
+	$jsonData = $this->getModulesData();
+	$data =  $this->transformData($jsonData);
 }
 ?>
 

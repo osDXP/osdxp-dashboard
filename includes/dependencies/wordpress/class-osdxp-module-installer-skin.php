@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Upgrader API: OSDXP_Module_Installer_Skin class
  *

@@ -1,10 +1,12 @@
 <?php
+
 /**
  * Module Update Checker UI
  * This adds extra links to module table view to check for updates & extra
  *
  * @see   Puc_v4p8_Plugin_Ui
  */
+
 namespace OSDXP_Dashboard;
 
 /**

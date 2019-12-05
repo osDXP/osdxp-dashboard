@@ -2,13 +2,11 @@
 <ruleset name="osDXP PSR12-based Coding Standards">
 	<description>Custom variant of PSR12 with WordPress security checks for PHP development</description>
 
-	<!-- Include PHPCompatibility to allow for checking code for PHP version compatibility -->
-	<rule ref="PHPCompatibility"/>
-
 	<!-- Default ruleset is PSR12 with one exception - tabs instead of spaces is allowed and preferred -->
 	<rule ref="PSR12">
 		<exclude name="Generic.WhiteSpace.DisallowTabIndent"/>
 	</rule>
+	<rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/>
 
 	<!-- WordPress security rules are included to check for sanitization of WordPress code -->
 	<rule ref="WordPress.DB.PreparedSQLPlaceholders"/>
@@ -52,7 +50,7 @@
 	<!-- Exclude node and vendor directories -->
 	<exclude-pattern>*/node_modules/*</exclude-pattern>
 	<exclude-pattern>*/vendor/*</exclude-pattern>
-	<exclude-pattern>*/wordpress/*</exclude-pattern>
+	<exclude-pattern>*/dependencies/*</exclude-pattern>
 
 	<!-- Check the files in the project directory. Where this xml file should be located. -->
 	<file>.</file>

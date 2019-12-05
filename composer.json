@@ -1,17 +1,31 @@
 {
-  "name": "crowdfavorite/osdxp-dashboard",
+  "name": "osdxp/osdxp-dashboard",
   "type": "wordpress-plugin",
+  "description": "An Augmentation of WordPress, creating a task-oriented Digital Experience Platform environment.",
+  "keywords": ["wordpress", "plugin", "dxp", "osdxp", "dashboard", "enterprise", "productivity"],
+  "license": "GPL-2.0-only",
+  "support": {
+    "email": "development@osdxp.org",
+    "issues": "https://github.com/osDXP/osdxp-dashboard/issues",
+    "docs": "https://osdxp.github.io/docs",
+    "chat": "https://osdxp.slack.com"
+  },
   "authors": [
     {
-      "name": "Crowd Favorite",
-      "email": "support@crowdfavorite.com",
-      "homepage": "http://crowdfavorite.com/"
+      "name": "osDXP",
+      "email": "development@osdxp.org",
+      "homepage": "https://osdxp.org/"
     }
   ],
   "require": {
-    "yahnis-elsts/plugin-update-checker": "~4.8.0"
+    "yahnis-elsts/plugin-update-checker": "^4.8.0",
+    "composer/installers": "^1.0",
+    "php": ">=7.2.0"
+  },
+  "suggest": {
+    "squizlabs/php_codesniffer": "Use phpcs with the included ruleset to lint your php files."
   },
   "autoload": {
-      "classmap": ["includes/"]
+    "classmap": ["includes/"]
   }
 }

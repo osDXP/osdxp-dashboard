@@ -1,4 +1,5 @@
 <?php
+
 /**
  * File containing various functions used throughout the plugin.
  *

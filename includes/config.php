@@ -1,4 +1,5 @@
 <?php
+
 /**
  * File containing the configuration of various plugin elements.
  *
@@ -89,7 +90,8 @@ function get_dxp_menu_pages()
 		$custom_pages = apply_filters('osdxp_add_module_settings_page', $custom_pages);
 
 		foreach ($custom_pages as $custom_page) {
-			if (isset($custom_page['page_title'])
+			if (
+				isset($custom_page['page_title'])
 				&& isset($custom_page['menu_title'])
 				&& isset($custom_page['menu_slug'])
 				&& isset($custom_page['function'])

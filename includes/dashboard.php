@@ -1,4 +1,5 @@
 <?php
+
 /**
  * File containing dashboard functionality.
  *
@@ -27,7 +28,7 @@ function add_dxp_dashboard_actions_widget()
 	if (is_dxp_dashboard()) {
 		wp_add_dashboard_widget(
 			'dxp_actions',
-			esc_html__('DXP Actions', 'osdxp-dashboard'),
+			esc_html__('osDXP Actions', 'osdxp-dashboard'),
 			__NAMESPACE__ . '\\dxp_dashboard_actions'
 		);
 	}
@@ -43,7 +44,7 @@ function add_dxp_news_dashboard_widget()
 	if (is_dxp_dashboard()) {
 		wp_add_dashboard_widget(
 			'dxp_news',
-			esc_html__('DXP News', 'osdxp-dashboard'),
+			esc_html__('osDXP News', 'osdxp-dashboard'),
 			__NAMESPACE__ . '\\dxp_news_dashboard_widget'
 		);
 	}
@@ -97,7 +98,7 @@ function dxp_news_dashboard_widget()
 
 		echo '</ul>';
 	} else {
-		esc_html_e('There are no DXP news at the moment.', 'osdxp-dashboard');
+		esc_html_e('There are no osDXP news at the moment.', 'osdxp-dashboard');
 	}
 }
 

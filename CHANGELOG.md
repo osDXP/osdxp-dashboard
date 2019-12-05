@@ -2,7 +2,7 @@
 
 A historical record of notable changes to `osdxp-dashboard` will be documented in this file.
 
-## [v1.1.0 (2019-11-29)](https://github.com/osDXP/osdxp-dashboard/releases/tag/v1.1.0)
+## [v1.1.0 (2019-12-05)](https://github.com/osDXP/osdxp-dashboard/releases/tag/v1.1.0)
 - Update repository meta files
 - Make plugin agnostic of integrations
 - Register assets by default and only enqueue them conditionally

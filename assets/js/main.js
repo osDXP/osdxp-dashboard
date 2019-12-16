@@ -130,5 +130,7 @@
     $(".dxp-dashboard #wp-admin-bar-root-default li").each( function() {
         $(this).addClass('current');
     });
+
+    $('.plugin-update-tr td').attr('colspan', 4);
   });
 })(jQuery);

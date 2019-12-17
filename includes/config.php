@@ -51,7 +51,7 @@ function get_dxp_menu_pages()
 				'capability' => 'manage_options',
 				'menu_slug'  => 'dxp-modules',
 				'function'   => __NAMESPACE__ . '\\dxp_render_available_modules',
-				'network'    => 'true',
+				'network'    => 'both',
 			],
 			[
 				'type'        => OSDXP_DASHBOARD_MENU_TYPE_ENDPOINT,

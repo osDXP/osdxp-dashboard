@@ -41,7 +41,7 @@
 			</a>
 		<?php endif; ?>
 
-		<?php if (current_user_can('install_plugins')) : ?>
+		<?php if (current_user_can('activate_plugins')) : ?>
 			<a href="<?php echo admin_url('admin.php?page=dxp-modules-installed');  // phpcs:ignore?>" class="col">
 				<div class="postbox">
 					<div>
@@ -114,8 +114,8 @@
 			</a>
 		<?php endif; ?>
 
-		<?php if (current_user_can('install_plugins')) : ?>
-			<a href="<?php echo admin_url('post-new.php?post_type=page');  // phpcs:ignore?>" class="col">
+		<?php if (current_user_can('install_plugins') && !is_multisite()) : ?>
+			<a href="<?php echo self_admin_url('?page=dxp-modules-installed');  // phpcs:ignore?>" class="col">
 				<div class="postbox">
 					<div>
 						<div class="group">

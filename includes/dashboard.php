@@ -59,9 +59,7 @@ function dxp_dashboard_actions()
 {
 	if (is_network_admin() && is_super_admin()) {
 		require_once(OSDXP_DASHBOARD_DIR . '/templates/dashboard-actions-network-admin.php');
-	} elseif (is_multisite() && is_super_admin()) {
-		require_once(OSDXP_DASHBOARD_DIR . '/templates/dashboard-actions-multisite-admin.php');
-	} elseif (!is_multisite() && current_user_can('administrator')) {
+	} elseif (current_user_can('administrator')) {
 		require_once(OSDXP_DASHBOARD_DIR . '/templates/dashboard-actions-single-admin.php');
 	} elseif (!current_user_can('administrator') && current_user_can('editor')) {
 		require_once(OSDXP_DASHBOARD_DIR . '/templates/dashboard-actions-editor.php');

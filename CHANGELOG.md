@@ -2,6 +2,16 @@
 
 A historical record of notable changes to `osdxp-dashboard` will be documented in this file.
 
+## [v1.1.1 (2019-12-27)](https://github.com/osDXP/osdxp-dashboard/releases/tag/v1.1.1)
+- Apply proper colspan to module update messages
+- Refactor dashboard templates logic
+- Refactor redirect path for user logins that are using osDXP
+- Account for osDXP dashboard status when deciding redirect path when checking for updates
+- Update default available modules json file
+- Reimplement available modules in regular admin on a multisite
+- Fix checking for new modules on a single site in a multisite instance
+- Fix proper path when switching to regular WordPress interface
+
 ## [v1.1.0 (2019-12-05)](https://github.com/osDXP/osdxp-dashboard/releases/tag/v1.1.0)
 - Update repository meta files
 - Make plugin agnostic of integrations

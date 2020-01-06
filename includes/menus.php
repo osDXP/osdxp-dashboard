@@ -92,7 +92,7 @@ function add_switch_to_dxp_button_to_admin_bar_menu($wp_admin_bar)
 						'<div>%s</div>',
 						__('<div>Return to<br> WordPress</div>', 'osdxp-dashboard')
 					),
-					'href'  => '/wp-admin/?dxp=off', // return to wp-admin dashboard
+					'href'  => esc_url(self_admin_url('?dxp=off')), // return to wp-admin dashboard
 				]
 			);
 		}
@@ -103,7 +103,7 @@ function add_switch_to_dxp_button_to_admin_bar_menu($wp_admin_bar)
 				'title' => '<div></div><span class="screen-reader-text">'
 							. esc_html__('Switch to osDXP', 'osdxp-dashboard')
 							. '</span>',
-				'href'  => admin_url('?dxp=on'), //set the user meta&init plugin based on dxp param
+				'href'  => esc_url(self_admin_url('?dxp=on')), //set the user meta&init plugin based on dxp param
 
 			]
 		);
@@ -114,7 +114,7 @@ function add_switch_to_dxp_button_to_admin_bar_menu($wp_admin_bar)
 				'title' => '<span class="screen-reader-text">'
 							. esc_html__('Switch to osDXP', 'osdxp-dashboard')
 							. '</span>',
-				'href'  => admin_url('?dxp=on'), //set the user meta&init plugin based on dxp param
+				'href'  => esc_url(self_admin_url('?dxp=on')), //set the user meta&init plugin based on dxp param
 			]
 		);
 	}

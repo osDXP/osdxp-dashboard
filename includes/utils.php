@@ -166,7 +166,7 @@ function osdxp_activation_redirect()
 	//ignore multisite since it will always be dxp on network dashboard
 	if (get_option('osdxp_activation_redirect', false) && !is_network_admin()) {
 		delete_option('osdxp_activation_redirect');
-		wp_safe_redirect("/wp-admin/?dxp=on");
+		wp_safe_redirect(esc_url(self_admin_url('?dxp=on')));
 		exit;
 	}
 }

@@ -42,7 +42,7 @@
 		<?php endif; ?>
 
 		<?php if (current_user_can('install_plugins')) : ?>
-			<a href="<?php echo network_admin_url('plugin-install.php');  // phpcs:ignore?>" class="col">
+			<a href="<?php echo network_admin_url('?page=dxp-modules-installed');  // phpcs:ignore?>" class="col">
 				<div class="postbox">
 					<div>
 						<div class="group">
@@ -115,7 +115,7 @@
 		<?php endif; ?>
 
 		<?php if (current_user_can('install_plugins')) : ?>
-			<a href="<?php echo network_admin_url('plugins.php');  // phpcs:ignore?>" class="col">
+			<a href="<?php echo network_admin_url('?page=dxp-modules-installed');  // phpcs:ignore?>" class="col">
 				<div class="postbox">
 					<div>
 						<div class="group">

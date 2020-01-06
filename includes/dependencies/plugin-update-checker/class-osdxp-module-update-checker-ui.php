@@ -232,13 +232,13 @@ class OsdxpModuleUpdateCheckerUi
 					set_site_transient($this->manualCheckErrorTransient, $this->lastRequestApiErrors, 60);
 				}
 			}
-
+			$url = is_dxp_dashboard() ? 'admin.php?page=dxp-modules-installed&' : 'plugins.php?';
 			wp_redirect(add_query_arg(
 				array(
 					'puc_update_check_result' => $status,
 					'puc_slug'                => $this->updateChecker->slug,
 				),
-				self_admin_url('admin.php?page=dxp-modules-installed&')
+				self_admin_url($url)
 			));
 			exit;
 		}

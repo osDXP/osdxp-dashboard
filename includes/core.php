@@ -45,8 +45,14 @@ function get_dxp_version_details()
  */
 function set_dxp_meta_on_login($redirect_to, $request, $user)
 {
-	if (isset($user->allcaps) && (!array_key_exists('dxp-dashboard', get_metadata('user', $user->ID)) || get_user_meta($user->ID, 'dxp-dashboard', true) === '1')) { // phpcs:ignore
-			$redirect_to = '/wp-admin/?dxp=on';
+	if (
+		($user instanceof \WP_User && user_can($user, 'edit_posts'))
+		&& (
+			! array_key_exists('dxp-dashboard', get_metadata('user', $user->ID))
+			|| get_user_meta($user->ID, 'dxp-dashboard', true) === '1'
+		)
+	) {
+			$redirect_to = esc_url(self_admin_url('?dxp=on'));
 	}
 	return $redirect_to;
 }

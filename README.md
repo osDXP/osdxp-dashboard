@@ -61,7 +61,6 @@ osDXP Dashboard is dependent on:
 [![Latest Release](https://img.shields.io/github/v/release/osDXP/osdxp-dashboard)](https://github.com/osDXP/osdxp-dashboard/releases)
 [![CSS gzip size](https://img.badgesize.io/osDXP/osdxp-dashboard/master/build/style-admin.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/osDXP/osdxp-dashboard/tree/master/build/style-admin.min.css)
 [![JS gzip size](https://img.badgesize.io/osDXP/osdxp-dashboard/master/build/app.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/osDXP/osdxp-dashboard/tree/master/build/app.min.js)
-[![License](https://img.shields.io/github/license/osDXP/osdxp-dashboard)](https://github.com/osDXP/osdxp-dashboard/blob/master/LICENSE)
 
 ## Bugs and feature requests
 

@@ -24,7 +24,7 @@
   "homepage": "https://github.com/osDXP/osdxp-dashboard#readme",
   "devDependencies": {
     "@babel/core": "^7.6.2",
-    "acorn": "^6.3.0",
+    "acorn": "^6.4.1",
     "autoprefixer": "^9.6.1",
     "babel-plugin-transform-remove-console": "^6.9.4",
     "babel-preset-airbnb": "^3.3.2",

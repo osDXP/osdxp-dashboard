@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Update/Install Module administration panel.
  *

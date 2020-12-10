@@ -1,0 +1,429 @@
+# Copyright (C) 2020 osDXP.org
+# This file is distributed under the same license as the Open Source DXP Dashboard plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Source DXP Dashboard 1.1.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/osdxp-dashboard\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-12-10T13:48:21+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: osdxp-dashboard\n"
+
+#. Plugin Name of the plugin
+msgid "Open Source DXP Dashboard"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://osdxp.org"
+msgstr ""
+
+#. Description of the plugin
+msgid "An Augmentation of WordPress, creating a task-oriented Digital Experience Platform environment."
+msgstr ""
+
+#. Author of the plugin
+msgid "osDXP.org"
+msgstr ""
+
+#: includes/assets.php:92
+msgid "Are you sure you want to remove this license key?"
+msgstr ""
+
+#: includes/class-licenseapi.php:236
+msgid "No API key has been set, unable to make request."
+msgstr ""
+
+#: includes/class-licenseapi.php:276
+msgid "The license API request failed: %1$s"
+msgstr ""
+
+#: includes/config.php:26
+#: includes/config.php:27
+#: includes/menus.php:206
+#: includes/menus.php:450
+#: templates/dashboard-actions-network-admin.php:50
+#: templates/dashboard-actions-network-admin.php:123
+#: templates/dashboard-actions-single-admin.php:50
+#: templates/dashboard-actions-single-admin.php:123
+msgid "Modules"
+msgstr ""
+
+#: includes/config.php:39
+#: includes/config.php:40
+msgid "Installed Modules"
+msgstr ""
+
+#: includes/config.php:49
+#: includes/config.php:50
+#: templates/modules-list-available.php:13
+msgid "Available Modules"
+msgstr ""
+
+#: includes/config.php:59
+#: includes/config.php:60
+msgid "Upgrade Modules"
+msgstr ""
+
+#: includes/config.php:69
+#: includes/config.php:70
+msgid "Modules Information"
+msgstr ""
+
+#: includes/config.php:79
+#: includes/config.php:80
+msgid "Module Settings"
+msgstr ""
+
+#. Translators: %s - Open Source DXP website.
+#: includes/core.php:144
+msgid "<a href=\"%1s\">Open Source DXP</a>. Powered by <a href=\"%2s\">WordPress</a>"
+msgstr ""
+
+#. Translators: %1$s: installed DXP version, %2$s: DXP URL, %3$s: latest DXP version.
+#: includes/core.php:175
+msgid "Open Source DXP %1$s installed. <a href=\"%2$s\">Get current version, %3$s</a>."
+msgstr ""
+
+#: includes/core.php:189
+msgid "Open Source DXP %1$s installed."
+msgstr ""
+
+#. Translators: %1$s: WordPress version number, %2$s: WordPress updates admin screen URL.
+#: includes/core.php:217
+msgid "You are using a development version (%1$s). Cool! Please <a href=\"%2$s\">stay updated</a>."
+msgstr ""
+
+#: includes/core.php:228
+msgid "WordPress %1$s installed. <a href=\"%2$s\">Get current version, %3$s</a>."
+msgstr ""
+
+#. Translators: %s: installed WordPress version.
+#: includes/core.php:246
+msgid "WordPress %s installed."
+msgstr ""
+
+#: includes/dashboard.php:31
+msgid "osDXP Actions"
+msgstr ""
+
+#: includes/dashboard.php:47
+msgid "osDXP News"
+msgstr ""
+
+#. Translators: %s the date when the item was posted.
+#: includes/dashboard.php:84
+msgid "Posted %s"
+msgstr ""
+
+#: includes/dashboard.php:99
+msgid "There are no osDXP news at the moment."
+msgstr ""
+
+#. translators: %s: module search term
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:350
+msgid "No modules found for &#8220;%s&#8221;."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:354
+msgid "Browse for more modules on the OSDXP Website!"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:357
+msgid "No modules found."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:359
+msgid "You do not appear to have any modules available at this time."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:532
+msgid "Network Activate"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:532
+msgid "Activate"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:536
+msgid "Network Deactivate"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:536
+msgid "Deactivate"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:541
+msgid "Update"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:544
+msgid "Delete"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:581
+msgid "Clear List"
+msgstr ""
+
+#. translators: %s: mu-plugins directory name
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:585
+msgid "Files in the %s directory are executed automatically."
+msgstr ""
+
+#. translators: %s: wp-content directory name
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:591
+msgid "Drop-ins are advanced modules in the %s directory that replace OSDXP functionality when present."
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:670
+msgid "Inactive:"
+msgstr ""
+
+#. translators: %s: module license expiry date
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:896
+msgid "Valid through"
+msgstr ""
+
+#. translators: %s: module license status
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:901
+msgid "License:"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:1045
+msgid "Enter License Key:"
+msgstr ""
+
+#: includes/dependencies/wordpress/class-osdxp-modules-list-table.php:1047
+msgid "Submit"
+msgstr ""
+
+#: includes/licensing.php:81
+msgid "License Key"
+msgstr ""
+
+#: includes/licensing.php:84
+msgid "Remove Key"
+msgstr ""
+
+#: includes/licensing.php:277
+msgid "License successfully removed."
+msgstr ""
+
+#: includes/licensing.php:337
+msgid "License successfully added."
+msgstr ""
+
+#: includes/licensing.php:340
+msgid "An error has occurred when trying to process your license key. Please try again later."
+msgstr ""
+
+#: includes/menus.php:93
+msgid "<div>Return to<br> WordPress</div>"
+msgstr ""
+
+#: includes/menus.php:104
+#: includes/menus.php:115
+msgid "Switch to osDXP"
+msgstr ""
+
+#: includes/menus.php:207
+msgid "Modules "
+msgstr ""
+
+#: includes/menus.php:398
+msgid "Network Admin"
+msgstr ""
+
+#: includes/menus.php:407
+#: includes/menus.php:503
+msgid "Dashboard"
+msgstr ""
+
+#: includes/menus.php:417
+#: templates/dashboard-actions-network-admin.php:20
+#: templates/dashboard-actions-network-admin.php:109
+msgid "Sites"
+msgstr ""
+
+#: includes/menus.php:428
+#: templates/dashboard-actions-network-admin.php:35
+#: templates/dashboard-actions-network-admin.php:95
+#: templates/dashboard-actions-single-admin.php:20
+#: templates/dashboard-actions-single-admin.php:95
+msgid "Users"
+msgstr ""
+
+#: includes/menus.php:439
+msgid "Themes"
+msgstr ""
+
+#: includes/menus.php:460
+msgid "osDXP Settings"
+msgstr ""
+
+#: includes/menus.php:534
+msgid "Manage Comments"
+msgstr ""
+
+#: includes/menus.php:544
+msgid "Visit Site"
+msgstr ""
+
+#: includes/notifications.php:46
+msgid "Administrative Notices have been minimized."
+msgstr ""
+
+#: includes/notifications.php:47
+msgid "Reveal"
+msgstr ""
+
+#: templates/dashboard-actions-editor.php:12
+#: templates/dashboard-actions-network-admin.php:12
+#: templates/dashboard-actions-single-admin.php:87
+msgid "Create Functionality"
+msgstr ""
+
+#: templates/dashboard-actions-editor.php:20
+#: templates/dashboard-actions-editor.php:80
+#: templates/dashboard-actions-single-admin.php:35
+#: templates/dashboard-actions-single-admin.php:109
+msgid "Pages"
+msgstr ""
+
+#: templates/dashboard-actions-editor.php:21
+#: templates/dashboard-actions-single-admin.php:110
+msgid "Create New Page"
+msgstr ""
+
+#: templates/dashboard-actions-editor.php:23
+msgid "New Page"
+msgstr ""
+
+#: templates/dashboard-actions-editor.php:35
+#: templates/dashboard-actions-editor.php:94
+msgid "Articles"
+msgstr ""
+
+#: templates/dashboard-actions-editor.php:36
+msgid "Create New Article"
+msgstr ""
+
+#: templates/dashboard-actions-editor.php:38
+msgid "New Article"
+msgstr ""
+
+#: templates/dashboard-actions-editor.php:72
+#: templates/dashboard-actions-network-admin.php:87
+#: templates/dashboard-actions-single-admin.php:12
+msgid "Manage Functionality"
+msgstr ""
+
+#: templates/dashboard-actions-editor.php:81
+#: templates/dashboard-actions-single-admin.php:36
+msgid "Manage Pages"
+msgstr ""
+
+#: templates/dashboard-actions-editor.php:95
+msgid "Manage Articles"
+msgstr ""
+
+#: templates/dashboard-actions-editor.php:108
+msgid "Media"
+msgstr ""
+
+#: templates/dashboard-actions-editor.php:109
+msgid "Manage Media"
+msgstr ""
+
+#: templates/dashboard-actions-network-admin.php:21
+msgid "Create New Site"
+msgstr ""
+
+#: templates/dashboard-actions-network-admin.php:23
+msgid "New Site"
+msgstr ""
+
+#: templates/dashboard-actions-network-admin.php:36
+#: templates/dashboard-actions-single-admin.php:96
+msgid "Create New User"
+msgstr ""
+
+#: templates/dashboard-actions-network-admin.php:38
+msgid "Create User"
+msgstr ""
+
+#: templates/dashboard-actions-network-admin.php:51
+#: templates/dashboard-actions-single-admin.php:124
+msgid "Add New Module"
+msgstr ""
+
+#: templates/dashboard-actions-network-admin.php:53
+msgid "New Module"
+msgstr ""
+
+#: templates/dashboard-actions-network-admin.php:96
+#: templates/dashboard-actions-single-admin.php:21
+msgid "Manage Users"
+msgstr ""
+
+#: templates/dashboard-actions-network-admin.php:110
+msgid "Manage Sites"
+msgstr ""
+
+#: templates/dashboard-actions-network-admin.php:124
+#: templates/dashboard-actions-single-admin.php:51
+msgid "Manage Modules"
+msgstr ""
+
+#: templates/dashboard-actions-single-admin.php:23
+msgid "View Users"
+msgstr ""
+
+#: templates/dashboard-actions-single-admin.php:38
+msgid "View Pages"
+msgstr ""
+
+#: templates/dashboard-actions-single-admin.php:53
+msgid "View Modules"
+msgstr ""
+
+#: templates/dashboard-actions-single-admin.php:137
+msgid "Menus"
+msgstr ""
+
+#: templates/dashboard-actions-single-admin.php:138
+msgid "Create New Menu"
+msgstr ""
+
+#: templates/modules-information.php:23
+msgid "Sorry, you are not allowed to install modules on this site."
+msgstr ""
+
+#: templates/modules-list-available.php:15
+msgid "Check for new modules"
+msgstr ""
+
+#: templates/modules-list-available.php:19
+msgid "Modules extend and expand the functionality of osDXP"
+msgstr ""
+
+#: templates/modules-list-available.php:49
+msgid "By"
+msgstr ""
+
+#: templates/modules-list-available.php:87
+msgid "Get Module"
+msgstr ""
+
+#: templates/modules-list-available.php:97
+msgid "Certified"
+msgstr ""
+
+#: templates/modules-list-available.php:98
+msgid " and tested with your osDXP version."
+msgstr ""

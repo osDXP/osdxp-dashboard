@@ -156,7 +156,7 @@ function get_license_key_option_name($plugin_slug)
 function handle_license_deletion(\WP_REST_Request $request)
 {
 	$plugin_slug = $request->get_param('plugin_slug');
-
+	$response = [];
 	/**
 	 * Filter the license deletion response.
 	 *
@@ -165,7 +165,7 @@ function handle_license_deletion(\WP_REST_Request $request)
 	 * @param array $response Response array.
 	 * @param string $plugin_slug Plugin slug.
 	 */
-	$response = apply_filters('osdxp_dashboard_license_deletion_response', [], $plugin_slug);
+	$response = apply_filters('osdxp_dashboard_license_deletion_response', $response, $plugin_slug);
 
 	return $response;
 }
@@ -196,7 +196,8 @@ function handle_license_submit(\WP_REST_Request $request)
 	 * @param string $plugin_slug Plugin slug.
 	 * @param string $license_key License key.
 	 */
-	$response = apply_filters('osdxp_dashboard_license_submit_response', [], $plugin_slug, $license_key);
+	$response = [];
+	$response = apply_filters('osdxp_dashboard_license_submit_response', $response, $plugin_slug, $license_key);
 
 	if (!empty($response['license_key_markup'])) {
 		$response['license_key_markup'] = esc_license_key_markup($response['license_key_markup']);

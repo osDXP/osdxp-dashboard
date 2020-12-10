@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Modules administration panel.
  *

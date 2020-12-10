@@ -1,7 +1,7 @@
 {
     "status": "success",
     "data": {
-        "osdxp-page-builder/fl-builder.php" : {
+        "osdxp-page-builder/fl-builder.php": {
             "name": "osDXP Page Builder",
             "logo": "https://s14308.pcdn.co/wp-content/uploads/2017/05/beaver-builder-wp-logo.png",
             "description": "Free Up Your Time and Unleash Your Creativity! osDXP Page Builder is a complete design system that includes a drag and drop page builder module and a framework theme. Based on the original WordPress Beaver Builder + Beaver Themer applications, but built for Enterprise grade needs and scalability, osDXP Page Builder is fully osDXP compatible.",
@@ -11,7 +11,7 @@
             "before-price-text": null,
             "after-price-text": "Per Year"
         },
-        "gravityforms/gravityforms.php" : {
+        "gravityforms/gravityforms.php": {
             "name": "Gravity Forms Enterprise for osDXP",
             "logo": "https://gravityforms.s3.us-east-1.amazonaws.com/logos/icon-osDXP.png",
             "description": "Quickly build and design your osDXP forms using the intuitive visual form editor. Select your fields, configure your options, and easily embed forms on your osDXP powered site using the built in tools. With the added complexity that comes from moving from a Content Management System to the new features being integrated into DXP's today, osDXP Form Builder is completely compatible with the DXP standards, and our team is on the forefront of creating the project's roadmap to start integration to a user based workflow on the creation and management of DXP sites.",
@@ -21,7 +21,7 @@
             "before-price-text": "Enterprise Edition",
             "after-price-text": "Per Year"
         },
-        "multilingualpress/multilingualpress.php" : {
+        "multilingualpress/multilingualpress.php": {
             "name": "osDXP Multilingual",
             "logo": "https://ps.w.org/multilingual-press/assets/icon-256x256.png",
             "description": "The perfect Multilingual Solution for the Open Source Digital Experience Platform. Built a powerful network of sites, translate them in any language and reach a greater audience - with osDXP Multilingual, the first and most trusted multilingual integration in the osDXP world. Benefit from the expertise of one of the founding partners of osDXP and make your website multilingual. The fully integrated osDXP Multilingual module enables you to publish your website in every language you want. Just add it to your osDXP and create a network of sites in different languages, all interconnected just like you want them to be.",
@@ -31,7 +31,7 @@
             "before-price-text": "From",
             "after-price-text": "Per Year"
         },
-        "cf-progressive-profiling/cf-progressive-profiling.php" : {
+        "cf-progressive-profiling/cf-progressive-profiling.php": {
             "name": "Progressive Profiling for osDXP",
             "logo": "https://osdxp.org/wp-content/uploads/2019/10/progressive-profiling.png",
             "description": "Progressive Profiling for osDXP allows you to have dynamic forms for your users and avoid question overload for your site visitors while slowly building trust with them. Collecting information from site visitors can be tricky, if the form is long and complicated many visitors will opt-out. Progressive Profiling allows you to select the information you wish to collect from the visitors and gradually collects the information for each site visitor as they return to your site. (requires Gravity Forms)",
@@ -41,7 +41,7 @@
             "before-price-text": null,
             "after-price-text": "Per Year"
         },
-        "cf-dxpct/cf-dxpct.php" : {
+        "cf-dxpct/cf-dxpct.php": {
             "name": "DXP Lead Conversion Tool - *Public Beta*",
             "logo": "https://osdxp.org/wp-content/uploads/2019/10/icon-large.png",
             "description": "DXP Lead Conversion Tool is PUBLIC BETA of a collaboration Between Crowd Favorite and Brainstorm Force, that is experimenting with the successful concepts that were introduced in BSF's very popular Convert Pro Plugin for WordPress, and will extend to create the foundation of an advanced lead generation module that uses a drag and drop editor to help build effective opt-in popups designed to increase interactions and website conversions. Email lists, content promotion, offers and more are easily achieved.",
@@ -51,7 +51,7 @@
             "before-price-text": null,
             "after-price-text": "Coming Soon"
         },
-        "osdxp-shared-counts/osdxp-shared-counts.php" : {
+        "osdxp-shared-counts/osdxp-shared-counts.php": {
             "name": "Shared Counts (osDXP Adaptation)",
             "logo": "https://sharedcountsplugin.com/wp-content/uploads/2019/03/shared-counts-icon.png",
             "description": "Social sharing buttons that look great and keep your site loading fast. https://sharedcountsplugin.com/",
@@ -61,7 +61,7 @@
             "before-price-text": null,
             "after-price-text": null
         },
-        "osdxp-login-logo/osdxp-login-logo.php" : {
+        "osdxp-login-logo/osdxp-login-logo.php": {
             "name": "Login Logo (osDXP Adaptation)",
             "logo": "https://s.w.org/plugins/geopattern-icon/login-logo_e7e7e7.svg",
             "description": "This plugin has been refactored to work with osDXP. Drop a PNG file named login-logo.png into your wp-content directory. This simple plugin takes care of the rest, with zero configuration. Transparent backgrounds work best. Crop it tight, with a width of 312 pixels, for best results. Original Code Link: http://txfx.net/wordpress-plugins/login-logo/ Donate link: http://txfx.net/wordpress-plugins/donate",
@@ -71,7 +71,7 @@
             "before-price-text": null,
             "after-price-text": null
         },
-        "cf-conditional-content/cf-conditional-content.php" : {
+        "conditional-content-pro-osdxp/conditional-content-pro-osdxp.php": {
             "name": "Conditional Content for osDXP",
             "logo": "https://osdxp.org/wp-content/uploads/2019/10/conditional-content.png",
             "description": "Create custom content as unique as your site visitors. Conditional Content is a Personalization plugin that gives you the ability to add or replace content based on the site visitors' behavior. Conditional Content is the ultimate customization tool, providing you with the ability to change content for the benefit of your visitors, and making it easier for the visitors to find what they are searching for.",

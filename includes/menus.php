@@ -63,12 +63,14 @@ function hide_endpoints_from_sidebar()
 /**
  * Sets desired menu page order
  *
+ * @param array $menu_order current menu order
+ *
  * @return  array of file names as used by Wordpress
  */
-function dxp_reorder_menu()
+function dxp_reorder_menu($menu_order)
 {
 	if (!is_dxp_dashboard()) {
-		return [];
+		return $menu_order;
 	}
 
 	return dxp_accepted_top_pages();

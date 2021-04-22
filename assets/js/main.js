@@ -29,7 +29,7 @@
     $('.js-osdxp-submit-module-license').on('click', event => {
       event.preventDefault();
 
-      const pressEnterEvent = $.Event('keypress', {which: 13});
+      const pressEnterEvent = $.Event('keypress', { which: 13 });
       $(event.currentTarget).siblings('.js-osdxp-module-license').trigger(pressEnterEvent);
     });
 
@@ -50,9 +50,9 @@
       $field.prop('disabled', true);
 
       // Send license request.
-      $.ajax(`${OSDXPDashboard.restUrl}/license/${pluginSlug}/${licenseKey}`, {
+      $.ajax(`${osDXPDashboard.restUrl}/license/${pluginSlug}/${licenseKey}`, {
         beforeSend: (xhr) => {
-          xhr.setRequestHeader('X-WP-Nonce', OSDXPDashboard.restNonce);
+          xhr.setRequestHeader('X-WP-Nonce', osDXPDashboard.restNonce);
         },
         method: 'POST'
       }).always(() => {
@@ -79,7 +79,7 @@
       event.preventDefault();
 
       // Display a confirmation and only continue if the user clicked "Yes".
-      if (!confirm(OSDXPDashboard.text.licenseKeyRemovalConfirmation)) {
+      if (!confirm(osDXPDashboard.text.licenseKeyRemovalConfirmation)) {
         return;
       }
 
@@ -91,9 +91,9 @@
       $button.prop('disabled', true);
 
       // Send license request.
-      $.ajax(`${OSDXPDashboard.restUrl}/license/${pluginSlug}`, {
+      $.ajax(`${osDXPDashboard.restUrl}/license/${pluginSlug}`, {
         beforeSend: (xhr) => {
-          xhr.setRequestHeader('X-WP-Nonce', OSDXPDashboard.restNonce);
+          xhr.setRequestHeader('X-WP-Nonce', osDXPDashboard.restNonce);
         },
         method: 'DELETE'
       }).always(() => {
@@ -127,8 +127,8 @@
     dxpActionsContainer.remove();
     dxpActionsHideLabel.remove();
 
-    $(".dxp-dashboard #wp-admin-bar-root-default li").each( function() {
-        $(this).addClass('current');
+    $(".dxp-dashboard #wp-admin-bar-root-default li").each(function () {
+      $(this).addClass('current');
     });
 
     $('.plugin-update-tr td').attr('colspan', 4);

@@ -44,9 +44,9 @@
 
       $field.prop('disabled', true); // Send license request.
 
-      $.ajax("".concat(OSDXPDashboard.restUrl, "/license/").concat(pluginSlug, "/").concat(licenseKey), {
+      $.ajax("".concat(osDXPDashboard.restUrl, "/license/").concat(pluginSlug, "/").concat(licenseKey), {
         beforeSend: function beforeSend(xhr) {
-          xhr.setRequestHeader('X-WP-Nonce', OSDXPDashboard.restNonce);
+          xhr.setRequestHeader('X-WP-Nonce', osDXPDashboard.restNonce);
         },
         method: 'POST'
       }).always(function () {
@@ -69,7 +69,7 @@
     $('.module-license-key').on('click', '.js-osdxp-module-remove-license', function (event) {
       event.preventDefault(); // Display a confirmation and only continue if the user clicked "Yes".
 
-      if (!confirm(OSDXPDashboard.text.licenseKeyRemovalConfirmation)) {
+      if (!confirm(osDXPDashboard.text.licenseKeyRemovalConfirmation)) {
         return;
       }
 
@@ -79,9 +79,9 @@
 
       $button.prop('disabled', true); // Send license request.
 
-      $.ajax("".concat(OSDXPDashboard.restUrl, "/license/").concat(pluginSlug), {
+      $.ajax("".concat(osDXPDashboard.restUrl, "/license/").concat(pluginSlug), {
         beforeSend: function beforeSend(xhr) {
-          xhr.setRequestHeader('X-WP-Nonce', OSDXPDashboard.restNonce);
+          xhr.setRequestHeader('X-WP-Nonce', osDXPDashboard.restNonce);
         },
         method: 'DELETE'
       }).always(function () {

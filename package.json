@@ -28,7 +28,7 @@
     "autoprefixer": "^9.8.6",
     "babel-plugin-transform-remove-console": "^6.9.4",
     "babel-preset-airbnb": "^3.3.2",
-    "browserslist": "^4.16.4",
+    "browserslist": "^4.16.5",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.22.1",

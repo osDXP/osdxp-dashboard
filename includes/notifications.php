@@ -17,6 +17,11 @@ if (! is_admin()) {
 // Output grouping notification and load required js
 function notifications()
 {
+	// GF Compatibility fix
+	$page = $_GET['page'] ?? ''; //phpcs:ignore
+	if (false !== strpos($page, 'gf')) {
+		return;
+	}
 
 	if (is_network_admin()) {
 		$action = 'network_admin_notices';

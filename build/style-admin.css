@@ -1074,12 +1074,13 @@ h1 {
 
 .postbox {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05); }
-  .postbox:before {
-    background: -webkit-linear-gradient(315deg, #4B1BE2 0%, #E81818 100%);
-    background: linear-gradient(135deg, #4B1BE2 0%, #E81818 100%);
-    content: '';
-    display: block;
-    height: 2px; }
+
+.col:before {
+  background: -webkit-linear-gradient(315deg, #4B1BE2 0%, #E81818 100%);
+  background: linear-gradient(135deg, #4B1BE2 0%, #E81818 100%);
+  content: '';
+  display: block;
+  height: 2px; }
 
 .wrap .add-new-h2,
 .wrap .add-new-h2:active,
@@ -1463,7 +1464,6 @@ input#title {
     -webkit-justify-content: stretch;
         -ms-flex-pack: stretch;
             justify-content: stretch;
-    margin: 0 -8px;
     min-width: 100%; }
     #dxp-actions .row .col {
       margin-bottom: 16px;
@@ -1477,51 +1477,60 @@ input#title {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
+      -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-              flex-direction: column;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
       -webkit-box-pack: stretch;
       -webkit-justify-content: stretch;
           -ms-flex-pack: stretch;
               justify-content: stretch;
-      margin: 0 8px;
-      min-height: 100%;
+      min-height: 100px;
       min-width: auto; }
       #dxp-actions .row .postbox > div {
-        -webkit-box-align: end;
-        -webkit-align-items: flex-end;
-            -ms-flex-align: end;
-                align-items: flex-end;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: horizontal;
+        -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-        -webkit-flex-direction: row;
-            -ms-flex-direction: row;
-                flex-direction: row;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
         -webkit-box-flex: 1;
-        -webkit-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
-        -webkit-box-pack: stretch;
-        -webkit-justify-content: stretch;
-            -ms-flex-pack: stretch;
-                justify-content: stretch;
+        -webkit-flex-grow: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         padding: 30px; }
+        #dxp-actions .row .postbox > div.dashicons-before {
+          -webkit-box-flex: initial;
+          -webkit-flex: initial;
+              -ms-flex: initial;
+                  flex: initial; }
       #dxp-actions .row .postbox [class*=dashicons]:before {
         font-size: 40px;
         height: 40px;
         margin-bottom: 10px;
         width: 40px; }
       #dxp-actions .row .postbox .group {
+        -webkit-flex-basis: 50%;
+            -ms-flex-preferred-size: 50%;
+                flex-basis: 50%;
         -webkit-box-flex: 1;
-        -webkit-flex: 1;
-            -ms-flex: 1;
-                flex: 1; }
+        -webkit-flex-grow: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1; }
       #dxp-actions .row .postbox span {
         color: #281F2E;
         display: block;
@@ -1540,8 +1549,13 @@ input#title {
         width: -webkit-max-content;
         width: -moz-max-content;
         width: max-content; }
-    #dxp-actions .row.large .col {
-      width: 33.33%; }
+    #dxp-actions .row.large {
+      gap: 30px; }
+      #dxp-actions .row.large .col {
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1; }
 
 @media only screen and (max-width: 782px) {
   #dxp-actions {
@@ -1566,6 +1580,9 @@ input#title {
         -ms-flex-positive: 1;
             flex-grow: 1;
     height: 100%; }
+    #dxp-actions .quick-actions .col:before {
+      background: transparent;
+      display: none; }
     #dxp-actions .quick-actions .col:hover .quickbox {
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); }
     #dxp-actions .quick-actions .col .quickbox {

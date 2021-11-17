@@ -12,7 +12,6 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: stretch;
-		margin: 0 -8px;
 		min-width: 100%;
 
 		.col {
@@ -30,19 +29,22 @@
 
 		.postbox {
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
+			flex-wrap: wrap;
 			justify-content: stretch;
-			margin: 0 8px;
-			min-height: 100%;
+			min-height: 100px;
 			min-width: auto;
 
 			> div {
-				align-items: flex-end;
 				display: flex;
-				flex-direction: row;
-				flex: 1;
-				justify-content: stretch;
+				flex-direction: column;
+				flex-grow: 1;
+				flex-wrap: wrap;
+				justify-content: center;
 				padding: 30px;
+				&.dashicons-before {
+					flex: initial;
+				}
 			}
 
 			[class*=dashicons]:before {
@@ -53,7 +55,8 @@
 			}
 
 			.group {
-				flex: 1;
+				flex-basis: 50%;
+				flex-grow: 1;
 			}
 
 			span {
@@ -80,8 +83,9 @@
 		}
 
 		&.large {
+			gap: 30px;
 			.col {
-				width: 33.33%;
+				flex-grow: 1;
 			}
 		}
 	}

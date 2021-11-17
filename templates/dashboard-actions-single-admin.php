@@ -62,24 +62,20 @@ $campaign .= '?fl_builder';
 	<div class="row large">
 		<a href="#cf-assistant-popup" class="col">
 			<div class="postbox">
-				<div>
-					<div class="group">
-						<div class="dashicons-before dashicons-businesswoman"></div>
-						<span><?php esc_html_e('AI Site Assistant', 'osdxp-dashboard'); ?></span>
-						<p><?php esc_html_e('I\'m here to help!', 'osdxp-dashboard'); ?></p>
-					</div>
+				<div class="group">
+					<span><?php esc_html_e('AI Site Assistant', 'osdxp-dashboard'); ?></span>
+					<p><?php esc_html_e('I\'m here to help!', 'osdxp-dashboard'); ?></p>
 				</div>
+				<div class="dashicons-before dashicons-businesswoman"></div>
 			</div>
 		</a>
 		<a href="<?php echo admin_url('admin.php?page=ab-testing');  // phpcs:ignore?>" class="col">
 			<div class="postbox">
-				<div>
-					<div class="group">
-						<div class="dashicons-before dashicons-chart-area"></div>
-						<span><?php esc_html_e('A/B Testing', 'osdxp-dashboard'); ?></span>
-						<p><?php esc_html_e('Manage A/B Tests', 'osdxp-dashboard'); ?></p>
-					</div>
+				<div class="group">
+					<span><?php esc_html_e('A/B Testing', 'osdxp-dashboard'); ?></span>
+					<p><?php esc_html_e('Manage A/B Tests', 'osdxp-dashboard'); ?></p>
 				</div>
+				<div class="dashicons-before dashicons-chart-area"></div>
 			</div>
 		</a>
 
@@ -94,13 +90,11 @@ $campaign .= '?fl_builder';
 			?>
 			<a href="<?php echo esc_url($custom_module['link']); ?>" class="col">
 				<div class="postbox">
-					<div>
-						<div class="group">
-							<div class="dashicons-before <?php echo esc_attr($custom_module['icon']); ?>"></div>
-							<span><?php echo esc_html($custom_module['title']); ?></span>
-							<p><?php echo esc_html($custom_module['subtitle']); ?></p>
-						</div>
+					<div class="group">
+						<span><?php echo esc_html($custom_module['title']); ?></span>
+						<p><?php echo esc_html($custom_module['subtitle']); ?></p>
 					</div>
+					<div class="dashicons-before <?php echo esc_attr($custom_module['icon']); ?>"></div>
 				</div>
 			</a>
 			<?php

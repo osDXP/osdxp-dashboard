@@ -8,6 +8,10 @@
 	.col {
 		flex-grow: 1;
 		height: 100%;
+		&:before {
+			background: transparent;
+			display: none;
+		}
 		&:hover {
 			.quickbox {
 				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);

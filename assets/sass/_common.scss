@@ -4,15 +4,13 @@ h1 {
 
 .postbox {
   box-shadow: 0 5px 10px rgba($color-black, .05);
-
-  &:before {
-    background: linear-gradient(135deg, $base-color 0%, $color-scarlet 100%);
-    content: '';
-    display: block;
-    height: 2px;
-  }
 }
-
+.col:before {
+  background: linear-gradient(135deg, $base-color 0%, $color-scarlet 100%);
+  content: '';
+  display: block;
+  height: 2px;
+}
 .wrap {
   .add-new-h2,
   .add-new-h2:active,

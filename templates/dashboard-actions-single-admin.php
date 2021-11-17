@@ -6,8 +6,58 @@
  * @package osdxp-dashboard
  */
 
+$campaign = get_permalink(get_page_by_path('event-promo', OBJECT, 'campaigns'));
+$campaign .= '?fl_builder';
 ?>
  <div id="dxp-actions">
+	<h2 class="title"><?php esc_html_e('Quick Actions', 'osdxp-dashboard'); ?></h2>
+	<div class="row quick-actions">
+		<a href="#" class="col">
+			<div class="quickbox">
+				<div class="group group-left">
+					<span><?php esc_html_e('Create new product', 'osdxp-dashboard'); ?></span>
+					<p><?php esc_html_e('Product Landing Page: eCommerce', 'osdxp-dashboard'); ?></p>
+				</div>
+				<div class="group group-right">
+					<div class="dashicons-before dashicons-cart"></div>
+				</div>
+			</div>
+		</a>
+		<a href="#" class="col">
+			<div class="quickbox quickbox-alt">
+				<div class="group group-left">
+					<span><?php esc_html_e('Create new event promotion', 'osdxp-dashboard'); ?></span>
+					<p><?php esc_html_e('Event Promotion Landing Page', 'osdxp-dashboard'); ?></p>
+				</div>
+				<div class="group group-right">
+					<div class="dashicons-before dashicons-calendar"></div>
+				</div>
+			</div>
+		</a>
+		<a href="#" class="col">
+			<div class="quickbox">
+				<div class="group group-left">
+					<span><?php esc_html_e('Create new webinar', 'osdxp-dashboard'); ?></span>
+					<p><?php esc_html_e('Webinar: Including Sign-ups', 'osdxp-dashboard'); ?></p>
+				</div>
+				<div class="group group-right">
+					<div class="dashicons-before dashicons-tickets-alt"></div>
+				</div>
+			</div>
+		</a>
+		<a href="<?php echo esc_url($campaign); ?>" class="col">
+			<div class="quickbox">
+				<div class="group group-left">
+					<span><?php esc_html_e('Create new landing page', 'osdxp-dashboard'); ?></span>
+					<p><?php esc_html_e('Campaign Landing Page', 'osdxp-dashboard'); ?></p>
+				</div>
+				<div class="group group-right">
+					<div class="dashicons-before dashicons-text-page"></div>
+				</div>
+			</div>
+		</a>
+	</div>
+
 	<h2 class="title"><?php esc_html_e('Manage Functionality', 'osdxp-dashboard'); ?></h2>
 	<div class="row large">
 		<a href="#cf-assistant-popup" class="col">

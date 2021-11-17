@@ -1,0 +1,70 @@
+.dashboard-subtitle {
+	padding-left: 0;
+}
+
+#dxp-actions .quick-actions {
+	gap: 30px;
+	margin: 0;
+	.col {
+		flex-grow: 1;
+		height: 100%;
+		&:hover {
+			.quickbox {
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+			}
+		}
+		.quickbox {
+			background: url('/wp-content/plugins/osdxp-dashboard/assets/images/gradient.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			color: #fff;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 5%;
+			min-height: 100px;
+			padding: 20px;
+			position: relative;
+			&:before {
+				background: rgba(69, 0, 162, 0.7);
+				bottom: 0;
+				content: '';
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+			&.quickbox-alt {
+				background: url('/wp-content/plugins/osdxp-dashboard/assets/images/gradient-alt.png');
+				&:before {
+					background: rgba(190,37,189,0.6);
+				}
+			}
+			.group {
+				justify-content: center;
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				z-index: +1;
+				p {
+					font-size: 16px;
+					line-height: 20px;
+					margin: 5px 0 0;
+				}
+				span {
+					font-size: 9px;
+					line-height: 14px;
+					text-transform: uppercase;
+				}
+				.dashicons-before:before {
+					font-size: calc(max(1.5vw, 25px));
+					height: calc(max(1.5vw, 25px));
+					width: calc(max(1.5vw, 25px));
+				}
+			}
+			.group-left {
+				flex-basis: 85%;
+			}
+		}
+	}
+}

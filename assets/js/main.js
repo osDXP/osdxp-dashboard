@@ -1,5 +1,7 @@
 (($) => {
   $(() => {
+    $('body.index-php h1').first().text(`${document.location.host} Dashboard`).after('<span class="subtitle dashboard-subtitle">Welcome to your osDXP dashboard!</span>');
+
     const clearMessages = $wrapper => {
       $wrapper.find('.error-messages').remove();
       $wrapper.find('.success-messages').remove();

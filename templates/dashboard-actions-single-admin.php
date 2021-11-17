@@ -71,13 +71,13 @@ $campaign .= '?fl_builder';
 				</div>
 			</div>
 		</a>
-		<a href="<?php echo admin_url('admin.php?page=dxp-modules-installed');  // phpcs:ignore?>" class="col">
+		<a href="<?php echo admin_url('admin.php?page=ab-testing');  // phpcs:ignore?>" class="col">
 			<div class="postbox">
 				<div>
 					<div class="group">
-						<div class="dashicons-before dashicons-admin-generic"></div>
-						<span><?php esc_html_e('Modules', 'osdxp-dashboard'); ?></span>
-						<p><?php esc_html_e('Manage Modules', 'osdxp-dashboard'); ?></p>
+						<div class="dashicons-before dashicons-chart-area"></div>
+						<span><?php esc_html_e('A/B Testing', 'osdxp-dashboard'); ?></span>
+						<p><?php esc_html_e('Manage A/B Tests', 'osdxp-dashboard'); ?></p>
 					</div>
 				</div>
 			</div>

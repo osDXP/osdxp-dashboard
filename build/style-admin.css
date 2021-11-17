@@ -1622,7 +1622,8 @@ input#title {
         #dxp-actions .quick-actions .col .quickbox .group p {
           font-size: 16px;
           line-height: 20px;
-          margin: 5px 0 0; }
+          margin: 5px 0 0;
+          text-shadow: 0 0 3px rgba(0, 0, 0, 0.3); }
         #dxp-actions .quick-actions .col .quickbox .group span {
           font-size: 9px;
           line-height: 14px;

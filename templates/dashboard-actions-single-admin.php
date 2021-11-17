@@ -103,15 +103,52 @@ $campaign .= '?fl_builder';
 	</div>
 
 	<h2 class="title"><?php esc_html_e('Analytics', 'osdxp-dashboard'); ?></h2>
-	<div class="row">
-		<a href="<?php echo admin_url('user-new.php');  // phpcs:ignore?>" class="col">
+	<div class="row large analytics">
+		<a href="#" class="col">
 			<div class="postbox">
-				<div>
-					<div class="group">
-						<div class="dashicons-before dashicons-admin-users"></div>
-						<span><?php esc_html_e('Users', 'osdxp-dashboard'); ?></span>
-						<p><?php esc_html_e('Create New User', 'osdxp-dashboard'); ?></p>
-					</div>
+				<div class="group">
+					<span><?php esc_html_e('Sessions', 'osdxp-dashboard'); ?></span>
+					<p><?php esc_html_e('31,190', 'osdxp-dashboard'); ?></p>
+				</div>
+				<div class="percent-change">
+					<p class="percent uptick">↑ 5%</p>
+					<p class="percent-subtitle">Vs. previous 30 days</p>
+				</div>
+			</div>
+		</a>
+		<a href="#" class="col">
+			<div class="postbox">
+				<div class="group">
+					<span><?php esc_html_e('White Paper Downloads', 'osdxp-dashboard'); ?></span>
+					<p><?php esc_html_e('715', 'osdxp-dashboard'); ?></p>
+				</div>
+				<div class="percent-change">
+					<p class="percent downtick">↓ 2%</p>
+					<p class="percent-subtitle">Vs. previous 30 days</p>
+				</div>
+			</div>
+		</a>
+		<a href="#" class="col">
+			<div class="postbox">
+				<div class="group">
+					<span><?php esc_html_e('Avg. Contract Value', 'osdxp-dashboard'); ?></span>
+					<p><?php esc_html_e('$430,000', 'osdxp-dashboard'); ?></p>
+				</div>
+				<div class="percent-change">
+					<p class="percent uptick">↑ 4%</p>
+					<p class="percent-subtitle">Vs. previous 30 days</p>
+				</div>
+			</div>
+		</a>
+		<a href="#" class="col">
+			<div class="postbox">
+				<div class="group">
+					<span><?php esc_html_e('Avg. Sales Cycle Length', 'osdxp-dashboard'); ?></span>
+					<p><?php esc_html_e('22.2 days', 'osdxp-dashboard'); ?></p>
+				</div>
+				<div class="percent-change">
+					<p class="percent downtick">↓ 5%</p>
+					<p class="percent-subtitle">Vs. previous 30 days</p>
 				</div>
 			</div>
 		</a>

@@ -1485,6 +1485,7 @@ input#title {
       -webkit-flex-wrap: wrap;
           -ms-flex-wrap: wrap;
               flex-wrap: wrap;
+      height: 100%;
       -webkit-box-pack: stretch;
       -webkit-justify-content: stretch;
           -ms-flex-pack: stretch;
@@ -1570,6 +1571,36 @@ input#title {
 
 .dashboard-subtitle {
   padding-left: 0; }
+
+#dxp-actions .row.analytics .postbox {
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap; }
+  #dxp-actions .row.analytics .postbox .group span {
+    font-size: 12px;
+    text-transform: unset; }
+  #dxp-actions .row.analytics .postbox .group p {
+    font-size: 28px;
+    font-weight: 600; }
+  #dxp-actions .row.analytics .postbox > div {
+    padding: 20px; }
+    #dxp-actions .row.analytics .postbox > div.percent-change {
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+          -ms-flex-align: end;
+              align-items: flex-end;
+      padding-left: 0; }
+      #dxp-actions .row.analytics .postbox > div.percent-change .percent {
+        font-size: 12px;
+        font-weight: 800; }
+        #dxp-actions .row.analytics .postbox > div.percent-change .percent.uptick {
+          color: #46D69F; }
+        #dxp-actions .row.analytics .postbox > div.percent-change .percent.downtick {
+          color: #F5516E; }
+      #dxp-actions .row.analytics .postbox > div.percent-change .percent-subtitle {
+        color: #888888;
+        font-size: 10px;
+        text-align: end; }
 
 #dxp-actions .quick-actions {
   gap: 30px;

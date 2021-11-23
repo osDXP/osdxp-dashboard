@@ -1558,7 +1558,7 @@ input#title {
             -ms-flex-positive: 1;
                 flex-grow: 1; }
 
-@media only screen and (max-width: 782px) {
+@media only screen and (max-width: 1227px) {
   #dxp-actions {
     padding: 0 0 20px 0; }
     #dxp-actions .row .col,
@@ -1570,6 +1570,7 @@ input#title {
         padding: 15px 20px; } }
 
 .dashboard-subtitle {
+  display: block;
   padding-left: 0; }
 
 #dxp-actions .row.analytics .postbox {

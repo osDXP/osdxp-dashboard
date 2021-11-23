@@ -2,7 +2,7 @@
 
 (function ($) {
   $(function () {
-    $('body.index-php h1').first().text("".concat(document.location.host, " Dashboard")).after('<span class="subtitle dashboard-subtitle">Welcome to your osDXP dashboard!</span>');
+    $('body.index-php h1').first().text("".concat(osDXPDashboard.text.siteTitle, " Dashboard")).after('<span class="subtitle dashboard-subtitle">Welcome to your osDXP dashboard!</span>');
 
     var clearMessages = function clearMessages($wrapper) {
       $wrapper.find('.error-messages').remove();

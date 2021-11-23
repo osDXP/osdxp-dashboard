@@ -12,10 +12,10 @@ $campaign .= '?fl_builder';
  <div id="dxp-actions">
 	<h2 class="title"><?php esc_html_e('Quick Actions', 'osdxp-dashboard'); ?></h2>
 	<div class="row quick-actions">
-		<a href="#" class="col">
+		<a href="<?php echo admin_url('post-new.php?post_type=page');  // phpcs:ignore?>" class="col">
 			<div class="quickbox">
 				<div class="group group-left">
-					<span><?php esc_html_e('Create new product', 'osdxp-dashboard'); ?></span>
+					<span><?php esc_html_e('Create new page', 'osdxp-dashboard'); ?></span>
 					<p><?php esc_html_e('Product Landing Page: eCommerce', 'osdxp-dashboard'); ?></p>
 				</div>
 				<div class="group group-right">
@@ -73,33 +73,20 @@ $campaign .= '?fl_builder';
 			<div class="postbox">
 				<div class="group">
 					<span><?php esc_html_e('A/B Testing', 'osdxp-dashboard'); ?></span>
-					<p><?php esc_html_e('Manage A/B Tests', 'osdxp-dashboard'); ?></p>
+					<p><?php esc_html_e('Manage A/B Campaigns', 'osdxp-dashboard'); ?></p>
 				</div>
 				<div class="dashicons-before dashicons-chart-area"></div>
 			</div>
 		</a>
-
-		<?php
-		$custom_manage_functionality_modules = [];
-		$custom_manage_functionality_modules = apply_filters(
-			'osdxp_dashboard_single_manage_functionality',
-			$custom_manage_functionality_modules
-		);
-
-		foreach ($custom_manage_functionality_modules as $custom_module) {
-			?>
-			<a href="<?php echo esc_url($custom_module['link']); ?>" class="col">
-				<div class="postbox">
-					<div class="group">
-						<span><?php echo esc_html($custom_module['title']); ?></span>
-						<p><?php echo esc_html($custom_module['subtitle']); ?></p>
-					</div>
-					<div class="dashicons-before <?php echo esc_attr($custom_module['icon']); ?>"></div>
+		<a href="<?php echo admin_url('admin.php?page=team-workflows');  // phpcs:ignore?>" class="col">
+			<div class="postbox">
+				<div class="group">
+					<span><?php esc_html_e('Workflows', 'osdxp-dashboard'); ?></span>
+					<p><?php esc_html_e('Manage Team Workflows', 'osdxp-dashboard'); ?></p>
 				</div>
-			</a>
-			<?php
-		}
-		?>
+				<div class="dashicons-before dashicons-groups"></div>
+			</div>
+		</a>
 	</div>
 
 	<h2 class="title"><?php esc_html_e('Analytics', 'osdxp-dashboard'); ?></h2>

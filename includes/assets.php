@@ -93,6 +93,7 @@ function load_admin_assets()
 						'Are you sure you want to remove this license key?',
 						'osdxp-dashboard'
 					),
+					'siteTitle' => get_bloginfo(),
 				],
 			]
 		);

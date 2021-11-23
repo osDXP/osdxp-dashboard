@@ -1,6 +1,6 @@
 (($) => {
   $(() => {
-    $('body.index-php h1').first().text(`${osDXPDashboard.text.siteTitle} Dashboard`).after('<span class="subtitle dashboard-subtitle">Welcome to your osDXP dashboard!</span>');
+    $('body.index-php h1').first().text(`${osDXPDashboard.text.siteTitle} Sales/Marketing at a Glance`).after('<span class="subtitle dashboard-subtitle">Welcome to your dashboard! Quick links to campaigns, settings and KPIs.</span>');
 
     const clearMessages = $wrapper => {
       $wrapper.find('.error-messages').remove();

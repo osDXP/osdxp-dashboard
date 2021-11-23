@@ -12,8 +12,11 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: stretch;
+		margin: 0;
 		min-width: 100%;
-
+		&::before {
+			content: none;
+		}
 		.col {
 			margin-bottom: 16px;
 			min-width: 100px;

@@ -1464,7 +1464,10 @@ input#title {
     -webkit-justify-content: stretch;
         -ms-flex-pack: stretch;
             justify-content: stretch;
+    margin: 0;
     min-width: 100%; }
+    #dxp-actions .row::before {
+      content: none; }
     #dxp-actions .row .col {
       margin-bottom: 16px;
       min-width: 100px;

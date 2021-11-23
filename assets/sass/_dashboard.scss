@@ -2,6 +2,18 @@
 	display: block;
 	padding-left: 0;
 }
+#dxp-actions .row.graphs {
+	.col {
+		width: 18%;
+		&::before {
+			content: none;
+		}
+	}
+	.double {
+		flex-grow: 6;
+		width: 35%;
+	}
+}
 #dxp-actions .row.analytics {
 	.postbox {
 		flex-wrap: nowrap;

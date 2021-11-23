@@ -1576,6 +1576,18 @@ input#title {
   display: block;
   padding-left: 0; }
 
+#dxp-actions .row.graphs .col {
+  width: 18%; }
+  #dxp-actions .row.graphs .col::before {
+    content: none; }
+
+#dxp-actions .row.graphs .double {
+  -webkit-box-flex: 6;
+  -webkit-flex-grow: 6;
+      -ms-flex-positive: 6;
+          flex-grow: 6;
+  width: 35%; }
+
 #dxp-actions .row.analytics .postbox {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;

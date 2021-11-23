@@ -99,7 +99,7 @@ $campaign .= '?fl_builder';
 				</div>
 				<div class="percent-change">
 					<p class="percent uptick">↑ 5%</p>
-					<p class="percent-subtitle">Vs. previous 30 days</p>
+					<p class="percent-subtitle">Vs. previous day</p>
 				</div>
 			</div>
 		</a>
@@ -111,7 +111,7 @@ $campaign .= '?fl_builder';
 				</div>
 				<div class="percent-change">
 					<p class="percent downtick">↓ 2%</p>
-					<p class="percent-subtitle">Vs. previous 30 days</p>
+					<p class="percent-subtitle">Vs. previous day</p>
 				</div>
 			</div>
 		</a>
@@ -123,7 +123,7 @@ $campaign .= '?fl_builder';
 				</div>
 				<div class="percent-change">
 					<p class="percent uptick">↑ 4%</p>
-					<p class="percent-subtitle">Vs. previous 30 days</p>
+					<p class="percent-subtitle">Vs. previous day</p>
 				</div>
 			</div>
 		</a>
@@ -131,14 +131,32 @@ $campaign .= '?fl_builder';
 			<div class="postbox">
 				<div class="group">
 					<span><?php esc_html_e('Avg. Sales Cycle Length', 'osdxp-dashboard'); ?></span>
-					<p><?php esc_html_e('22.2 days', 'osdxp-dashboard'); ?></p>
+					<p><?php esc_html_e('89 days', 'osdxp-dashboard'); ?></p>
 				</div>
 				<div class="percent-change">
 					<p class="percent downtick">↓ 5%</p>
-					<p class="percent-subtitle">Vs. previous 30 days</p>
+					<p class="percent-subtitle">Vs. previous day</p>
 				</div>
 			</div>
 		</a>
 	</div>
-
+	<div class="row large graphs">
+		<a href="#" class="col">
+			<img class="postbox" style="width:100%; height:auto;" src="/wp-content/plugins/osdxp-dashboard/assets/images/graph-1.png" />
+		</a>
+		<a href="#" class="col">
+			<img class="postbox" style="width:100%; height:auto;" src="/wp-content/plugins/osdxp-dashboard/assets/images/graph-2.png" />
+		</a>
+	</div>
+	<div class="row large graphs">
+		<a href="#" class="col double">
+			<img class="postbox" style="width:100%; height:auto;" src="/wp-content/plugins/osdxp-dashboard/assets/images/graph-3.png" />
+		</a>
+		<a href="#" class="col">
+			<img class="postbox" style="width:100%; height:auto;" src="/wp-content/plugins/osdxp-dashboard/assets/images/graph-4.png" />
+		</a>
+		<a href="#" class="col double">
+			<img class="postbox" style="width:100%; height:auto;" src="/wp-content/plugins/osdxp-dashboard/assets/images/graph-5.png" />
+		</a>
+	</div>
  </div>

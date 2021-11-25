@@ -14,7 +14,7 @@ $leads = ($leads === 'https://winery.crowdfavorite.digital') ? admin_url('admin.
  <div id="dxp-actions">
 	<h2 class="title"><?php esc_html_e('Quick Actions', 'osdxp-dashboard'); ?></h2>
 	<div class="row quick-actions">
-		<a href="<?php echo admin_url('post-new.php?post_type=page');  // phpcs:ignore?>" class="col">
+		<a href="<?php echo admin_url('post.php?post=2234&action=edit');  // phpcs:ignore?>" class="col">
 			<div class="quickbox">
 				<div class="group group-left">
 					<span><?php esc_html_e('Create new page', 'osdxp-dashboard'); ?></span>

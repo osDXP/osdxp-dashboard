@@ -8,8 +8,6 @@
 
 $campaign = get_permalink(get_page_by_path('event-promo', OBJECT, 'campaigns'));
 $campaign .= '?fl_builder';
-$leads = get_site_url();
-$leads = ($leads === 'https://winery.crowdfavorite.digital') ? admin_url('admin.php?page=gf_entries&id=3') : '#';
 ?>
  <div id="dxp-actions">
 	<h2 class="title"><?php esc_html_e('Quick Actions', 'osdxp-dashboard'); ?></h2>
@@ -151,7 +149,7 @@ $leads = ($leads === 'https://winery.crowdfavorite.digital') ? admin_url('admin.
 		</a>
 	</div>
 	<div class="row large graphs">
-		<a href="<?php echo $leads; //phpcs:ignore?>" class="col double">
+		<a href="#" class="col double">
 			<img class="postbox" style="width:100%; height:auto;" src="/wp-content/plugins/osdxp-dashboard/assets/images/graph-3.png" />
 		</a>
 		<a href="#" class="col">

@@ -260,7 +260,7 @@ function dxp_accepted_top_pages()
 	foreach ($cpts as $cpt) {
 		$menu_list[] = 'edit.php?post_type=' . $cpt;
 	}
-
+	$menu_list[] = 'upload.php';
 	// non-dashboard osDXP top-level pages
 	$custom_pages = [];
 	$custom_pages = apply_filters('osdxp_add_module_settings_page', $custom_pages);
@@ -273,12 +273,11 @@ function dxp_accepted_top_pages()
 
 	array_push(
 		$menu_list,
-		'upload.php',
+		'separator2',
 		'themes.php',
 		'dxp-modules-installed',
 		'dxp-module-settings',
 		'options-general.php',
-		'separator2',
 		'users.php',
 		'tools.php'
 	);

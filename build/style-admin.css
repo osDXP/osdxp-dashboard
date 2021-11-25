@@ -294,7 +294,7 @@
 #wpadminbar .ab-icon:before,
 #wpadminbar .ab-item:before,
 #wpadminbar .ab-item:after {
-  color: #281F2E; }
+  color: #4B1BE2 !important; }
 
 #wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item,
 #wpadminbar:not(.mobile) .ab-top-menu > li > .ab-item:focus,
@@ -1652,8 +1652,10 @@ input#title {
       gap: 5%;
       min-height: 100px;
       padding: 20px;
-      position: relative; }
-      #dxp-actions .quick-actions .col .quickbox:before {
+      position: relative;
+      -webkit-transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in; }
+      #dxp-actions .quick-actions .col .quickbox::before {
         background: rgba(69, 0, 162, 0.7);
         bottom: 0;
         content: '';
@@ -1661,9 +1663,11 @@ input#title {
         position: absolute;
         right: 0;
         top: 0; }
-      #dxp-actions .quick-actions .col .quickbox.quickbox-alt {
-        background: url("/wp-content/plugins/osdxp-dashboard/assets/images/gradient-alt.png"); }
-        #dxp-actions .quick-actions .col .quickbox.quickbox-alt:before {
+      #dxp-actions .quick-actions .col .quickbox:hover {
+        background: url("/wp-content/plugins/osdxp-dashboard/assets/images/gradient-alt.png");
+        -webkit-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out; }
+        #dxp-actions .quick-actions .col .quickbox:hover::before {
           background: rgba(190, 37, 189, 0.6); }
       #dxp-actions .quick-actions .col .quickbox .group {
         -webkit-box-pack: center;
@@ -1700,6 +1704,22 @@ input#title {
         -webkit-flex-basis: 85%;
             -ms-flex-preferred-size: 85%;
                 flex-basis: 85%; }
+
+#wpadminbar #wp-admin-bar-my-account.with-avatar > .ab-empty-item img, #wpadminbar #wp-admin-bar-my-account.with-avatar > a img {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 0 30px -6px rgba(0, 0, 0, 0.05);
+  height: 32px;
+  width: 32px; }
+
+#wp-admin-bar-my-account > a::after {
+  content: '\f347';
+  font-family: 'dashicons';
+  margin-left: 9px;
+  vertical-align: middle; }
+
+#wp-admin-bar-my-account .display-name {
+  font-size: 14px; }
 
 #wp-admin-bar-my-sites {
   color: #4B1BE2 !important; }

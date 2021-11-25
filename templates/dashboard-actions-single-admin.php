@@ -24,7 +24,7 @@ $campaign .= '?fl_builder';
 			</div>
 		</a>
 		<a href="#" class="col">
-			<div class="quickbox quickbox-alt">
+			<div class="quickbox">
 				<div class="group group-left">
 					<span><?php esc_html_e('Create new event promotion', 'osdxp-dashboard'); ?></span>
 					<p><?php esc_html_e('Event Promotion Landing Page', 'osdxp-dashboard'); ?></p>

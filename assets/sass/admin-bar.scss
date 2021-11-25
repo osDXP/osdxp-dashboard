@@ -173,7 +173,7 @@
 #wpadminbar .ab-icon:before,
 #wpadminbar .ab-item:before,
 #wpadminbar .ab-item:after {
-	color: $adminbar-text;
+	color: $base-color!important;
 }
 
 #wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item,

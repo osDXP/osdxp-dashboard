@@ -1,0 +1,18 @@
+#wpadminbar #wp-admin-bar-my-account.with-avatar > .ab-empty-item img, #wpadminbar #wp-admin-bar-my-account.with-avatar > a img {
+	border: none;
+	border-radius: 16px;
+	box-shadow: 0 0 30px -6px rgba(0,0,0,0.05);
+	height: 32px;
+	width: 32px;
+}
+#wp-admin-bar-my-account {
+	> a::after {
+		content: '\f347';
+		font-family: 'dashicons';
+		margin-left: 9px;
+		vertical-align: middle;
+	}
+	.display-name {
+		font-size: 14px;
+	}
+}

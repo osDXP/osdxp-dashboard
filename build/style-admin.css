@@ -1712,11 +1712,13 @@ input#title {
   height: 32px;
   width: 32px; }
 
-#wp-admin-bar-my-account > a::after {
-  content: '\f347';
-  font-family: 'dashicons';
-  margin-left: 9px;
-  vertical-align: middle; }
+#wp-admin-bar-my-account > a {
+  margin-right: 20px !important; }
+  #wp-admin-bar-my-account > a::after {
+    content: '\f347';
+    font-family: 'dashicons';
+    margin-left: 9px;
+    vertical-align: middle; }
 
 #wp-admin-bar-my-account .display-name {
   font-size: 14px; }

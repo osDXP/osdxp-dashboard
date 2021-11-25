@@ -6,11 +6,14 @@
 	width: 32px;
 }
 #wp-admin-bar-my-account {
-	> a::after {
-		content: '\f347';
-		font-family: 'dashicons';
-		margin-left: 9px;
-		vertical-align: middle;
+	> a {
+		margin-right: 20px!important;
+		&::after {
+			content: '\f347';
+			font-family: 'dashicons';
+			margin-left: 9px;
+			vertical-align: middle;
+		}
 	}
 	.display-name {
 		font-size: 14px;

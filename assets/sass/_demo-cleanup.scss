@@ -19,3 +19,31 @@
 		font-size: 14px;
 	}
 }
+#adminmenuback, #adminmenuwrap, #adminmenu, #adminmenu .wp-submenu {
+	width: 220px;
+}
+#wpcontent, #wpfooter {
+	margin-left: 220px;
+}
+#adminmenu div.wp-menu-name {
+	padding: 18px 18px 18px 46px;
+}
+#adminmenuback {
+	border-radius: 0 15px 0 0;
+	top: 44px;
+}
+#adminmenuwrap {
+	border-radius: 0 15px 0 0;
+}
+div.wp-menu-image:before {
+	padding: 17px 0 0 10px;
+}
+#adminmenu li.wp-has-submenu.wp-not-current-submenu:hover:after, #adminmenu li.wp-has-submenu.wp-not-current-submenu:focus-within:after {
+	top: 20px;
+}
+#adminmenu .wp-submenu {
+	left: 220px;
+}
+body {
+	font-family: 'Open Sans';
+}

@@ -1751,6 +1751,9 @@ div.wp-menu-image:before {
 body {
   font-family: 'Open Sans'; }
 
+.folded #adminmenu div.wp-menu-image:before, .auto-fold #adminmenu div.wp-menu-image:before {
+  padding: 7px 0; }
+
 #wp-admin-bar-my-sites {
   color: #4B1BE2 !important; }
   #wp-admin-bar-my-sites > a:before {

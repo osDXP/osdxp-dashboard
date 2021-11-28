@@ -47,3 +47,8 @@ div.wp-menu-image:before {
 body {
 	font-family: 'Open Sans';
 }
+.folded #adminmenu, .auto-fold #adminmenu {
+	div.wp-menu-image:before {
+		padding: 7px 0;
+	}
+}

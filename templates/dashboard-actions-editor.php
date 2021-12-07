@@ -79,3 +79,14 @@ $campaign .= '?fl_builder';
 			</div>
 		</a>
 	</div>
+
+	<h2 class="title"><?php esc_html_e('Analytics', 'osdxp-dashboard'); ?></h2>
+	<div class="row large graphs">
+		<a href="#" class="col">
+			<img class="postbox" style="width:100%; height:auto;" src="/wp-content/plugins/osdxp-dashboard/assets/images/graph-1.png" />
+		</a>
+		<a href="#" class="col">
+			<img class="postbox" style="width:100%; height:auto;" src="/wp-content/plugins/osdxp-dashboard/assets/images/graph-2.png" />
+		</a>
+	</div>
+ </div>

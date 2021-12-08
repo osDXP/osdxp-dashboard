@@ -236,6 +236,13 @@ function dxp_admin_add_menu_items(bool $network = false)
 			);
 		}
 	}
+	add_submenu_page(
+		'dxp-module-settings',
+		'All Conditions',
+		'Conditional Content',
+		'manage_options',
+		'edit.php?post_type=cf_cc_condition'
+	);
 }
 
 /**

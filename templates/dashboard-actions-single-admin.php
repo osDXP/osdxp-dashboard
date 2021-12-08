@@ -8,6 +8,7 @@
 
 $campaign = get_permalink(get_page_by_path('event-promo', OBJECT, 'campaigns'));
 $campaign .= '?fl_builder';
+$analytics = admin_url('admin.php?page=analytics');
 ?>
  <div id="dxp-actions">
 	<h2 class="title"><?php esc_html_e('Quick Actions', 'osdxp-dashboard'); ?></h2>
@@ -144,7 +145,7 @@ $campaign .= '?fl_builder';
 		<a href="#" class="col">
 			<img class="postbox" style="width:100%; height:auto;" src="/wp-content/plugins/osdxp-dashboard/assets/images/graph-1.png" />
 		</a>
-		<a href="#" class="col">
+		<a href="<?php echo esc_url($analytics); ?>" class="col">
 			<img class="postbox" style="width:100%; height:auto;" src="/wp-content/plugins/osdxp-dashboard/assets/images/graph-2.png" />
 		</a>
 	</div>
